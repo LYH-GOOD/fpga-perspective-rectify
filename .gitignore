@@ -1,0 +1,29 @@
+# ── Vivado / Vitis 构建产物（几百 MB ～ 几 GB，绝不入库）──
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.gen/
+*.Xil/
+*.jou
+vivado*.log
+
+# ── 压缩包（GitHub 单文件硬上限 100 MB）──
+*.zip
+*.7z
+*.rar
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ── 系统与编辑器 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
