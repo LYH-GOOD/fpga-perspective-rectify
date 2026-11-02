@@ -47,6 +47,29 @@ UI_MODULES += ('v123_live_ui',)
 UI_ASSETS += ('v123_live_ui.png','v123_live_ui.json')
 UI_ASSETS += ('v119_wait_480p.png','v119_wait_600p.png','v119_frame_timeout.png')
 
+#   ⭐ 2026-11-02：新增「按层合并」发布布局。合并后只剩 6 个 .py（不是 114 个），
+#      其余文件（界面资产 / .cpp / system.bit+hwh+manifest）一个不少。
+#      布局写在 release_manifest.json 的 "layout" 字段：'layers-6' 或 'modules-114'。
+#      缺字段时按旧的 114 模块布局处理 ⇒ 老发布包照常能过，不需要重打包。
+LAYER_MODULES = ('core', 'geometry', 'tracking', 'display', 'ai', 'ui')
+LAYOUT_LAYERS = 'layers-6'
+LAYOUT_MODULES = 'modules-114'
+#   合并布局还要多核两个文件：它们不是被 import 的模块，而是被 subprocess.Popen 拉起的
+#   **子进程入口** ⇒ 合并工具不会碰它们，但必须是磁盘上的真实文件：
+#     v99_ai_worker.py    ← v99_ai_service.py 拉起（常驻推理进程）
+#     v99_ai_selftest.py  ← ai_selftest.ipynb 拉起（CPU 自检）
+#   build/make_ai_entries.py 生成自包含版本（不导入任何层文件，免得把 cv2 拉进子进程）。
+LAYER_EXTRA_FILES = ('v99_ai_worker.py', 'v99_ai_selftest.py')
+
+
+def _module_names_for(release):
+    layout = release.get('layout', LAYOUT_MODULES)
+    if layout == LAYOUT_LAYERS:
+        return list(LAYER_MODULES)
+    if layout == LAYOUT_MODULES:
+        return list(MODULES) + list(UI_MODULES)
+    raise ValueError('未知的发布包布局：'+str(layout))
+
 def cache_profile(width):
     #   ⚠️ 本函数有两个调用点传的是【输入图宽度】（v8_plan / pl_fields，相机 640），
     #      不是 crop 宽度。而行缓存只装 crop（≤512 由规划器保证）⇒ 这里**夹到 512**，
@@ -82,7 +105,9 @@ def verify_package(bitfile=BITFILE):
         raise ValueError('发布版本不一致；请重启内核，从新版目录重新导入')
     if any(hashes.get(name)!=digest for name,digest in EXACT_PAIR_SHA256.items()):
         raise ValueError('本版只接受已登记的锐化 bit/HWH 配对；请完整上传本版目录')
-    required={name+'.py' for name in MODULES+UI_MODULES}|{path.name,path.with_suffix('.hwh').name,path.with_suffix('.manifest.json').name,'v31_native.cpp','v31_camera_native.cpp','v64_io.cpp','v87_v74_native.cpp','v91_transaction.cpp','v105_edges.cpp'}|set(UI_ASSETS)
+    module_names=_module_names_for(release)
+    required={name+'.py' for name in module_names}|{path.name,path.with_suffix('.hwh').name,path.with_suffix('.manifest.json').name,'v31_native.cpp','v31_camera_native.cpp','v64_io.cpp','v87_v74_native.cpp','v91_transaction.cpp','v105_edges.cpp'}|set(UI_ASSETS)
+    if release.get('layout',LAYOUT_MODULES)==LAYOUT_LAYERS:required|=set(LAYER_EXTRA_FILES)
     if not required.issubset(hashes):
         raise ValueError('发布清单缺少必要文件')
     # Notebook execution/edits are expected: only executable drivers and the
@@ -102,7 +127,7 @@ def verify_package(bitfile=BITFILE):
             _FILE_DIGESTS[stamp]=actual_digest
         if actual_digest!=expected:
             raise ValueError(f'文件版本或内容不一致：{name}。请重新完整复制发布目录')
-    for name in MODULES+UI_MODULES:
+    for name in module_names:
         module=sys.modules.get(name)
         if module is None:
             continue
@@ -128,7 +153,8 @@ class PackageAdmission:
         self.bitfile=str(Path(bitfile).expanduser().resolve())
         self.manifest=manifest
         hashes=manifest['sha256']
-        self.expected=tuple((name,self.folder/(name+'.py'),hashes[name+'.py']) for name in MODULES)
+        self.expected=tuple((name,self.folder/(name+'.py'),hashes[name+'.py'])
+                            for name in _module_names_for(manifest))
         self.loaded={}
         self.check()
     def check(self):
