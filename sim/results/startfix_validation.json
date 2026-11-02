@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-hotfix-20261027-10",
+  "distribution_id": "p11_rgb_v9_ai_hotfix_20261027_10_startfix1",
+  "startup": {
+    "passed": true,
+    "tests": 14,
+    "errors": 0,
+    "failures": 0,
+    "notebook_sha256": "ab3f21b80af90edd8938f58e30e1ca7814df4345a87290e0e30cadaccd221f96",
+    "actual_discovery_code_executed": true,
+    "runtime_configuration_unchanged": true,
+    "board_fps_tested": false
+  },
+  "first_cell": {
+    "passed": true,
+    "actual_first_code_cell_executed": true,
+    "full_package_admission_after_import": true,
+    "selected_directory": "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_delivery_verification\\p11_rgb_v9_ai_hotfix_20261027_10_2",
+    "startup_stdout": "当前目录就是第10版 = C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_delivery_verification\\p11_rgb_v9_ai_hotfix_20261027_10_2\n将使用： C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_delivery_verification\\p11_rgb_v9_ai_hotfix_20261027_10_2\nGIL switch interval = 1.0 ms\nPL 侧 YUYV 转换 = 开\n逐帧日志：每 4 帧记一条\nSKIP_RESEARCH = True\nSTATIC_HOLD = True\nFREEZE_OUTPUT = False\np11-rgb-pspl-v9-ai-hotfix-20261027-10 V9 hotfix10: clock reset fixed; returned target AUTO first; original progress + live preview\n",
+    "camera_ui_called": false,
+    "hardware_opened": false,
+    "board_fps_tested": false
+  },
+  "all_runtime_bytes_unchanged": true,
+  "board_tested": false
+}

@@ -1,0 +1,485 @@
+{
+  "completed": true,
+  "rounds": 9,
+  "alternating_order": [
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      16,
+      17
+    ]
+  ],
+  "measurements": {
+    "tag_us": {
+      "previous16": {
+        "median": 1.1431791666666666,
+        "p90": 1.2291991666666668,
+        "rounds": [
+          1.1222525,
+          1.1660758333333334,
+          1.1345966666666665,
+          1.1034033333333335,
+          1.093655,
+          1.1535758333333332,
+          1.2291991666666668,
+          1.2320733333333334,
+          1.1431791666666666
+        ]
+      },
+      "current17": {
+        "median": 1.1999766666666667,
+        "p90": 1.3347441666666666,
+        "rounds": [
+          1.138065,
+          1.3206575,
+          1.1999766666666667,
+          1.3489966666666666,
+          1.2053191666666667,
+          1.1770474999999998,
+          1.1683191666666666,
+          1.17736,
+          1.3347441666666666
+        ]
+      },
+      "median_difference_us": 0.056797500000000056,
+      "median_difference_percent": 4.968381305059366
+    },
+    "paired_offer_compositor_us": {
+      "previous16": {
+        "median": 2428.1955555555555,
+        "p90": 2585.943888888889,
+        "rounds": [
+          2428.1955555555555,
+          2348.7144444444443,
+          2508.707777777778,
+          2399.472222222222,
+          2585.943888888889,
+          2419.31,
+          2639.538888888889,
+          2378.977777777778,
+          2499.342777777778
+        ]
+      },
+      "current17": {
+        "median": 2474.5483333333336,
+        "p90": 2514.887777777778,
+        "rounds": [
+          2483.077777777778,
+          2611.386111111111,
+          2383.762222222222,
+          2474.5483333333336,
+          2426.1805555555557,
+          2464.077777777778,
+          2514.887777777778,
+          2509.8394444444443,
+          2430.577222222222
+        ]
+      },
+      "median_difference_us": 46.3527777777781,
+      "median_difference_percent": 1.908939239746399
+    },
+    "paired_frame_median_us": {
+      "previous16": {
+        "median": 2396.9,
+        "p90": 2504.6499999999996,
+        "rounds": [
+          2404.55,
+          2299.3,
+          2426.75,
+          2328.15,
+          2504.6499999999996,
+          2350.1000000000004,
+          2534.55,
+          2344.65,
+          2396.9
+        ]
+      },
+      "current17": {
+        "median": 2389.05,
+        "p90": 2423.65,
+        "rounds": [
+          2400.5,
+          2501.05,
+          2334.8500000000004,
+          2408.75,
+          2330.5,
+          2389.05,
+          2423.65,
+          2375.4,
+          2355.4
+        ]
+      },
+      "median_difference_us": -7.849999999999909,
+      "median_difference_percent": -0.32750636238474407
+    },
+    "paired_frame_p90_us": {
+      "previous16": {
+        "median": 2843.3,
+        "p90": 3051.3,
+        "rounds": [
+          2758.6,
+          2690.2,
+          3004.6,
+          2805.1,
+          2967.5,
+          2843.3,
+          3173.1,
+          2696.3,
+          3051.3
+        ]
+      },
+      "current17": {
+        "median": 2900.7,
+        "p90": 3166.6,
+        "rounds": [
+          2929.5,
+          3190.5,
+          2783.5,
+          2873.5,
+          2876.6,
+          2900.7,
+          3123.4,
+          3166.6,
+          2793.0
+        ]
+      },
+      "median_difference_us": 57.399999999999636,
+      "median_difference_percent": 2.0187809939155033
+    }
+  },
+  "isolated_process_per_measurement": true,
+  "actual_unified_tag": true,
+  "actual_offer_compositor": true,
+  "display_scope": "one same-frame healthy CURRENT pair, CPU stand-ins for native CSC/copy, fake HDMI submit; same slots, canvas and quad",
+  "host_only": true,
+  "board_fps_tested": false,
+  "no_fps_guarantee_inferred": true,
+  "raw_rounds": {
+    "16": [
+      {
+        "version": 16,
+        "tag_us": 1.1222525,
+        "paired_offer_compositor_us": 2428.1955555555555,
+        "paired_frame_median_us": 2404.55,
+        "paired_frame_p90_us": 2758.6,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.1660758333333334,
+        "paired_offer_compositor_us": 2348.7144444444443,
+        "paired_frame_median_us": 2299.3,
+        "paired_frame_p90_us": 2690.2,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.1345966666666665,
+        "paired_offer_compositor_us": 2508.707777777778,
+        "paired_frame_median_us": 2426.75,
+        "paired_frame_p90_us": 3004.6,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.1034033333333335,
+        "paired_offer_compositor_us": 2399.472222222222,
+        "paired_frame_median_us": 2328.15,
+        "paired_frame_p90_us": 2805.1,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.093655,
+        "paired_offer_compositor_us": 2585.943888888889,
+        "paired_frame_median_us": 2504.6499999999996,
+        "paired_frame_p90_us": 2967.5,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.1535758333333332,
+        "paired_offer_compositor_us": 2419.31,
+        "paired_frame_median_us": 2350.1000000000004,
+        "paired_frame_p90_us": 2843.3,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.2291991666666668,
+        "paired_offer_compositor_us": 2639.538888888889,
+        "paired_frame_median_us": 2534.55,
+        "paired_frame_p90_us": 3173.1,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.2320733333333334,
+        "paired_offer_compositor_us": 2378.977777777778,
+        "paired_frame_median_us": 2344.65,
+        "paired_frame_p90_us": 2696.3,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "tag_us": 1.1431791666666666,
+        "paired_offer_compositor_us": 2499.342777777778,
+        "paired_frame_median_us": 2396.9,
+        "paired_frame_p90_us": 3051.3,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "cf07d122474b4e9e6c01fd7f8232a6f127fd5047a5e9cbc54006a2e219eb5f5a",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      }
+    ],
+    "17": [
+      {
+        "version": 17,
+        "tag_us": 1.138065,
+        "paired_offer_compositor_us": 2483.077777777778,
+        "paired_frame_median_us": 2400.5,
+        "paired_frame_p90_us": 2929.5,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.3206575,
+        "paired_offer_compositor_us": 2611.386111111111,
+        "paired_frame_median_us": 2501.05,
+        "paired_frame_p90_us": 3190.5,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.1999766666666667,
+        "paired_offer_compositor_us": 2383.762222222222,
+        "paired_frame_median_us": 2334.8500000000004,
+        "paired_frame_p90_us": 2783.5,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.3489966666666666,
+        "paired_offer_compositor_us": 2474.5483333333336,
+        "paired_frame_median_us": 2408.75,
+        "paired_frame_p90_us": 2873.5,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.2053191666666667,
+        "paired_offer_compositor_us": 2426.1805555555557,
+        "paired_frame_median_us": 2330.5,
+        "paired_frame_p90_us": 2876.6,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.1770474999999998,
+        "paired_offer_compositor_us": 2464.077777777778,
+        "paired_frame_median_us": 2389.05,
+        "paired_frame_p90_us": 2900.7,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.1683191666666666,
+        "paired_offer_compositor_us": 2514.887777777778,
+        "paired_frame_median_us": 2423.65,
+        "paired_frame_p90_us": 3123.4,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.17736,
+        "paired_offer_compositor_us": 2509.8394444444443,
+        "paired_frame_median_us": 2375.4,
+        "paired_frame_p90_us": 3166.6,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "tag_us": 1.3347441666666666,
+        "paired_offer_compositor_us": 2430.577222222222,
+        "paired_frame_median_us": 2355.4,
+        "paired_frame_p90_us": 2793.0,
+        "tag_iterations": 120000,
+        "display_iterations": 180,
+        "source_sha256": {
+          "v110_unified.py": "5fe6c65d2130afaf657b45d7c8776f193239765c63cbcdee8de101975a45f88d",
+          "v64_hdmi_display.py": "ac86aed62de519fa09cc73e95a210bce3b500a0e48bd5637c66f0eb68b247908",
+          "v115_pair_display.py": "dbe94a8db8198e5992a0e6ad0e7299c08cfd9fd3c816ca1b7040d180b8a9e6c8"
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      }
+    ]
+  },
+  "static_current_review": {
+    "existing_behavior_preserved": true,
+    "observation": "v92 static_hold returns accepted nonNone quad; v82 q+plan success updates last_verified to current frame.ready. TTL follows last existing CURRENT, not last full LK. HELD does not renew it."
+  }
+}

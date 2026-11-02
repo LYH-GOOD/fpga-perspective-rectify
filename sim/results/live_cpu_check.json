@@ -1,0 +1,64 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "passed": true,
+  "preview_and_cancel_checks": 6,
+  "previous_cpu_check": {
+    "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+    "passed": true,
+    "timer_reset_checks": 4,
+    "previous_cpu_check": {
+      "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+      "passed": true,
+      "budget_checks": 3,
+      "previous_cpu_check": {
+        "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+        "passed": true,
+        "target_cycle_checks": 3,
+        "previous_cpu_check": {
+          "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+          "passed": true,
+          "policy_checks": 4,
+          "output_hook_mean_us": 1.5313700001570396,
+          "machine": "AMD64",
+          "native_edge_check": {
+            "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+            "passed": true,
+            "platform": "Windows-10-10.0.26200-SP0",
+            "machine": "AMD64",
+            "native_executed": true,
+            "native_arm_executed": false,
+            "native_source_sha256": "39c4e4c90edbba6e78109f5709b4063ed8eadfcbfb1e218fc8691b3c4e9d7f33",
+            "timing": {
+              "physical4": {
+                "current": 59,
+                "total": 59,
+                "median_ms": 1.8896500005212147,
+                "p95_ms": 2.7725900006771553
+              },
+              "trackfix5": {
+                "current": 59,
+                "total": 59,
+                "median_ms": 1.0158499999306514,
+                "p95_ms": 1.3172350000786535
+              }
+            },
+            "real_camera_fps_measured": false,
+            "scope": "CPU recorded/synthetic input only; actual output FPS requires live board run-result.log"
+          },
+          "live_board_fps_measured": false,
+          "scope": "CPU input-only installation smoke; compare live normal AUTO tracking via run-result.log"
+        },
+        "machine": "AMD64",
+        "live_board_fps_measured": false,
+        "scope": "CPU-only synthetic input and unchanged native edge kernel; not live camera/FPS acceptance"
+      },
+      "machine": "AMD64",
+      "live_board_fps_measured": false,
+      "scope": "CPU synthetic/policy checks and unchanged native edges; not live recovery/FPS acceptance"
+    },
+    "live_board_fps_measured": false,
+    "scope": "CPU clock/reset and unchanged native checks; board FPS pending"
+  },
+  "live_board_fps_measured": false,
+  "scope": "CPU-only RAM/ownership/cancel/native; no camera/HDMI/PL"
+}

@@ -1,0 +1,32 @@
+{
+  "previous10_median_us": 19.624996666666664,
+  "smooth11_median_us": 20.03266,
+  "difference_us": 0.4076633333333355,
+  "rounds": 9,
+  "iterations_per_round": 30000,
+  "previous_rounds_us": [
+    17.745293333333336,
+    16.688283333333334,
+    19.198803333333334,
+    19.99751,
+    20.881876666666667,
+    19.624996666666664,
+    19.920636666666667,
+    19.296503333333334,
+    20.351893333333333
+  ],
+  "current_rounds_us": [
+    17.239283333333333,
+    16.8037,
+    20.110490000000002,
+    20.082323333333335,
+    20.03266,
+    21.791900000000002,
+    18.70897,
+    18.38664,
+    20.40018666666667
+  ],
+  "host_only": true,
+  "board_fps_measured": false,
+  "scope": "healthy producer/completion scalar control only; camera/model/PL/HDMI excluded"
+}

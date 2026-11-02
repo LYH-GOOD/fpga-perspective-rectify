@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "light_bram": 0,
+  "light_dsp": 1,
+  "light_lut_primitives": 182,
+  "light_ff": 202,
+  "light_primitive_cells": 410,
+  "wns": 0.65,
+  "whs": 0.015,
+  "drc_errors": 0,
+  "main_period_ns": 12.0,
+  "serial_period_ns": 2.0,
+  "total_ramb36": 108,
+  "total_ramb18": 26,
+  "total_BRAM36_equivalent": 121.0,
+  "tool": "Vivado2025.2",
+  "part": "xc7z020clg400-1",
+  "main_clock_hz": 83333333.33333333,
+  "top": "system_wrapper",
+  "RTL_sha256": "d3d883fa2a78d9a06f809a3d6ed513e2a17e4548db58db9a81f0595cde17a726",
+  "XSim": {
+    "passed": true,
+    "output_pixels": 5311,
+    "continuous_II1_pixels": 1024,
+    "behavioral_only": true
+  },
+  "critical_warnings": 0,
+  "report_sha256": {
+    "timing_impl.rpt": "47eb69df47901e88cf18e5d6c8c9d7a06757b501e46bf16d5cb9a50c94a5632e",
+    "utilization_impl.rpt": "bfaf8018493928f715d23ee2611659a2688284c4f88fb5a6ce22b43768115c2d",
+    "drc_impl.rpt": "8fa2c88db42b11f18312ce6fe7b172b6d6f39d1b6e07b4a33401182235e66d03"
+  },
+  "board_tested": true,
+  "board_FPS_tested": true,
+  "clock_constraint_correction": "Private rgb2dvi_clocks.xdc removes impossible PixelClk->SerialClk path; parent MMCM/BUFIO/BUFR auto-derived clocks used. Physical clock generator and frequency unchanged.",
+  "IO_constraint_source": "TUL PYNQ-Z2 Reference Manual v1.1 Table7",
+  "hardware_release_id": "p11_pwl_light_20261030_27",
+  "sha256": {
+    "system.bit": "aaa9f632d3f8a7a11db14ae36876f0d40fa9d7fa2666d8a4894c2ca14ddef3d0",
+    "system.hwh": "deb1f5a620a74bae0cd74b25a223c4ab2beb319877e2cc74b675e66ac6e83637"
+  },
+  "xsa_sha256": "eaa083086db4835cbe66a75043155ce816c1f61e169f7afa78214ebb5b27d8f2",
+  "local_rebuild": {
+    "date": "2026-10-30",
+    "what": "remap core restored to the V7 4.686 clk/px version (NDIV=16 + even/odd 2-bank line buffer + C-stage merge)",
+    "why": "teammate 27th-package hardware source still carried the 7.160 clk/px core; software merged but hardware did not",
+    "remap_clocks_per_pixel": 4.686,
+    "previous_clocks_per_pixel": 7.16,
+    "lut": 17569,
+    "ff": 24135,
+    "bram36_equivalent": 121,
+    "dsp": 46,
+    "wns": 0.65,
+    "whs": 0.015,
+    "drc_errors": 0,
+    "board_tested": false,
+    "note": "numbers in this block describe the local rebuild; the original teammate evidence files in verification/ still describe their build"
+  },
+  "board_evidence": {
+    "date": "2026-10-30/31",
+    "logs": [
+      "logs/run-result - 2026-10-30T232851.860.log",
+      "logs/run-result - 2026-10-30T233907.730.log"
+    ],
+    "contract_check": "p11_contract.py EXACT_PAIR_SHA256 通过（板上实际运行的 bit/hwh 即本文件 sha256 字段）",
+    "480P_static": {
+      "camera_fps": 30.72,
+      "sustained_fps": 22.73,
+      "service_median_ms": 35.6,
+      "service_mean_ms": 41.8,
+      "service_p90_ms": 51.5,
+      "frame_period_ms": 44.0
+    },
+    "delta_vs_old_core": {
+      "dma_wait_s": "17.0 -> 10.9 ms",
+      "owner_s": "28.1 -> 20.7 ms",
+      "peak_window_fps": "20.48 -> 24.74"
+    },
+    "bottleneck": "PS 侧跟踪器长尾（tracker_s 尖峰 124~126 ms），PL 侧 dma_wait 已达 10.4 ms 理论地板"
+  }
+}

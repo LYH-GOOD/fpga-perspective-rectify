@@ -1,0 +1,65 @@
+{
+  "healthy_source_snapshot_and_geometry": {
+    "previous13_us": 272.17716666666666,
+    "paired14_us": 231.90758333333335,
+    "difference_us": -40.269583333333316,
+    "previous_rounds_us": [
+      39.64775,
+      281.5919166666667,
+      276.4005833333333,
+      214.08608333333333,
+      234.24458333333334,
+      254.52433333333335,
+      286.2861666666667,
+      274.174,
+      272.17716666666666
+    ],
+    "current_rounds_us": [
+      26.99908333333333,
+      30.296,
+      213.42708333333334,
+      232.39791666666665,
+      233.6965,
+      240.31416666666667,
+      231.90758333333335,
+      246.2045,
+      224.15241666666665
+    ]
+  },
+  "healthy_equal_visible_outline_compositor": {
+    "previous13_us": 2992.7156,
+    "paired14_us": 2802.4352000000003,
+    "difference_us": -190.28039999999964,
+    "previous_rounds_us": [
+      2215.4487999999997,
+      3049.5276,
+      3367.0544,
+      2861.1367999999998,
+      3168.7172,
+      2992.7156,
+      3350.1952,
+      2764.9576,
+      2701.2556
+    ],
+    "current_rounds_us": [
+      2215.9424,
+      2601.8408,
+      2611.408,
+      2802.4352000000003,
+      3038.8347999999996,
+      2930.8612000000003,
+      3080.8388,
+      2883.4503999999997,
+      2653.8163999999997
+    ]
+  },
+  "host_only": true,
+  "board_fps_tested": false,
+  "gc_disabled_during_measurement_like_active_GcBudget": true,
+  "source_sha256": {
+    "v113_live_preview.py": "8a2dda5a6eccf6eb9a41387a98bb375a33dbc867b1d717a90592d48c9f258a61",
+    "v115_pair_display.py": "03fe6f22ecc3e19993fa3dc4a1d92f4b19bfda75c27831c230f6048b4c9a2736",
+    "v64_hdmi_display.py": "98db5acb3c8c7e7605e3d1a48ed43b11d392dfb51080c9da57fcdfb5721fc56f"
+  },
+  "scope": "actual snapshot/metadata/compositor; fake HDMI submit and CPU CSC; same one quad, raw and output on both versions"
+}

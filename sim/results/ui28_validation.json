@@ -1,0 +1,33 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-ui-20261101-28",
+  "passed": true,
+  "host_tests": 39,
+  "installed_CPU_check_passed": true,
+  "preserved_hardware_and_model": true,
+  "baseline": "E:\\P11\\p11_light27_handoff_20261031\\software",
+  "board_FPS_tested": false,
+  "actual_compositor_previews": true,
+  "desktop_UI_benchmark": {
+    "scope": "host metadata/cached-patch microbenchmark only; no camera/DMA/ARM/PL FPS claim",
+    "iterations": 10000,
+    "stable": {
+      "median_us": 9.4,
+      "p95_us": 21.6,
+      "p99_us": 35.50100000000002,
+      "maximum_us": 364.1
+    },
+    "point_progress": {
+      "median_us": 9.8,
+      "p95_us": 20.9,
+      "p99_us": 36.50100000000002,
+      "maximum_us": 383.2
+    },
+    "drag": {
+      "median_us": 13.9,
+      "p95_us": 112.50499999999992,
+      "p99_us": 159.10300000000007,
+      "maximum_us": 2415.8
+    },
+    "previews": "actual host compositor with provided photograph, simulated timestamps and manually prepared output"
+  }
+}

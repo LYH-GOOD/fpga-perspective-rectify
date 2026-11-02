@@ -1,0 +1,218 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-unified-20261027-8",
+  "passed": true,
+  "tests": 130,
+  "reports": {
+    "frontend": {
+      "passed": true,
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "controller_sha256": "ffccae123f5e0d3ca18d0880c7241d183420237c2d1849b8456d473926570b02",
+      "benchmark": {
+        "iterations_per_round": 30000,
+        "rounds": 7,
+        "baseline_us": 7.407236666666667,
+        "wrapped_us": 17.3385,
+        "additional_us": 9.931263333333334,
+        "one_core_percent_at_30fps": 0.02979379,
+        "host_only": true,
+        "board_fps_measured": false
+      },
+      "board_tested": false
+    },
+    "cycle": {
+      "passed": true,
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "due_probe_median_us": 713.2,
+        "due_probe_p95_us": 1162.825,
+        "maximum_probe_hz": 2,
+        "small_shape": [
+          120,
+          160
+        ],
+        "host_only": true,
+        "healthy_measured_frame_probes": 0
+      },
+      "board_tested": false
+    },
+    "equivalence": {
+      "passed": true,
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "real_manual_frontend": true,
+      "real_persistent_tracker": true,
+      "hardware_planner_stubbed": true,
+      "board_tested": false
+    },
+    "flow": {
+      "passed": true,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false
+    },
+    "tracking": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "physical4": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 2.149650000319525,
+          "p95_ms": 2.688405000208149,
+          "max_corner_error": 1.4406582465965887
+        },
+        "trackfix5": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.2734499996440718,
+          "p95_ms": 1.7162200007078354,
+          "max_corner_error": 1.435545449620178
+        }
+      },
+      "board_tested": false
+    },
+    "owner": {
+      "passed": true,
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Real owner function body with fake devices/queue; no physical board"
+    },
+    "policy": {
+      "passed": true,
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "release_id": "p11-rgb-pspl-v9-ai-unified-20261027-8",
+      "source_sha256": "3dd25fb40cfc881994e9b723fb22c3a30351a6360fa22ffd94f92181b9796653",
+      "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+      "benchmark": {
+        "iterations_per_round": 100000,
+        "rounds": 7,
+        "measurements": {
+          "completed_current": {
+            "median_us": 2.272694,
+            "max_round_us": 2.956149,
+            "one_core_percent_at_30fps": 0.006818082
+          },
+          "rejected_held": {
+            "median_us": 0.134405,
+            "max_round_us": 0.21377000000000002
+          },
+          "healthy_tick": {
+            "median_us": 1.19031,
+            "max_round_us": 1.3021610000000001
+          }
+        },
+        "timing_includes_row_update_and_timestamp_arithmetic": true,
+        "measured_on": "Windows host Python; ARM/board FPS not measured"
+      },
+      "host_callback_budget_us": 100.0,
+      "host_callback_budget_passed": true,
+      "board_tested": false,
+      "limitations": [
+        "Controller must generation-gate asynchronous completion callbacks.",
+        "Live camera sequence must increase within each automatic epoch.",
+        "No ARM/HDMI/camera timing validation performed here."
+      ]
+    },
+    "status": {
+      "passed": true,
+      "tests": 19,
+      "failures": [],
+      "asset_build": {
+        "font": "C:\\Windows\\Fonts\\msyh.ttc",
+        "font_size": 17,
+        "font_glyphs_verified": true,
+        "tiles": 108,
+        "tile_size": [
+          320,
+          28
+        ],
+        "max_text_width": 301,
+        "allowed_text_width": 304
+      },
+      "performance": {
+        "host_python": "D:\\p11_ai_training\\.venv\\Scripts\\python.exe",
+        "host_opencv": "4.11.0",
+        "native_canvas_size": [
+          1280,
+          720
+        ],
+        "cache_selection_and_rate_format_median_us": 2.3845666666666667,
+        "existing_footer_patch_and_english_text_median_us": 123.367,
+        "atlas_decoded_bytes": 2903040,
+        "chinese_badge_patch_bytes": 26880,
+        "new_full_frame_copies": 0,
+        "scope": "Host-only small-footer microbenchmark; no camera, AI, HDMI DMA or board FPS measured."
+      },
+      "previews": [
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\auto_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\ai_infer_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\ai_held_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\ai_manual_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\empty_wait_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\manual_lost_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\unified_status_previews\\all_hybrid_footer_states.png"
+      ],
+      "source_sha256": {
+        "v108_hybrid_status.py": "e1e37ce0009f0413b77b949f7f225f730ad27fea3bfe816944e7a58da2fabeb4",
+        "v108_hybrid_status.png": "ca40fdfd00c845271a1c2272e09da8387127afb21ce1929c4d9aef51c9aa8eb9",
+        "v64_hdmi_display.py": "123c53f9ce05ea6fee4d8fdfb7d1fdf39adda6a0c3e6eab1ac226a498b0df9dc"
+      },
+      "board_fps_tested": false,
+      "board_touch_tested": false,
+      "physical_hdmi_scan_tested": false,
+      "notes": [
+        "Chinese status labels are cached read-only 320x28 atlas views.",
+        "Valid correction rate is supplied by completed CURRENT corrections; DISP is owner submission rate.",
+        "No per-frame Pillow/font/image decode, model call, animation, or extra full-frame copy.",
+        "Native 1280x720 layout, video ownership and touch controls are unchanged."
+      ]
+    }
+  },
+  "unchanged_files_verified": [
+    "system.bit",
+    "system.hwh",
+    "system.manifest.json",
+    "v31_camera.py",
+    "v64_p1_backend.py",
+    "v75_ui.py",
+    "v99_ai_service.py",
+    "v99_ai_worker.py",
+    "v84_snapshot.py",
+    "v92_manual_v87.py",
+    "v105_manual_tracking.py",
+    "v104_physical_tracking.py",
+    "v105_native.py",
+    "v105_reference.py",
+    "ai/plane.ncnn.param",
+    "ai/plane.ncnn.bin",
+    "ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so",
+    "bench_mem.cpp",
+    "v105_edges.cpp",
+    "v31_camera_native.cpp",
+    "v31_native.cpp",
+    "v64_io.cpp",
+    "v87_v74_native.cpp",
+    "v91_transaction.cpp"
+  ],
+  "auto_frontend_queue_and_manual_frontend_ast_identical": true,
+  "model_retrained": false,
+  "hardware_changed": false,
+  "native_kernel_changed": false,
+  "native_host_executed": true,
+  "native_arm_executed": false,
+  "board_fps_tested": false,
+  "default_ai_tracking": "exact ManualFrontend + PersistentManualTracker defaults; same-target recovery",
+  "repeated_ai_policy": "one request per target cycle; no periodic retry; rearm on confirmed absent then stable return or explicit UI reselect",
+  "normal_path_added_host_us": 9.931263333333334
+}

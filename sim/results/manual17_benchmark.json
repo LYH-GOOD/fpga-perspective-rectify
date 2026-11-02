@@ -1,0 +1,755 @@
+{
+  "rounds": 9,
+  "alternating": true,
+  "cases": {
+    "static": {
+      "old_total_ms": 76.43809999999999,
+      "new_total_ms": 68.41719999999998,
+      "change_percent": -10.493327280505415,
+      "old_max_error_px": 0.0,
+      "new_max_error_px": 0.0
+    },
+    "translation_full": {
+      "old_total_ms": 281.8416,
+      "new_total_ms": 192.84589999999997,
+      "change_percent": -31.5764954499265,
+      "old_max_error_px": 10.607784046479853,
+      "new_max_error_px": 0.19548278362147953
+    },
+    "perspective_full": {
+      "old_total_ms": 304.44509999999985,
+      "new_total_ms": 207.93359999999993,
+      "change_percent": -31.70078940340967,
+      "old_max_error_px": 2.538362503051758,
+      "new_max_error_px": 0.5654027462005615
+    }
+  },
+  "raw": {
+    "16": [
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4111,
+            "p90_ms": 2.4084,
+            "total_ms": 78.37059999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.7987,
+            "p90_ms": 3.484,
+            "total_ms": 275.7109999999999,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.4862,
+            "p90_ms": 4.1646,
+            "total_ms": 303.1824,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4043,
+            "p90_ms": 2.3046,
+            "total_ms": 75.77050000000001,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.7718,
+            "p90_ms": 3.4836,
+            "total_ms": 276.8193000000001,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.9812,
+            "p90_ms": 4.0008,
+            "total_ms": 275.2018000000001,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4436,
+            "p90_ms": 2.9213,
+            "total_ms": 80.85379999999995,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.7977,
+            "p90_ms": 3.7692,
+            "total_ms": 281.8416,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.5171,
+            "p90_ms": 3.927,
+            "total_ms": 304.44509999999985,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4093,
+            "p90_ms": 2.2234,
+            "total_ms": 75.40999999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.8322,
+            "p90_ms": 3.8664,
+            "total_ms": 286.66580000000005,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.4712,
+            "p90_ms": 4.2888,
+            "total_ms": 309.2727,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.3902,
+            "p90_ms": 2.2819,
+            "total_ms": 71.02740000000001,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 3.0447,
+            "p90_ms": 4.1627,
+            "total_ms": 298.8184,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.8279,
+            "p90_ms": 4.3435,
+            "total_ms": 337.5708,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4134,
+            "p90_ms": 2.4605,
+            "total_ms": 76.43809999999999,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.8171,
+            "p90_ms": 3.7555,
+            "total_ms": 283.22400000000005,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.7404,
+            "p90_ms": 4.2178,
+            "total_ms": 336.2850999999999,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4217,
+            "p90_ms": 2.5756,
+            "total_ms": 77.87749999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.7154,
+            "p90_ms": 3.3443,
+            "total_ms": 268.702,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 3.5256,
+            "p90_ms": 4.1053,
+            "total_ms": 316.285,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.3902,
+            "p90_ms": 2.2916,
+            "total_ms": 73.70299999999999,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.6385,
+            "p90_ms": 3.4698,
+            "total_ms": 266.4656,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.6936,
+            "p90_ms": 3.4916,
+            "total_ms": 249.72620000000015,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 16,
+        "cases": {
+          "static": {
+            "median_ms": 0.4213,
+            "p90_ms": 2.4602,
+            "total_ms": 80.649,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 12,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.9297,
+            "p90_ms": 3.9793,
+            "total_ms": 294.60710000000006,
+            "accepted": 99,
+            "max_corner_error_px": 10.607784046479853,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.8782,
+            "p90_ms": 3.6564,
+            "total_ms": 264.97720000000004,
+            "accepted": 99,
+            "max_corner_error_px": 2.538362503051758,
+            "initial_points": 12,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      }
+    ],
+    "17": [
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.5158,
+            "p90_ms": 2.2496,
+            "total_ms": 74.55370000000003,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.1655,
+            "p90_ms": 3.0018,
+            "total_ms": 211.96129999999997,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.8912,
+            "p90_ms": 3.4986,
+            "total_ms": 253.32260000000005,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.4346,
+            "p90_ms": 2.0354,
+            "total_ms": 66.9494,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.0176,
+            "p90_ms": 2.5509,
+            "total_ms": 189.43840000000006,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.2428,
+            "p90_ms": 3.0142,
+            "total_ms": 214.9922,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.433,
+            "p90_ms": 2.0378,
+            "total_ms": 67.42489999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.1837,
+            "p90_ms": 2.7739,
+            "total_ms": 202.34439999999995,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.1764,
+            "p90_ms": 3.0429,
+            "total_ms": 209.34229999999994,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.4353,
+            "p90_ms": 2.1033,
+            "total_ms": 64.79940000000002,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.099,
+            "p90_ms": 2.6733,
+            "total_ms": 196.83989999999997,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.0476,
+            "p90_ms": 2.4924,
+            "total_ms": 191.12080000000003,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.4414,
+            "p90_ms": 2.2435,
+            "total_ms": 70.66289999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.1125,
+            "p90_ms": 2.8765,
+            "total_ms": 200.8336,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.381,
+            "p90_ms": 3.2269,
+            "total_ms": 224.28099999999995,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.4633,
+            "p90_ms": 2.0698,
+            "total_ms": 68.41719999999998,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.0145,
+            "p90_ms": 2.7362,
+            "total_ms": 192.84589999999997,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.1246,
+            "p90_ms": 3.0709,
+            "total_ms": 207.93359999999993,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.469,
+            "p90_ms": 2.1001,
+            "total_ms": 71.0577,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 2.0255,
+            "p90_ms": 2.7482,
+            "total_ms": 191.50009999999997,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.1764,
+            "p90_ms": 2.8619,
+            "total_ms": 205.68110000000001,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.4412,
+            "p90_ms": 2.0543,
+            "total_ms": 66.04779999999997,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 1.894,
+            "p90_ms": 2.4138,
+            "total_ms": 181.2847,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.037,
+            "p90_ms": 2.6033,
+            "total_ms": 191.71639999999994,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      },
+      {
+        "version": 17,
+        "cases": {
+          "static": {
+            "median_ms": 0.5208,
+            "p90_ms": 2.2792,
+            "total_ms": 77.7351,
+            "accepted": 99,
+            "max_corner_error_px": 0.0,
+            "initial_points": 4,
+            "static_reuses": 81,
+            "opencv_flow_calls": 36,
+            "native_lk_executed": false
+          },
+          "translation_full": {
+            "median_ms": 1.9072,
+            "p90_ms": 2.544,
+            "total_ms": 181.61410000000006,
+            "accepted": 99,
+            "max_corner_error_px": 0.19548278362147953,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          },
+          "perspective_full": {
+            "median_ms": 2.0555,
+            "p90_ms": 2.6202,
+            "total_ms": 194.14940000000004,
+            "accepted": 99,
+            "max_corner_error_px": 0.5654027462005615,
+            "initial_points": 4,
+            "static_reuses": 0,
+            "opencv_flow_calls": 198,
+            "native_lk_executed": false
+          }
+        },
+        "host_only": true,
+        "board_fps_tested": false
+      }
+    ]
+  },
+  "host_only": true,
+  "board_fps_tested": false
+}

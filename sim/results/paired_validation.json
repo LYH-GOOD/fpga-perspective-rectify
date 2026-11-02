@@ -1,0 +1,368 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-paired-20261028-14",
+  "passed": true,
+  "tests": 238,
+  "reports": {
+    "frontend": {
+      "passed": true,
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "controller_sha256": "8995718af94a689c366b9848855b709b9edb859ceca1e55f179334efa3cf617b",
+      "benchmark": {
+        "iterations_per_round": 30000,
+        "rounds": 7,
+        "baseline_us": 7.279263333333334,
+        "wrapped_us": 18.696463333333334,
+        "additional_us": 11.417200000000001,
+        "one_core_percent_at_30fps": 0.0342516,
+        "host_only": true,
+        "board_fps_measured": false
+      },
+      "board_tested": false
+    },
+    "alignment": {
+      "passed": true,
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false,
+      "scope": "real align_current orchestration; deterministic verifier stubs, separate real native bridge cases in flow suite"
+    },
+    "cycle": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "due_probe_median_us": 1040.2,
+        "due_probe_p95_us": 1523.3499999999997,
+        "maximum_probe_hz": 2,
+        "small_shape": [
+          120,
+          160
+        ],
+        "host_only": true,
+        "healthy_measured_frame_probes": 0
+      },
+      "board_tested": false
+    },
+    "equivalence": {
+      "passed": true,
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "real_manual_frontend": true,
+      "real_persistent_tracker": true,
+      "hardware_planner_stubbed": true,
+      "board_tested": false
+    },
+    "flow": {
+      "passed": true,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false
+    },
+    "tracking": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "physical4": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.7315999994025333,
+          "p95_ms": 2.26221999982954,
+          "max_corner_error": 1.4406582465965887
+        },
+        "trackfix5": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.0356000002502697,
+          "p95_ms": 1.5758799991090195,
+          "max_corner_error": 1.435545449620178
+        }
+      },
+      "board_tested": false
+    },
+    "owner": {
+      "passed": true,
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Real owner function body with fake devices/queue; no physical board"
+    },
+    "policy": {
+      "passed": true,
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "release_id": "p11-rgb-pspl-v9-ai-paired-20261028-14",
+      "source_sha256": "3dd25fb40cfc881994e9b723fb22c3a30351a6360fa22ffd94f92181b9796653",
+      "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+      "benchmark": {
+        "iterations_per_round": 100000,
+        "rounds": 7,
+        "measurements": {
+          "completed_current": {
+            "median_us": 3.210038,
+            "max_round_us": 3.289533,
+            "one_core_percent_at_30fps": 0.009630114
+          },
+          "rejected_held": {
+            "median_us": 0.24362299999999998,
+            "max_round_us": 0.344813
+          },
+          "healthy_tick": {
+            "median_us": 1.723245,
+            "max_round_us": 1.981853
+          }
+        },
+        "timing_includes_row_update_and_timestamp_arithmetic": true,
+        "measured_on": "Windows host Python; ARM/board FPS not measured"
+      },
+      "host_callback_budget_us": 100.0,
+      "host_callback_budget_passed": true,
+      "board_tested": false,
+      "limitations": [
+        "Controller must generation-gate asynchronous completion callbacks.",
+        "Live camera sequence must increase within each automatic epoch.",
+        "No ARM/HDMI/camera timing validation performed here."
+      ]
+    },
+    "status": {
+      "passed": true,
+      "tests": 22,
+      "failures": [],
+      "asset_build": null,
+      "performance": {
+        "host_python": "D:\\p11_ai_training\\.venv\\Scripts\\python.exe",
+        "host_opencv": "4.11.0",
+        "native_canvas_size": [
+          1280,
+          720
+        ],
+        "cache_selection_and_rate_format_median_us": 4.492333333333333,
+        "existing_footer_patch_and_english_text_median_us": 181.1445,
+        "atlas_decoded_bytes": 3870720,
+        "chinese_badge_patch_bytes": 26880,
+        "new_full_frame_copies": 0,
+        "scope": "Host-only small-footer microbenchmark; no camera, AI, HDMI DMA or board FPS measured."
+      },
+      "previews": [
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\auto_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\ai_infer_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\ai_held_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\ai_manual_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\empty_wait_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\alignment_failed_auto_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\recovery_cooldown_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\manual_lost_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\paired_status_previews\\all_hybrid_footer_states.png"
+      ],
+      "source_sha256": {
+        "v108_hybrid_status.py": "3b2d3a496fa1ff39e5cc23ac599c2aebfd7cd1bc3122df88e87a7e931b0a850c",
+        "v108_hybrid_status.png": "0c454c62b65ddae55863d08a2df0065b62439af11e369c6a38d9eacd459f9a38",
+        "v64_hdmi_display.py": "98db5acb3c8c7e7605e3d1a48ed43b11d392dfb51080c9da57fcdfb5721fc56f"
+      },
+      "board_fps_tested": false,
+      "board_touch_tested": false,
+      "physical_hdmi_scan_tested": false,
+      "notes": [
+        "Chinese status labels are cached read-only 320x28 atlas views.",
+        "Valid correction rate is supplied by completed CURRENT corrections; DISP is owner submission rate.",
+        "No per-frame Pillow/font/image decode, model call, animation, or extra full-frame copy.",
+        "Native 1280x720 layout, video ownership and touch controls are unchanged."
+      ]
+    },
+    "display": {
+      "passed": true,
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "actual_offer_compositor_slots_and_hdmi_owner_loop": true,
+      "board_fps_tested": false,
+      "source_sha256": {
+        "v115_pair_display.py": "03fe6f22ecc3e19993fa3dc4a1d92f4b19bfda75c27831c230f6048b4c9a2736",
+        "v113_live_preview.py": "8a2dda5a6eccf6eb9a41387a98bb375a33dbc867b1d717a90592d48c9f258a61",
+        "v64_hdmi_display.py": "98db5acb3c8c7e7605e3d1a48ed43b11d392dfb51080c9da57fcdfb5721fc56f",
+        "v31_camera.py": "1b6617d0f860415903d8d225a9d2951d232f6ca04dff3684da6f12bb5fca874c"
+      }
+    },
+    "cancel": {
+      "passed": true,
+      "tests": 6,
+      "errors": 0,
+      "failures": 0,
+      "actual_acquire_worker_joined": true,
+      "running_native_calls_not_preempted": true,
+      "board_tested": false
+    },
+    "startup": {
+      "passed": true,
+      "tests": 14,
+      "errors": 0,
+      "failures": 0,
+      "notebook_sha256": "7aee09457884734be389bdafc8f1aa8eadd3eaa96b8786311d1e97ebb0c47038",
+      "actual_discovery_code_executed": true,
+      "runtime_configuration_unchanged": true,
+      "board_fps_tested": false
+    },
+    "preview": {
+      "passed": true,
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "board_fps_tested": false
+    },
+    "package_ai": {
+      "passed": true,
+      "tests": 7,
+      "inference": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "1024",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "1049",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "4000",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "4023",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          }
+        ],
+        "actual_windows_ncnn": true,
+        "model_retrained": false,
+        "board_abi_gate_simulated_only_for_hash_preflight": true,
+        "actual_arm_ipc_or_board_fps_tested": false
+      },
+      "strict_abi_hash_identity_gates_preserved": true,
+      "source_sha256": {
+        "v99_ai_selftest.json": "bb26de89a7a9608e7facd2041572824eba04c32d75db34412a9e7b6c82987265",
+        "v98_ai_manifest.json": "f4bf0dc2693971d26302bbaf62e821b65eaa7e6040db4ab3b8a30b58ea95fcd0"
+      },
+      "board_tested": false
+    }
+  },
+  "unchanged_files_verified": [
+    "system.bit",
+    "system.hwh",
+    "system.manifest.json",
+    "v31_camera.py",
+    "v64_p1_backend.py",
+    "v75_ui.py",
+    "v64_camera_hdmi.py",
+    "v82_manual.py",
+    "v110_unified.py",
+    "v111_recovery.py",
+    "v87_acquire.py",
+    "v31_detection.py",
+    "v99_ai_service.py",
+    "v99_ai_worker.py",
+    "v99_ai_selftest.py",
+    "v84_snapshot.py",
+    "v92_manual_v87.py",
+    "v105_manual_tracking.py",
+    "v104_physical_tracking.py",
+    "v105_native.py",
+    "v105_reference.py",
+    "v108_hybrid_status.py",
+    "v108_hybrid_status.png",
+    "v97_3_target_hints.png",
+    "ai/plane.ncnn.param",
+    "ai/plane.ncnn.bin",
+    "ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so",
+    "bench_mem.cpp",
+    "v105_edges.cpp",
+    "v31_camera_native.cpp",
+    "v31_native.cpp",
+    "v64_io.cpp",
+    "v87_v74_native.cpp",
+    "v91_transaction.cpp"
+  ],
+  "recovery_controller_byte_identical": true,
+  "model_retrained": false,
+  "hardware_changed": false,
+  "native_kernel_changed": false,
+  "board_fps_tested": false,
+  "host_benchmark": {
+    "healthy_source_snapshot_and_geometry": {
+      "previous13_us": 272.17716666666666,
+      "paired14_us": 231.90758333333335,
+      "difference_us": -40.269583333333316,
+      "previous_rounds_us": [
+        39.64775,
+        281.5919166666667,
+        276.4005833333333,
+        214.08608333333333,
+        234.24458333333334,
+        254.52433333333335,
+        286.2861666666667,
+        274.174,
+        272.17716666666666
+      ],
+      "current_rounds_us": [
+        26.99908333333333,
+        30.296,
+        213.42708333333334,
+        232.39791666666665,
+        233.6965,
+        240.31416666666667,
+        231.90758333333335,
+        246.2045,
+        224.15241666666665
+      ]
+    },
+    "healthy_equal_visible_outline_compositor": {
+      "previous13_us": 2992.7156,
+      "paired14_us": 2802.4352000000003,
+      "difference_us": -190.28039999999964,
+      "previous_rounds_us": [
+        2215.4487999999997,
+        3049.5276,
+        3367.0544,
+        2861.1367999999998,
+        3168.7172,
+        2992.7156,
+        3350.1952,
+        2764.9576,
+        2701.2556
+      ],
+      "current_rounds_us": [
+        2215.9424,
+        2601.8408,
+        2611.408,
+        2802.4352000000003,
+        3038.8347999999996,
+        2930.8612000000003,
+        3080.8388,
+        2883.4503999999997,
+        2653.8163999999997
+      ]
+    },
+    "host_only": true,
+    "board_fps_tested": false,
+    "gc_disabled_during_measurement_like_active_GcBudget": true,
+    "source_sha256": {
+      "v113_live_preview.py": "8a2dda5a6eccf6eb9a41387a98bb375a33dbc867b1d717a90592d48c9f258a61",
+      "v115_pair_display.py": "03fe6f22ecc3e19993fa3dc4a1d92f4b19bfda75c27831c230f6048b4c9a2736",
+      "v64_hdmi_display.py": "98db5acb3c8c7e7605e3d1a48ed43b11d392dfb51080c9da57fcdfb5721fc56f"
+    },
+    "scope": "actual snapshot/metadata/compositor; fake HDMI submit and CPU CSC; same one quad, raw and output on both versions"
+  },
+  "pair_policy": "completed immutable raw+quad+actual pixels; no reference overlay; invalid/stall live raw only",
+  "recovery_cooldown": "3s first,5s all subsequent in episode; existing stable/new-target reset preserved"
+}

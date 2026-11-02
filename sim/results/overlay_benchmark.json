@@ -1,0 +1,60 @@
+{
+  "healthy_source_snapshot_and_geometry": {
+    "previous12_us": 33.03675,
+    "overlay13_us": 54.077083333333334,
+    "difference_us": 21.040333333333336,
+    "previous_rounds_us": [
+      27.36658333333333,
+      30.2775,
+      33.76916666666666,
+      36.7385,
+      40.462583333333335,
+      33.03675,
+      31.417166666666667,
+      34.42075,
+      32.83325
+    ],
+    "current_rounds_us": [
+      43.14658333333334,
+      43.13625,
+      55.187416666666664,
+      47.599583333333335,
+      86.70891666666667,
+      68.05841666666667,
+      84.005,
+      54.077083333333334,
+      46.95925
+    ]
+  },
+  "healthy_equal_visible_outline_compositor": {
+    "previous12_us": 2560.5312000000004,
+    "overlay13_us": 2672.088,
+    "difference_us": 111.55679999999984,
+    "previous_rounds_us": [
+      2151.9836,
+      2560.5312000000004,
+      2518.6908,
+      2663.3296,
+      2897.884,
+      2643.3016000000002,
+      2599.9107999999997,
+      2509.5144,
+      2446.0764
+    ],
+    "current_rounds_us": [
+      2409.3024,
+      2354.9436,
+      2672.088,
+      2794.3472,
+      3470.14,
+      2964.7492,
+      2605.0576,
+      2693.4452,
+      2507.8712
+    ]
+  },
+  "host_only": true,
+  "board_fps_tested": false,
+  "gc_disabled_during_measurement_like_active_GcBudget": true,
+  "scope": "actual snapshot/metadata/compositor with fake HDMI submit and CPU CSC; both versions draw same one quad"
+}

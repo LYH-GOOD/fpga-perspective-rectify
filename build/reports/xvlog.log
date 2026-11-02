@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/P11/light27_build/axis_light27.v" into library work
+INFO: [VRFC 10-311] analyzing module axis_light27
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/P11/light27_build/tb_light27.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_light27
+27

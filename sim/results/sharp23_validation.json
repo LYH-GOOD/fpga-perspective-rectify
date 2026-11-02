@@ -1,0 +1,907 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+  "host_tests": 506,
+  "suites": {
+    "test_man17_frontend": 42,
+    "test_man17_alignment": 8,
+    "test_man17_cycle": 23,
+    "test_man17_manual_equivalence": 4,
+    "test_man17_flow": 21,
+    "test_man17_tracking": 23,
+    "test_man17_owner_integration": 7,
+    "test_man17_policy": 18,
+    "test_man17_status": 22,
+    "test_man17_display": 34,
+    "test_man17_cancel": 6,
+    "test_man17_startup": 14,
+    "test_man17_preview": 9,
+    "test_man17_package_ai": 7,
+    "test_manual17_frontend": 19,
+    "test_manual17_policy": 26,
+    "test_manual17_display": 20,
+    "test_manual17_reference": 11,
+    "test_manual17_scope": 15,
+    "test_display18": 30,
+    "test_latency20": 36,
+    "test_reuse21": 45,
+    "test_profile22": 36,
+    "test_sharp23": 30
+  },
+  "tests": {
+    "display_validation.json": {
+      "passed": true,
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "actual_offer_compositor_slots_and_owner": true,
+      "board_fps_tested": false,
+      "source_sha256": {
+        "v115_pair_display.py": "8932b4ab0dd8401170fa78fa28fc72f291344d1ee911f15909d21b8b215c2abf",
+        "v116_continuity.py": "56ca6d27c3427a983e80322a4745c2223fb36fcb3087edc23ddb63fa2b4bbb0c",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8"
+      }
+    },
+    "frontend_validation.json": {
+      "passed": true,
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "source_sha256": {
+        "v110_unified.py": "4827c1e7b557437d5e9518e22698aba8630e243d6bba9363a3699c2c692446f7",
+        "v116_continuity.py": "56ca6d27c3427a983e80322a4745c2223fb36fcb3087edc23ddb63fa2b4bbb0c"
+      },
+      "actual_unified_frontend_exercised": true,
+      "backend_and_board_executed": false,
+      "current_pixels_not_cached": true
+    },
+    "man17_alignment_validation.json": {
+      "passed": true,
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false,
+      "scope": "real align_current orchestration; deterministic verifier stubs, separate real native bridge cases in flow suite"
+    },
+    "man17_cancel_validation.json": {
+      "passed": true,
+      "tests": 6,
+      "errors": 0,
+      "failures": 0,
+      "actual_acquire_worker_joined": true,
+      "running_native_calls_not_preempted": true,
+      "board_tested": false
+    },
+    "man17_cycle_validation.json": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "due_probe_median_us": 733.1,
+        "due_probe_p95_us": 1259.765,
+        "maximum_probe_hz": 2,
+        "small_shape": [
+          120,
+          160
+        ],
+        "host_only": true,
+        "healthy_measured_frame_probes": 0
+      },
+      "board_tested": false
+    },
+    "man17_display_validation.json": {
+      "passed": true,
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "actual_offer_compositor_slots_and_hdmi_owner_loop": true,
+      "board_fps_tested": false,
+      "source_sha256": {
+        "v115_pair_display.py": "8932b4ab0dd8401170fa78fa28fc72f291344d1ee911f15909d21b8b215c2abf",
+        "v113_live_preview.py": "96e9a09ccb4ad9f2d870cf23e9a58c46d41022b41b39ece59542c53f523cadfd",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8",
+        "v31_camera.py": "b6b029abe9189866f22c7dadc9e6c07948c62bad204d4bc330ad022209d4cf85"
+      }
+    },
+    "man17_equivalence_validation.json": {
+      "passed": true,
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "real_manual_frontend": true,
+      "real_persistent_tracker": true,
+      "hardware_planner_stubbed": true,
+      "board_tested": false
+    },
+    "man17_flow_validation.json": {
+      "passed": true,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false
+    },
+    "man17_frontend_validation.json": {
+      "passed": true,
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "controller_sha256": "f873b89cefd37fbf1be38c655575f846b9e8a87e2f3392e121ede0187a37d7de",
+      "benchmark": {
+        "iterations_per_round": 30000,
+        "rounds": 7,
+        "baseline_us": 7.66897,
+        "wrapped_us": 21.772313333333333,
+        "additional_us": 14.103343333333333,
+        "one_core_percent_at_30fps": 0.04231003,
+        "host_only": true,
+        "board_fps_measured": false
+      },
+      "board_tested": false
+    },
+    "man17_owner_validation.json": {
+      "passed": true,
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Real owner function body with fake devices/queue; no physical board"
+    },
+    "man17_package_ai_validation.json": {
+      "passed": true,
+      "tests": 7,
+      "inference": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "1024",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "1049",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "4000",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "4023",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "5020",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "5055",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "5067",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          },
+          {
+            "id": "5094",
+            "max_corner_drift_px": 0.0,
+            "passed": true
+          }
+        ],
+        "actual_windows_ncnn": true,
+        "model_retrained": false,
+        "board_abi_gate_simulated_only_for_hash_preflight": true,
+        "actual_arm_ipc_or_board_fps_tested": false
+      },
+      "strict_abi_hash_identity_gates_preserved": true,
+      "source_sha256": {
+        "v99_ai_selftest.json": "d5a97ab88b6259d2958aa01252e4efcf7e2f18ce23a278a4f5aa3273ccd478fd",
+        "v98_ai_manifest.json": "2f9228e0aaba0d31570136511ea902bbf6d2d4c39008a79b8b21d9f2cf578eb1"
+      },
+      "board_tested": false
+    },
+    "man17_policy_validation.json": {
+      "passed": true,
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+      "source_sha256": "3dd25fb40cfc881994e9b723fb22c3a30351a6360fa22ffd94f92181b9796653",
+      "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+      "benchmark": {
+        "iterations_per_round": 100000,
+        "rounds": 7,
+        "measurements": {
+          "completed_current": {
+            "median_us": 1.911152,
+            "max_round_us": 2.09612,
+            "one_core_percent_at_30fps": 0.005733456
+          },
+          "rejected_held": {
+            "median_us": 0.122943,
+            "max_round_us": 0.17537799999999998
+          },
+          "healthy_tick": {
+            "median_us": 1.014389,
+            "max_round_us": 1.245768
+          }
+        },
+        "timing_includes_row_update_and_timestamp_arithmetic": true,
+        "measured_on": "Windows host Python; ARM/board FPS not measured"
+      },
+      "host_callback_budget_us": 100.0,
+      "host_callback_budget_passed": true,
+      "board_tested": false,
+      "limitations": [
+        "Controller must generation-gate asynchronous completion callbacks.",
+        "Live camera sequence must increase within each automatic epoch.",
+        "No ARM/HDMI/camera timing validation performed here."
+      ]
+    },
+    "man17_preview_validation.json": {
+      "passed": true,
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "board_fps_tested": false
+    },
+    "man17_startup_validation.json": {
+      "passed": true,
+      "tests": 14,
+      "errors": 0,
+      "failures": 0,
+      "notebook_sha256": "473f4c20b6b644cc8935364607374dcfc802e1784fe3f1ca8584508cffeca847",
+      "actual_discovery_code_executed": true,
+      "runtime_configuration_preserved_except_hybrid_and_identity": true,
+      "board_fps_tested": false
+    },
+    "man17_status_validation.json": {
+      "passed": true,
+      "tests": 22,
+      "failures": [],
+      "asset_build": null,
+      "performance": {
+        "host_python": "D:\\p11_ai_training\\.venv\\Scripts\\python.exe",
+        "host_opencv": "4.11.0",
+        "native_canvas_size": [
+          1280,
+          720
+        ],
+        "cache_selection_and_rate_format_median_us": 2.1958,
+        "existing_footer_patch_and_english_text_median_us": 130.5782,
+        "atlas_decoded_bytes": 3870720,
+        "chinese_badge_patch_bytes": 26880,
+        "new_full_frame_copies": 0,
+        "scope": "Host-only small-footer microbenchmark; no camera, AI, HDMI DMA or board FPS measured."
+      },
+      "previews": [
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\auto_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\ai_infer_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\ai_held_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\ai_manual_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\empty_wait_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\alignment_failed_auto_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\recovery_cooldown_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\manual_lost_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\man17_status_previews\\all_hybrid_footer_states.png"
+      ],
+      "source_sha256": {
+        "v108_hybrid_status.py": "5a9996844fd61a7bcf2e535f2b9f2009dae7a5e59d7556ac3f5937c43ffa5583",
+        "v108_hybrid_status.png": "0c454c62b65ddae55863d08a2df0065b62439af11e369c6a38d9eacd459f9a38",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8"
+      },
+      "board_fps_tested": false,
+      "board_touch_tested": false,
+      "physical_hdmi_scan_tested": false,
+      "notes": [
+        "Chinese status labels are cached read-only 320x28 atlas views.",
+        "Valid correction rate is supplied by completed CURRENT corrections; DISP is owner submission rate.",
+        "No per-frame Pillow/font/image decode, model call, animation, or extra full-frame copy.",
+        "Native 1280x720 layout, video ownership and touch controls are unchanged."
+      ]
+    },
+    "man17_tracking_validation.json": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "physical4": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.9406499995966442,
+          "p95_ms": 2.9267799998251576,
+          "max_corner_error": 1.4406582465965887
+        },
+        "trackfix5": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.0990999999194173,
+          "p95_ms": 1.63420000003498,
+          "max_corner_error": 1.435545449620178
+        }
+      },
+      "board_tested": false
+    },
+    "policy_validation.json": {
+      "passed": true,
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "source_sha256": {
+        "v111_recovery.py": "f873b89cefd37fbf1be38c655575f846b9e8a87e2f3392e121ede0187a37d7de",
+        "v75_ui.py": "190c69753a50f193831d2fd55db2555e8c88a37c8f68f113baee2c6fadd87e4c"
+      },
+      "hardware_tested": false,
+      "ai_lock_released_on_acquired_target_loss": true
+    },
+    "reference_validation.json": {
+      "passed": true,
+      "tests": 11,
+      "source_sha256": {
+        "v117_manual_reference.py": "9cda5c5b3d0d0b7946523bf0b46fa66156a0ab87cf9beac9161ea99eb84a48b1"
+      },
+      "real_opencv_lk_executed": true,
+      "native_arm_lk_executed": false,
+      "board_tested": false
+    },
+    "scope_validation.json": {
+      "passed": true,
+      "tests": 15,
+      "source_sha256": {
+        "v75_ui.py": "190c69753a50f193831d2fd55db2555e8c88a37c8f68f113baee2c6fadd87e4c",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8",
+        "v82_manual.py": "ce93efc3b8169b6f4b7815282fc7a40080385d417516ad61f83feb3b5a2fb10b",
+        "v116_continuity.py": "56ca6d27c3427a983e80322a4745c2223fb36fcb3087edc23ddb63fa2b4bbb0c",
+        "v117_manual_reference.py": "9cda5c5b3d0d0b7946523bf0b46fa66156a0ab87cf9beac9161ea99eb84a48b1"
+      },
+      "board_tested": false
+    },
+    "focused_validation.json": {
+      "passed": true,
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "actual_compositor": true,
+      "actual_prepare_queue": true,
+      "actual_output_slots": true,
+      "hardware_owner": "stand-in",
+      "board_tested": false,
+      "source_sha256": {
+        "v118_display_continuity.py": "da854f0156472711ac159867fa9eeb7cf7ae1576557d3f3d2274b4db527f609d",
+        "v115_pair_display.py": "8932b4ab0dd8401170fa78fa28fc72f291344d1ee911f15909d21b8b215c2abf",
+        "v113_live_preview.py": "96e9a09ccb4ad9f2d870cf23e9a58c46d41022b41b39ece59542c53f523cadfd",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8",
+        "v64_camera_hdmi.py": "0db181d76916f42f17e85bdcc9b119733e3dfd0463047259656791e3965b4390",
+        "v82_manual.py": "ce93efc3b8169b6f4b7815282fc7a40080385d417516ad61f83feb3b5a2fb10b"
+      }
+    },
+    "current_policy_validation.json": {
+      "passed": true,
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "source_sha256": {
+        "v111_recovery.py": "f873b89cefd37fbf1be38c655575f846b9e8a87e2f3392e121ede0187a37d7de",
+        "v99_ai_service.py": "7b1e0a507fdc7fea1b58a01ed88e6b722082fa54920121670294dffc9043479d"
+      },
+      "actual_service_actor": true,
+      "model_process": "stand-in",
+      "board_tested": false
+    },
+    "reuse_validation.json": {
+      "passed": true,
+      "tests": 45,
+      "failures": 0,
+      "errors": 0,
+      "source_sha256": {
+        "benchmark_physical_tracking.py": "f0f6224450edc356b7256d6e0550aff65c0f3ddf3fca90e8eb2dd578d82e666b",
+        "bench_b1.py": "c37d0ce27d78960d907ed30709f2e2a511beded3cad5dc350a61c8d5fa4f741b",
+        "display18_cpu_check.py": "fc57cf27b08f9fa3fb81585af807a0782b2141b7fe8b21a83ae1ca15932d4dbb",
+        "find_homography.py": "844b407e3f781158e03c4a215842b6ed3ac397c84c79a826a1ebc51b492d048c",
+        "hotfix_cpu_check.py": "285ef342f8afb69df4ddf901d361f1116fd0e967e801332edadebdf52d2c4ba5",
+        "hybrid_cpu_check.py": "44349d13727a2b8087b2b24791ea116844313b643285050501c0cb7fe1de0393",
+        "live_cpu_check.py": "f540fc6634fa972f3a88ac923e9c73c1250973d996dd07dc84b05bbe6e64ef9b",
+        "manual17_cpu_check.py": "77f819b5f69a6e8495bf89e26f706e783c7156f9fa099bedcc0803c2d0014f6b",
+        "overlay_cpu_check.py": "a6d043396fd665e9aafb2c3128b1ec97f56d919e28e405f0fb39f0b23fd443c5",
+        "p11_contract.py": "19f71e6b3367a87cb9b3172bc08c3c9184e595f74e03a925514126ca044bbb59",
+        "p1_paper_quad.py": "c4692fd719907ea33ad49be6d080c0dd1f5260010995eae49093511a9b6e421a",
+        "paired_cpu_check.py": "4e1a3bed7bb6355cd4aa0abe348be6afd8537bf457970c108457fe3f42ae70bb",
+        "pl_fields.py": "cfbbfa7d1ace7ef9334c3ad89bba8af48027cc1d3276db1970661ac88afa32ad",
+        "profile22_cpu_check.py": "6e031b7fcbd9f5ccb18c7d2a97e042f6764ef1f7cb8ca3e73cbe4e61f413754c",
+        "recovery_cpu_check.py": "35529e12858ba6b62579b9557875fb06144336984abd60f0088eba2796649fee",
+        "reuse21_cpu_check.py": "bb9f28f7dd053921a099a3d9029f3c4e063e95fce514d33061075cc747078b0f",
+        "run_logging.py": "6c83d539e14944a79b7741e0b0f6b3a416b9b7f7151cec34821dab0f9235788d",
+        "sharp23_board_check.py": "75313691fd3641a2c220bfdda5b7fab8a826a214d1e30171c66abb6959ff8400",
+        "sharp23_cpu_check.py": "138f93ae7dab1bd7acb344e8a4db58f903c8e8365d95eba4665324c4b335fedc",
+        "smooth_cpu_check.py": "3bd2abfa56043bccf9857cda2ff9c126a9dbf3dee1116ccbb122359d04bcb28a",
+        "trackfix_baseline_physical4.py": "ca3e62ec29f20dded2ed96247e7b81143a463740248538cd6caf1f037382057e",
+        "trackfix_cpu_check.py": "3778721a117a6ba6df6f79d8443756b372897a1a8aefdd9867c4707a2aea889e",
+        "unified_cpu_check.py": "98164e09d2e8d547daab483cbdfeb37f41cfc19dc60ced62609120fcbaaa0a3a",
+        "v100_ai_image.py": "d460404c4ca196ca39ae30a9e9001104805938ac953de40ac377c5605b234812",
+        "v100_ai_tracking.py": "c5a156da5ef7f8b58cf5074a22d9dfb790916a1276a492252642a4d344fdec27",
+        "v101_ai_camera.py": "402aaaa6a3dfaf64d88e4fb478577462e6fd728e78c6494d888316b932366468",
+        "v102_ai_selection.py": "b9e73ec9e24beacf5f92d518ea298c1be3b0064543964f2f487943869eef40a9",
+        "v104_physical_tracking.py": "fa291b77a35cb388dca756e2c7098398285658551dac4d6c2da88a7a96554163",
+        "v105_manual_tracking.py": "ecd2efd1abb141b4261da5e285c4ae522edd2663edfb185550ffb8bebafa342d",
+        "v105_native.py": "31475d53f481580fa34f5e1551cd2456f1ec36c2c9efc6e8b5485ecbfb352188",
+        "v105_reference.py": "eec04513ca599b352288524676dc30b9e1dc6399d2388507f9368856d4f83d62",
+        "v107_hybrid.py": "79ba99a36fea1b0ad87f8ce759c8beb5d7c563cfed631657f730879952ab9397",
+        "v107_policy.py": "3dd25fb40cfc881994e9b723fb22c3a30351a6360fa22ffd94f92181b9796653",
+        "v108_hybrid_status.py": "5a9996844fd61a7bcf2e535f2b9f2009dae7a5e59d7556ac3f5937c43ffa5583",
+        "v109_target_cycle.py": "8186aa31933c57e1db80fa93783e1f492f1297332013714989c7771f593a6dde",
+        "v10_quad.py": "c0c5aebd30c24631517a8d473942c56b0f26046d658a75321719774f7cacba4e",
+        "v110_unified.py": "4827c1e7b557437d5e9518e22698aba8630e243d6bba9363a3699c2c692446f7",
+        "v111_recovery.py": "f873b89cefd37fbf1be38c655575f846b9e8a87e2f3392e121ede0187a37d7de",
+        "v112_display_hold.py": "f2f99737a982b1938ab7d36eaf15dfff028b0345e612b74ac150966f7d0ff0c2",
+        "v113_live_preview.py": "96e9a09ccb4ad9f2d870cf23e9a58c46d41022b41b39ece59542c53f523cadfd",
+        "v114_geometry_overlay.py": "fc09369e907829ff0eee3bd57225da4e3dad5afad718aad8e9d34afec0acb53b",
+        "v115_pair_display.py": "8932b4ab0dd8401170fa78fa28fc72f291344d1ee911f15909d21b8b215c2abf",
+        "v116_continuity.py": "56ca6d27c3427a983e80322a4745c2223fb36fcb3087edc23ddb63fa2b4bbb0c",
+        "v117_manual_reference.py": "9cda5c5b3d0d0b7946523bf0b46fa66156a0ab87cf9beac9161ea99eb84a48b1",
+        "v118_display_continuity.py": "da854f0156472711ac159867fa9eeb7cf7ae1576557d3f3d2274b4db527f609d",
+        "v119_profile_ui.py": "08bf9eae20c563d704bc4e711cda63ffd034010ba85467e4e4c739d9a3c06cf6",
+        "v120_image_settings.py": "bf38000f4d1f19832655ca89ec711a4bb067d03feba671891a5f1b8f0146c267",
+        "v120_sharp.py": "6f6ae4c6c1ae77f0fbde5c1d2a72870dfda211f4297f7582d5fd599bf617f707",
+        "v14_planner.py": "01934b97e743599d27f9687a0fdceb5c854a8c683b6860de4e8e70aafb45afcc",
+        "v31_camera.py": "b6b029abe9189866f22c7dadc9e6c07948c62bad204d4bc330ad022209d4cf85",
+        "v31_crash.py": "6e3ac1b6c3540fd13002c40168d65d4c2f26a19bdde31edd2b0ea28e72153d39",
+        "v31_detection.py": "a48930e65eb7d7393fe90869749b49e94d84db43e1394b0da3ffa83630296d08",
+        "v31_diagnostics.py": "6889029fac54caa0e6f1de77bff646366c2ab1877b441536528d04c77f43dab7",
+        "v31_gc_budget.py": "114455a03f3114f333a4360c91b1ba155cb07e1435fc416abba007d9b93674f5",
+        "v31_native.py": "f2578e5250515d7063940679b1f9e3f5bfb310c54b5b7c6eb503097c5a0f8bd8",
+        "v31_pixels.py": "746a525d812e8d6168ef25bfde991eeb0b7279457a80c0361a1a9f241096fe98",
+        "v31_startup.py": "9e234999cf807747d436bad78a532710ccc0fe8838d62b0c3f63f821e32748a3",
+        "v31_tracking.py": "5aea227866923909f7c7cce6f1075fe2cd89c7f64d73423cff81f8253738da88",
+        "v41_quad.py": "64fd63d8727f073a02faa11a7c4aaf4187d5d7d092e57f5294c654e4c9138d59",
+        "v45_color.py": "3e75becd9e168ffb2a705b4234cf5421c1dc312778f03185032338e6c058fd4e",
+        "v48_candidates.py": "b2cb15e937fc7f349fca4c5f9619301d576f9c38b12045e328529e7815d175b0",
+        "v49_boundary.py": "52379caa4c725972bb35a53169605db7189e15deb7927d6e40a9ed18273e8705",
+        "v50_orientation.py": "a5da6503b21ae0ecd2916cf5d1792c4043b410dfcfed9d6ba4e0d3aedede443c",
+        "v51_target.py": "62eafa3f95d912d4d51ebf9a60b2ca24b1c7823d8a35b0a0ff820bbc81090e72",
+        "v58_budget.py": "796a828f0b6078b88b6fd2198474f9f169362eccb7cd2459b0512dc8c8e43a5a",
+        "v58_recovery.py": "4530dff20fff3b12c18790602292a180fb44b8eb714224205bc4025ce512ffaa",
+        "v62_boundary.py": "ad17d3316b7998fcc41673a56ccfadc24e84ccaed420cec0708eec6de6c25a08",
+        "v62_exterior.py": "084600faa932aecd2879c35bfe9cf87c09dec96b328f5d429a23b0ff479dd12a",
+        "v62_policy.py": "cc307c458dc25ae98c29075965c61bca145b4081220d16c9d8f91c2430411270",
+        "v64_camera_hdmi.py": "0db181d76916f42f17e85bdcc9b119733e3dfd0463047259656791e3965b4390",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8",
+        "v64_io.py": "3670a66096319eb941f0544c7613d70f57d689c048c23e3e788c27e02f4cae59",
+        "v64_p1_backend.py": "6940a86f346550117bf9f43ec52c9624d0aa38596933e8a5f0853bb18b6220a3",
+        "v67_observation.py": "6eb20d04f2524b75ae87d6558564cdef7194d31c3aca941e9a61e6755df38cd9",
+        "v68_stability.py": "b15639021b881e3b8be19f7d929369f1ca6d63cf0a7b3f724c34f67ccc9abdb8",
+        "v69_policy.py": "45d491f60ad0ef0a99906c55f025b2160085d9a2e98b1c979d8275993d996085",
+        "v70_hdmi_timing.py": "89ef9706472977dcfc3cdbbd59b95d5b3a3e297a271d0fe56bec97abf546fa46",
+        "v70_ps.py": "5c809b9aa3b32eac5234dc95ffc77b873d45310fe252ace4ab0084168b7cfc33",
+        "v71_display.py": "04b79471e9c8a4758f68f9d3170345a09ca4be15c62926d4890093b9ada37aa8",
+        "v73_ratio.py": "fe5a6a1684547d3da47e17104b31135702ce5ce494c1e63d5a901398ceb9807b",
+        "v73_ratio_ui.py": "5055ae663bb7d882d8fbd973559a5dbd08b02791b5db18c634b79d98caff9744",
+        "v741_reading.py": "ef2bfc44dc9bf6bdd2d010af99b1b0072eec203d2a9cf25924e4ff3c99c4f138",
+        "v74_hold.py": "db8095c59b9020548da4dc3ac97b9ddb06741665ac0db0dc4ff1f57203770ed2",
+        "v75_hotswitch.py": "03b909645b4566382bda8c131283c5dc4a6e531072487356d3dafb7549ab7282",
+        "v75_touch.py": "c4550895a12c35c38dd569832fde11e3ad96a25b25956f9102677fca25582e7b",
+        "v75_ui.py": "190c69753a50f193831d2fd55db2555e8c88a37c8f68f113baee2c6fadd87e4c",
+        "v76_snapshot.py": "534b7a624f59ef5ef7dc9747a2c4113050a4b90ead4495113e6c4ff5adac2bfc",
+        "v78_localization.py": "b8c5b844ca41e35d23c1a3e54ff33b921e10c3b505782e6bff0c52d52ea2d5a7",
+        "v79_acquire.py": "c244feaa58bb8b15793e3f3aac98545aa80974843ffc9c9df524d00c2bf2de7d",
+        "v79_setup.py": "81bffe1b5e6a79e1ba553d08133f2d0d1c06c2c72e95d0d3a7011549a8b67401",
+        "v80_cache.py": "8c036ac92dad71f9de9430c7b3db76dedee4b579dddf811c929d7b7e01071a13",
+        "v81_evidence.py": "5ac98f9480ce424bd96160a8981bc637e3112e38efc888b415676d991790d12c",
+        "v82_assets.py": "eb1d2040260ad2348f42c6059e612817372e5f7ba3355bdab690932b208ac419",
+        "v82_interaction.py": "ed7cea71dda818316c7214603f3094ef2de55da8757ae7cd1f236ebc367732b1",
+        "v82_manual.py": "ce93efc3b8169b6f4b7815282fc7a40080385d417516ad61f83feb3b5a2fb10b",
+        "v83_recovery.py": "60496a5353db980af687ba6c021885e72b3c4c86ea3e7163b525e19e56d94b2c",
+        "v84_color.py": "2ded710133d101914fe219ba0d93f092df54e88ce813dd17829fc985770a169c",
+        "v84_prebuilt.py": "fce239cbdfe3bbbb20243beb8a76dc85b749bb332f4363a2fbd4e162f2848e51",
+        "v84_snapshot.py": "a46e53c8711f6be3cf6649dcf89936bc6950f2d25f2dc9328dd5c4c785fe80db",
+        "v85_boundary.py": "20834557f13e7d6213f38d3d1b2c2a24ed84f88cb96af1025b3c07f2a7fff2dd",
+        "v85_candidates.py": "66c4c1981c4b2e873b4f5944c60253410b0eab8ff8a9c3bfda2395596f6cc402",
+        "v86_candidates.py": "5e4ea7be4e4c5d07650186019bd2164f8b4b1d7c8f220a74bb602b4d6c849fb3",
+        "v86_policy.py": "8d1b6d242160238e2bdc79c412a24b803773595919526c780fa9553f75a522d5",
+        "v86_tracking.py": "a83dae0806da0eebd7e2e17098719b4c4b5f950dca7bd9aecb3051f95bfd8f3c",
+        "v87_acquire.py": "82f34f09a32e6e04ed3ef8d3858a8c64678ba49f2b09320c5feb431025adcf80",
+        "v87_v74_native.py": "fa479eb5e8677c42b7d6efdce177f394c7c803723527fb6bc7ca02682ce325f5",
+        "v87_v74_tracking.py": "fcc2c79a02f01fc7fd26bd40d9e885b607163e910cb754ab185f920832c85663",
+        "v88_motion.py": "2f6f3dff114f80de0f19c6277500fe392f9bf0550254002c3f30ee710b88866f",
+        "v88_recovery.py": "34cde044a1d7ef37e4787d1bf6715c08ea07745bccfda65050cc208effc1a1d1",
+        "v8_geometry.py": "76eb339f1123378f2422d20ee915f82a78ab900641f5d77baf71279984dc7e16",
+        "v8_plan.py": "555f4cc21e8038255083830e28ccbb19e3aa94818eee75160d148184a005b854",
+        "v8_surface.py": "137c571c751285b48738f81858817a5354bb1df9ce23f899428b6bc84619a758",
+        "v8_tables.py": "2038d3cfd370baf0458d4460b83b4f8270b17a0a90197ff1db32d842fab9e98b",
+        "v90_lk.py": "7798581bc33ba87c0da1fdf8190c33b47f1fd6635b078e7e05ad6040dafbc12d",
+        "v90_transaction.py": "01bdbe776a8ebf5bac7cda3f3c627cea80c0ef755679a9c3210915f72b173baf",
+        "v91_native.py": "706ea603802ebaefadb602c32cb74787887572bf18d85459de33c53fdca4f96b",
+        "v91_policy.py": "6d9e830abe9c7ebc246882a2e58358cac84994bbf2ab2ea53b3408db8f4ea5fe",
+        "v92_manual_v87.py": "595aa1037a363056005dc699eccd00ebac748628f0edb780dd570c5f86048d18",
+        "v94_audit.py": "626f7808112be88852692ba6b7fb3fa0f22c54cb77215913ac8df62240c96ab8",
+        "v97_album.py": "d5baffed244686bd49904c791e546f82aaf5b1e2681b9b06b315428732f793ea",
+        "v98_ai_geometry.py": "b20031ca086a46d61d9cbd25d9e1843e3210ee727a0106874d158fce62be326e",
+        "v98_ai_request.py": "693e23137fcbe8b6f8ad8c8847c03d995c5afeee0362277c11eeb0ef91a8e6eb",
+        "v98_ai_worker.py": "e3c9982c30462c4cbd0bc9dd6f06da5339b27efc801a209f9c3928b1f3b910e4",
+        "v99_ai_protocol.py": "565e7e08436c53d6a3bab088564382fe980a6596563795c982d31b471b2459d7",
+        "v99_ai_selftest.py": "2a5c78cd5ad4d0ed7e93efb55c49a21552d1ea565ab4fe3a0278a940fcf2883a",
+        "v99_ai_service.py": "7b1e0a507fdc7fea1b58a01ed88e6b722082fa54920121670294dffc9043479d",
+        "v99_ai_ui.py": "ab79d26843e40a122f1a3dc20a6a13e15235771854b2e68cd2f473f4e729c25e",
+        "v99_ai_worker.py": "fece3675574dfc4965ba88534e6049ad0bccdf33b3cade86d2457e5525bc4c89"
+      },
+      "real_UI_broker_and_service_actor": true,
+      "capture_driver": "stand-in",
+      "board_tested": false
+    },
+    "profile_validation.json": {
+      "passed": true,
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "real_UI_callback_and_compositor": true,
+      "source_sha256": {
+        "v119_profile_ui.py": "08bf9eae20c563d704bc4e711cda63ffd034010ba85467e4e4c739d9a3c06cf6",
+        "v64_hdmi_display.py": "e862e56203e5719514f978eb756e6873781de1ebd311814d6c81a9c197e4acb8",
+        "v75_ui.py": "190c69753a50f193831d2fd55db2555e8c88a37c8f68f113baee2c6fadd87e4c"
+      },
+      "board_tested": false
+    }
+  },
+  "Windows_ncnn_cases": 8,
+  "CPU_smoke": {
+    "passed": true,
+    "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+    "previous_cpu_check": {
+      "passed": true,
+      "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+      "previous_cpu_check": {
+        "passed": true,
+        "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+        "previous_cpu_check": {
+          "passed": true,
+          "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+          "display_policy_checks": 4,
+          "previous_cpu_check": {
+            "passed": true,
+            "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+            "manual_reference_checks": 6,
+            "progress_checks": 3,
+            "manual_corner_max_error_px": 2.000488296147524,
+            "native_lk_executed": false,
+            "previous_cpu_check": {
+              "passed": true,
+              "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+              "pair_checks": 9,
+              "previous_cpu_check": {
+                "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                "passed": true,
+                "preview_and_cancel_checks": 6,
+                "previous_cpu_check": {
+                  "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                  "passed": true,
+                  "timer_reset_checks": 4,
+                  "previous_cpu_check": {
+                    "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                    "passed": true,
+                    "budget_checks": 3,
+                    "previous_cpu_check": {
+                      "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                      "passed": true,
+                      "target_cycle_checks": 3,
+                      "previous_cpu_check": {
+                        "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                        "passed": true,
+                        "policy_checks": 4,
+                        "output_hook_mean_us": 1.5036499999951047,
+                        "machine": "AMD64",
+                        "native_edge_check": {
+                          "release_id": "p11-rgb-pspl-v9-ai-sharp-20261030-23",
+                          "passed": true,
+                          "platform": "Windows-10-10.0.26200-SP0",
+                          "machine": "AMD64",
+                          "native_executed": true,
+                          "native_arm_executed": false,
+                          "native_source_sha256": "39c4e4c90edbba6e78109f5709b4063ed8eadfcbfb1e218fc8691b3c4e9d7f33",
+                          "timing": {
+                            "physical4": {
+                              "current": 59,
+                              "total": 59,
+                              "median_ms": 1.7787000001590059,
+                              "p95_ms": 2.3908449999453287
+                            },
+                            "trackfix5": {
+                              "current": 59,
+                              "total": 59,
+                              "median_ms": 1.001850000648119,
+                              "p95_ms": 1.359039999624656
+                            }
+                          },
+                          "real_camera_fps_measured": false,
+                          "scope": "CPU recorded/synthetic input only; actual output FPS requires live board run-result.log"
+                        },
+                        "live_board_fps_measured": false,
+                        "scope": "CPU input-only installation smoke; compare live normal AUTO tracking via run-result.log"
+                      },
+                      "machine": "AMD64",
+                      "live_board_fps_measured": false,
+                      "scope": "CPU-only synthetic input and unchanged native edge kernel; not live camera/FPS acceptance"
+                    },
+                    "machine": "AMD64",
+                    "live_board_fps_measured": false,
+                    "scope": "CPU synthetic/policy checks and unchanged native edges; not live recovery/FPS acceptance"
+                  },
+                  "live_board_fps_measured": false,
+                  "scope": "CPU clock/reset and unchanged native checks; board FPS pending"
+                },
+                "live_board_fps_measured": false,
+                "scope": "CPU-only RAM/ownership/cancel/native; no camera/HDMI/PL"
+              },
+              "live_board_fps_measured": false,
+              "scope": "CPU/native and bounded pair metadata; no camera/HDMI/PL"
+            },
+            "live_board_fps_measured": false,
+            "hardware_opened": false
+          },
+          "hardware_opened": false,
+          "live_board_fps_measured": false
+        },
+        "reuse_policy_checks": 12,
+        "cooldown_s": 2,
+        "capture_native": null,
+        "hardware_opened": false,
+        "live_board_fps_measured": false
+      },
+      "actual_profile_metadata_check": true,
+      "hardware_opened": false,
+      "board_FPS_tested": false
+    },
+    "sharp_pair_SHA_CRC_graph_checked": true,
+    "sharp_request_and_mock_MMIO_checked": true,
+    "sharp_UI_metadata_checked": true,
+    "hardware_opened": false,
+    "RTL_simulation_run": false,
+    "board_FPS_tested": false
+  },
+  "normal_display_benchmark": {
+    "completed": true,
+    "rounds": 9,
+    "measurements": {
+      "display_batch_us": {
+        "previous22": 2889.7318333333333,
+        "current23": 2888.3733333333334,
+        "difference_us": -1.3584999999998217,
+        "difference_percent": -0.04701128265015564
+      },
+      "display_median_us": {
+        "previous22": 2749.6000000000004,
+        "current23": 2768.0,
+        "difference_us": 18.399999999999636,
+        "difference_percent": 0.6691882455629683
+      },
+      "display_p90_us": {
+        "previous22": 3372.9,
+        "current23": 3406.6,
+        "difference_us": 33.69999999999982,
+        "difference_percent": 0.9991402057576426
+      },
+      "ready_queue_take_us": {
+        "previous22": 1.142228,
+        "current23": 1.222496,
+        "difference_us": 0.080268,
+        "difference_percent": 7.027318538855631
+      }
+    },
+    "raw_rounds": {
+      "22": [
+        {
+          "version": 22,
+          "display_batch_us": 3082.4031666666665,
+          "display_median_us": 3002.9,
+          "display_p90_us": 3638.7,
+          "ready_queue_take_us": 1.142228,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2575.2835,
+          "display_median_us": 2595.45,
+          "display_p90_us": 3238.4,
+          "ready_queue_take_us": 0.82067,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2889.7318333333333,
+          "display_median_us": 2749.6000000000004,
+          "display_p90_us": 3460.3,
+          "ready_queue_take_us": 1.24716,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2934.8933333333334,
+          "display_median_us": 2787.6,
+          "display_p90_us": 3450.0,
+          "ready_queue_take_us": 1.2915560000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2861.641,
+          "display_median_us": 2716.3999999999996,
+          "display_p90_us": 3310.9,
+          "ready_queue_take_us": 1.4696300000000002,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2808.076,
+          "display_median_us": 2676.1,
+          "display_p90_us": 3234.5,
+          "ready_queue_take_us": 1.118288,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2841.7271666666666,
+          "display_median_us": 2716.15,
+          "display_p90_us": 3306.6,
+          "ready_queue_take_us": 1.099906,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 3047.6313333333337,
+          "display_median_us": 2922.65,
+          "display_p90_us": 3738.9,
+          "ready_queue_take_us": 1.2146020000000002,
+          "owner_remember_included": true
+        },
+        {
+          "version": 22,
+          "display_batch_us": 2889.811,
+          "display_median_us": 2758.05,
+          "display_p90_us": 3372.9,
+          "ready_queue_take_us": 1.0871199999999999,
+          "owner_remember_included": true
+        }
+      ],
+      "23": [
+        {
+          "version": 23,
+          "display_batch_us": 3077.5695,
+          "display_median_us": 2951.7,
+          "display_p90_us": 3803.1,
+          "ready_queue_take_us": 1.2930760000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2830.1148333333335,
+          "display_median_us": 2720.95,
+          "display_p90_us": 3289.3,
+          "ready_queue_take_us": 1.4809,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2829.0296666666663,
+          "display_median_us": 2698.8999999999996,
+          "display_p90_us": 3300.8,
+          "ready_queue_take_us": 1.12702,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2862.696,
+          "display_median_us": 2727.5,
+          "display_p90_us": 3336.4,
+          "ready_queue_take_us": 1.222496,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2984.0641666666666,
+          "display_median_us": 2811.25,
+          "display_p90_us": 3507.7,
+          "ready_queue_take_us": 1.171138,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2927.671,
+          "display_median_us": 2789.25,
+          "display_p90_us": 3467.7,
+          "ready_queue_take_us": 1.308398,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2859.624,
+          "display_median_us": 2729.6,
+          "display_p90_us": 3355.3,
+          "ready_queue_take_us": 1.294772,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2981.0446666666667,
+          "display_median_us": 2848.05,
+          "display_p90_us": 3505.7,
+          "ready_queue_take_us": 1.10691,
+          "owner_remember_included": true
+        },
+        {
+          "version": 23,
+          "display_batch_us": 2888.3733333333334,
+          "display_median_us": 2768.0,
+          "display_p90_us": 3406.6,
+          "ready_queue_take_us": 1.160524,
+          "owner_remember_included": true
+        }
+      ]
+    },
+    "actual_offer_compositor": true,
+    "ready_queue_take": true,
+    "healthy_owner_remember_included": true,
+    "CPU_color_conversion_standins": true,
+    "fake_HDMI": true,
+    "host_only": true,
+    "board_fps_tested": false
+  },
+  "actual_compositor_render": {
+    "actual_compositor": true,
+    "resolution": [
+      1280,
+      720
+    ],
+    "images": [
+      "resolution_panel.png",
+      "sharp_candidate.png",
+      "sharp_waiting.png",
+      "sharp_enabled.png",
+      "multi_tile_bypass.png",
+      "closed_live.png",
+      "switch_600.png",
+      "waiting_new_profile_frame.png",
+      "first_profile_frame.png"
+    ],
+    "fake_capture_and_PL": true,
+    "board_tested": false
+  },
+  "changed_baseline_files": [
+    "hotfix_cpu_check.json",
+    "hybrid_cpu_check.json",
+    "live_cpu_check.json",
+    "p11_contract.py",
+    "p11_start.ipynb",
+    "paired_cpu_check.json",
+    "recovery_cpu_check.json",
+    "run-result.log",
+    "system.bit",
+    "system.hwh",
+    "system.manifest.json",
+    "trackfix_cpu_check.json",
+    "unified_cpu_check.json",
+    "upload_inventory.json",
+    "v64_hdmi_display.py",
+    "v64_p1_backend.py",
+    "v75_ui.py",
+    "v98_ai_manifest.json",
+    "v99_ai_selftest.json",
+    "release_manifest.json"
+  ],
+  "previous22_source_preserved": true,
+  "native_capture_tracker_model_preserved": true,
+  "supplied_bit_and_hwh_changed": true,
+  "recovery_cooldown_s": [
+    2,
+    2,
+    2
+  ],
+  "RTL_simulation_run": false,
+  "Vivado_MCP_attempt": "tcl and gui sessions exited before ready; compile check skipped because iverilog/verilator unavailable",
+  "board_FPS_tested": false,
+  "board_USB_reconfigure_tested": false,
+  "board_sharpening_tested": false
+}

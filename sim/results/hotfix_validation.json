@@ -1,0 +1,274 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-hotfix-20261027-10",
+  "passed": true,
+  "tests": 170,
+  "reports": {
+    "frontend": {
+      "passed": true,
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "controller_sha256": "24e88204fef8da075ae9223bb5c2c5331fb65fd4836831c236e469b825bc75e5",
+      "benchmark": {
+        "iterations_per_round": 30000,
+        "rounds": 7,
+        "baseline_us": 6.79229,
+        "wrapped_us": 19.214869999999998,
+        "additional_us": 12.422579999999996,
+        "one_core_percent_at_30fps": 0.037267739999999994,
+        "host_only": true,
+        "board_fps_measured": false
+      },
+      "board_tested": false
+    },
+    "alignment": {
+      "passed": true,
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false,
+      "scope": "real align_current orchestration; deterministic verifier stubs, separate real native bridge cases in flow suite"
+    },
+    "cycle": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "due_probe_median_us": 1188.75,
+        "due_probe_p95_us": 1555.3599999999997,
+        "maximum_probe_hz": 2,
+        "small_shape": [
+          120,
+          160
+        ],
+        "host_only": true,
+        "healthy_measured_frame_probes": 0
+      },
+      "board_tested": false
+    },
+    "equivalence": {
+      "passed": true,
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "real_manual_frontend": true,
+      "real_persistent_tracker": true,
+      "hardware_planner_stubbed": true,
+      "board_tested": false
+    },
+    "flow": {
+      "passed": true,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "board_tested": false
+    },
+    "tracking": {
+      "passed": true,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "benchmark": {
+        "physical4": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.8573500019556377,
+          "p95_ms": 2.40337999912299,
+          "max_corner_error": 1.4406582465965887
+        },
+        "trackfix5": {
+          "success": 99,
+          "total": 99,
+          "median_ms": 1.0550000024522888,
+          "p95_ms": 1.5734100001282056,
+          "max_corner_error": 1.435545449620178
+        }
+      },
+      "board_tested": false
+    },
+    "owner": {
+      "passed": true,
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Real owner function body with fake devices/queue; no physical board"
+    },
+    "policy": {
+      "passed": true,
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "release_id": "p11-rgb-pspl-v9-ai-hotfix-20261027-10",
+      "source_sha256": "3dd25fb40cfc881994e9b723fb22c3a30351a6360fa22ffd94f92181b9796653",
+      "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+      "benchmark": {
+        "iterations_per_round": 100000,
+        "rounds": 7,
+        "measurements": {
+          "completed_current": {
+            "median_us": 2.204507,
+            "max_round_us": 3.1831210000000003,
+            "one_core_percent_at_30fps": 0.006613521
+          },
+          "rejected_held": {
+            "median_us": 0.163928,
+            "max_round_us": 0.205363
+          },
+          "healthy_tick": {
+            "median_us": 1.068036,
+            "max_round_us": 1.235981
+          }
+        },
+        "timing_includes_row_update_and_timestamp_arithmetic": true,
+        "measured_on": "Windows host Python; ARM/board FPS not measured"
+      },
+      "host_callback_budget_us": 100.0,
+      "host_callback_budget_passed": true,
+      "board_tested": false,
+      "limitations": [
+        "Controller must generation-gate asynchronous completion callbacks.",
+        "Live camera sequence must increase within each automatic epoch.",
+        "No ARM/HDMI/camera timing validation performed here."
+      ]
+    },
+    "status": {
+      "passed": true,
+      "tests": 21,
+      "failures": [],
+      "asset_build": null,
+      "performance": {
+        "host_python": "D:\\p11_ai_training\\.venv\\Scripts\\python.exe",
+        "host_opencv": "4.11.0",
+        "native_canvas_size": [
+          1280,
+          720
+        ],
+        "cache_selection_and_rate_format_median_us": 2.060366666666667,
+        "existing_footer_patch_and_english_text_median_us": 120.7,
+        "atlas_decoded_bytes": 3628800,
+        "chinese_badge_patch_bytes": 26880,
+        "new_full_frame_copies": 0,
+        "scope": "Host-only small-footer microbenchmark; no camera, AI, HDMI DMA or board FPS measured."
+      },
+      "previews": [
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\auto_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_infer_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_held_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_manual_current_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\empty_wait_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\alignment_failed_auto_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\recovery_cooldown_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\manual_lost_1280x720.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\all_hybrid_footer_states.png"
+      ],
+      "source_sha256": {
+        "v108_hybrid_status.py": "d80ac5058f84949ecdc25d4a32a9a5f909f296cdf3aacb07528af29b71160636",
+        "v108_hybrid_status.png": "c9998305492491fcd122f4d0371dc972cddc2baa7244ddcd1b7b31d831f6ffea",
+        "v64_hdmi_display.py": "872b8bc51790275106e7865cc54023ccd2e0dab2e163a02566160ca54f148d2e"
+      },
+      "board_fps_tested": false,
+      "board_touch_tested": false,
+      "physical_hdmi_scan_tested": false,
+      "notes": [
+        "Chinese status labels are cached read-only 320x28 atlas views.",
+        "Valid correction rate is supplied by completed CURRENT corrections; DISP is owner submission rate.",
+        "No per-frame Pillow/font/image decode, model call, animation, or extra full-frame copy.",
+        "Native 1280x720 layout, video ownership and touch controls are unchanged."
+      ]
+    },
+    "display": {
+      "passed": true,
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "previews": [
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_loading_compare_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_infer_compare_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\auto_recover_compare_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\empty_wait_compare_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\no_frame_compare_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_loading_rectified_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\ai_infer_rectified_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\auto_recover_rectified_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\empty_wait_rectified_actual_compositor.png",
+        "C:\\Users\\tlf\\Desktop\\新建文件夹\\ai_pic3_flow_fix_20261026\\hotfix_status_previews\\no_frame_rectified_actual_compositor.png"
+      ],
+      "actual_compositor_executed": true,
+      "board_fps_tested": false,
+      "source_sha256": {
+        "v64_hdmi_display.py": "872b8bc51790275106e7865cc54023ccd2e0dab2e163a02566160ca54f148d2e",
+        "v97_3_target_hints.png": "78c04c43c951c48b3baaebe477a8aaf4d3caf7ed1c685117df9304a32173064a"
+      }
+    }
+  },
+  "unchanged_files_verified": [
+    "system.bit",
+    "system.hwh",
+    "system.manifest.json",
+    "v31_camera.py",
+    "v64_p1_backend.py",
+    "v99_ai_service.py",
+    "v99_ai_worker.py",
+    "v84_snapshot.py",
+    "v82_manual.py",
+    "v92_manual_v87.py",
+    "v105_manual_tracking.py",
+    "v104_physical_tracking.py",
+    "v105_native.py",
+    "v105_reference.py",
+    "v97_3_target_hints.png",
+    "ai/plane.ncnn.param",
+    "ai/plane.ncnn.bin",
+    "ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so",
+    "bench_mem.cpp",
+    "v105_edges.cpp",
+    "v31_camera_native.cpp",
+    "v31_native.cpp",
+    "v64_io.cpp",
+    "v87_v74_native.cpp",
+    "v91_transaction.cpp"
+  ],
+  "steady_auto_frontend_queue_and_manual_frontend_ast_identical": true,
+  "model_retrained": false,
+  "hardware_changed": false,
+  "native_kernel_changed": false,
+  "native_host_executed": true,
+  "native_arm_executed": false,
+  "board_fps_tested": false,
+  "timer": "atomic candidate reset / missing-clock guard / new-lock reset / numerical probe isolation",
+  "returned_target": "stable appearance -> AUTO -> bounded AI fallback",
+  "ai_transition": "native1:1 live raw + original cached entry/navigation progress",
+  "normal_path_paired_host_benchmark": {
+    "recovery9_median_us": 22.92523,
+    "hotfix10_median_us": 23.118766666666666,
+    "difference_us": 0.1935366666666667,
+    "rounds": 9,
+    "iterations_per_round": 30000,
+    "previous_rounds_us": [
+      19.373726666666666,
+      21.376516666666667,
+      24.38457,
+      22.30352666666667,
+      24.49091,
+      22.92523,
+      23.235956666666667,
+      23.36609,
+      22.295840000000002
+    ],
+    "current_rounds_us": [
+      19.88515333333333,
+      19.486823333333334,
+      23.118766666666666,
+      23.68973666666667,
+      24.2672,
+      24.558083333333332,
+      22.50556333333333,
+      23.184953333333336,
+      22.293860000000002
+    ],
+    "host_only": true,
+    "board_fps_measured": false,
+    "scope": "healthy producer/completion scalar control only; camera/model/PL/HDMI excluded"
+  }
+}

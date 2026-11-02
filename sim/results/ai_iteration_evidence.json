@@ -1,0 +1,12 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "baseline": "FPS32",
+  "model_retrained": false,
+  "model_graph_changed": false,
+  "hardware_changed": false,
+  "tracker_core_changed": false,
+  "FPS_window_s": 3.0,
+  "FPS_refresh_s": 0.1,
+  "max_duration_s": 7200,
+  "board_FPS_tested": false
+}

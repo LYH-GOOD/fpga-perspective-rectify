@@ -1,0 +1,61 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-trackfix-20261026-5",
+  "passed": true,
+  "tests": 44,
+  "tracking": {
+    "passed": true,
+    "tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "benchmark": {
+      "physical4": {
+        "success": 99,
+        "total": 99,
+        "median_ms": 1.6611000000921194,
+        "p95_ms": 2.2611899999674274,
+        "max_corner_error": 1.4406582465965887
+      },
+      "trackfix5": {
+        "success": 99,
+        "total": 99,
+        "median_ms": 1.0678000001007604,
+        "p95_ms": 1.6128849999631707,
+        "max_corner_error": 1.435545449620178
+      }
+    },
+    "board_tested": false
+  },
+  "flow": {
+    "passed": true,
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "board_tested": false
+  },
+  "unchanged_files_verified": [
+    "system.bit",
+    "system.hwh",
+    "system.manifest.json",
+    "v31_native.cpp",
+    "v64_io.cpp",
+    "v31_camera_native.cpp",
+    "v87_v74_native.cpp",
+    "v91_transaction.cpp",
+    "v92_manual_v87.py",
+    "v64_camera_hdmi.py",
+    "v64_hdmi_display.py",
+    "v31_camera.py",
+    "v99_ai_service.py",
+    "v99_ai_worker.py",
+    "v84_snapshot.py",
+    "v75_ui.py",
+    "ai/plane.ncnn.param",
+    "ai/plane.ncnn.bin"
+  ],
+  "model_retrained": false,
+  "native_host_executed": true,
+  "arm_target_compile_passed": true,
+  "native_arm_executed": false,
+  "board_fps_tested": false,
+  "manual_policy": "persistent selected target; no automatic scene takeover; finite hold and evidence-based recovery"
+}

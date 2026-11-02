@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+  "previous_cpu_check": {
+    "passed": true,
+    "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+    "display_policy_checks": 4,
+    "previous_cpu_check": {
+      "passed": true,
+      "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+      "manual_reference_checks": 6,
+      "progress_checks": 3,
+      "manual_corner_max_error_px": 2.000488296147524,
+      "native_lk_executed": false,
+      "previous_cpu_check": {
+        "passed": true,
+        "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+        "pair_checks": 9,
+        "previous_cpu_check": {
+          "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+          "passed": true,
+          "preview_and_cancel_checks": 6,
+          "previous_cpu_check": {
+            "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+            "passed": true,
+            "timer_reset_checks": 4,
+            "previous_cpu_check": {
+              "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+              "passed": true,
+              "budget_checks": 3,
+              "previous_cpu_check": {
+                "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+                "passed": true,
+                "target_cycle_checks": 3,
+                "previous_cpu_check": {
+                  "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+                  "passed": true,
+                  "policy_checks": 4,
+                  "output_hook_mean_us": 1.587660000222968,
+                  "machine": "AMD64",
+                  "native_edge_check": {
+                    "release_id": "p11-rgb-pspl-v9-ai-reuse-20261029-21",
+                    "passed": true,
+                    "platform": "Windows-10-10.0.26200-SP0",
+                    "machine": "AMD64",
+                    "native_executed": true,
+                    "native_arm_executed": false,
+                    "native_source_sha256": "39c4e4c90edbba6e78109f5709b4063ed8eadfcbfb1e218fc8691b3c4e9d7f33",
+                    "timing": {
+                      "physical4": {
+                        "current": 59,
+                        "total": 59,
+                        "median_ms": 1.6771500049799215,
+                        "p95_ms": 2.4593449998064894
+                      },
+                      "trackfix5": {
+                        "current": 59,
+                        "total": 59,
+                        "median_ms": 0.9382499993080273,
+                        "p95_ms": 1.2321599991992116
+                      }
+                    },
+                    "real_camera_fps_measured": false,
+                    "scope": "CPU recorded/synthetic input only; actual output FPS requires live board run-result.log"
+                  },
+                  "live_board_fps_measured": false,
+                  "scope": "CPU input-only installation smoke; compare live normal AUTO tracking via run-result.log"
+                },
+                "machine": "AMD64",
+                "live_board_fps_measured": false,
+                "scope": "CPU-only synthetic input and unchanged native edge kernel; not live camera/FPS acceptance"
+              },
+              "machine": "AMD64",
+              "live_board_fps_measured": false,
+              "scope": "CPU synthetic/policy checks and unchanged native edges; not live recovery/FPS acceptance"
+            },
+            "live_board_fps_measured": false,
+            "scope": "CPU clock/reset and unchanged native checks; board FPS pending"
+          },
+          "live_board_fps_measured": false,
+          "scope": "CPU-only RAM/ownership/cancel/native; no camera/HDMI/PL"
+        },
+        "live_board_fps_measured": false,
+        "scope": "CPU/native and bounded pair metadata; no camera/HDMI/PL"
+      },
+      "live_board_fps_measured": false,
+      "hardware_opened": false
+    },
+    "hardware_opened": false,
+    "live_board_fps_measured": false
+  },
+  "reuse_policy_checks": 12,
+  "cooldown_s": 2,
+  "capture_native": null,
+  "hardware_opened": false,
+  "live_board_fps_measured": false
+}

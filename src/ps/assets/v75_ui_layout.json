@@ -1,0 +1,238 @@
+{
+  "activation": {
+    "back": "press",
+    "home": "release",
+    "layout": "release",
+    "refind": "release",
+    "snapshot_recapture": "release"
+  },
+  "ai_hit_rect": [
+    280,
+    0,
+    100,
+    72
+  ],
+  "ai_policy": "live compare/rectified only; explicit release; one frozen frame; automatic original correction handoff; no confirmation",
+  "back_hit_rect": [
+    0,
+    0,
+    180,
+    72
+  ],
+  "back_pixels_rect": [
+    6,
+    6,
+    162,
+    58
+  ],
+  "background_origin": "generated concept illustration, not a captured or measured frame",
+  "buttons": [
+    {
+      "rect": [
+        60,
+        300,
+        475,
+        104
+      ],
+      "view": "compare"
+    },
+    {
+      "rect": [
+        60,
+        420,
+        475,
+        104
+      ],
+      "view": "rectified"
+    },
+    {
+      "rect": [
+        60,
+        540,
+        475,
+        104
+      ],
+      "view": "snapshot"
+    }
+  ],
+  "camera_profile_apply_rect": [
+    36,
+    528,
+    416,
+    64
+  ],
+  "camera_profile_button_rect": [
+    20,
+    640,
+    300,
+    56
+  ],
+  "camera_profile_close_rect": [
+    404,
+    140,
+    48,
+    48
+  ],
+  "camera_profile_open_scope": "compare/rectified live pages only",
+  "camera_profile_option_rects": {
+    "480p": [
+      36,
+      256,
+      416,
+      84
+    ],
+    "600p": [
+      36,
+      352,
+      416,
+      84
+    ]
+  },
+  "camera_profile_panel_rect": [
+    20,
+    128,
+    448,
+    488
+  ],
+  "camera_profile_policy": "left-bottom button opens panel; options show active/pending; apply requests a new input session; only the backend moves active after the new mode is live",
+  "camera_profile_reposition": "after a switch the target is re-localized; display layout unchanged",
+  "camera_profile_tracking_max_dim": {
+    "480p": 320,
+    "600p": 400
+  },
+  "camera_profiles": {
+    "480p": [
+      640,
+      480
+    ],
+    "600p": [
+      800,
+      600
+    ]
+  },
+  "format": "v83-fasttrack-no-placement-guide",
+  "header_height": 72,
+  "header_strategy": "per-VideoFrame/page generation install",
+  "home_press_feedback": "owner redraw; release activation unchanged",
+  "home_redraw": "event only",
+  "layout_switch_hit_rect": [
+    1000,
+    0,
+    280,
+    72
+  ],
+  "layout_switch_pixels_rect": [
+    1006,
+    6,
+    268,
+    58
+  ],
+  "logo_source": "https://cdn.jsdelivr.net/gh/Xilinx/Image-Collateral@main/logo-white-text.png",
+  "manual_hit_rect": [
+    180,
+    0,
+    200,
+    72
+  ],
+  "manual_live_hit_rect": [
+    180,
+    0,
+    100,
+    72
+  ],
+  "manual_policy": "fresh serialized session; frozen source native1to1 four touches; repeat allowed",
+  "mode": [
+    1280,
+    720
+  ],
+  "motion_scope": "valid DOWN reports only; 32px limit retained",
+  "placement_confirmation_required": false,
+  "placement_guidance_enabled": false,
+  "ratio_commit": "matching-revision verified output successfully submitted",
+  "ratio_custom_range": [
+    0.5,
+    2.0
+  ],
+  "ratio_default": "original",
+  "ratio_hit_rect": [
+    768,
+    0,
+    224,
+    72
+  ],
+  "ratio_output_capacity": 185344,
+  "ratio_output_max_height": 512,
+  "ratio_panel_rect": [
+    820,
+    72,
+    460,
+    648
+  ],
+  "ratio_profiles": [
+    "auto",
+    "manual"
+  ],
+  "ratio_render": "cached assets, event-only frozen canvas; touchscreen numeric keypad",
+  "reading_policy": "frozen corrected source, event-only2x/4x; correction producer continues",
+  "refind_hit_rect": [
+    380,
+    0,
+    200,
+    72
+  ],
+  "refind_pixels_rect": [
+    384,
+    3,
+    192,
+    66
+  ],
+  "refind_policy": "live page fresh generation; serialized cleanup; preserve HDMI/overlay",
+  "release_position": "last_valid_DOWN_report",
+  "return_feedback": "cached highlighted return on first home submission, then normal home",
+  "snapshot_recapture_enabled": "only after same-generation paired snapshot submission",
+  "snapshot_recapture_hit_rect": [
+    1000,
+    0,
+    280,
+    72
+  ],
+  "snapshot_recapture_pixels_rect": [
+    1006,
+    6,
+    268,
+    58
+  ],
+  "snapshot_recapture_policy": "new generation; serialized camera cleanup and recapture; reuse HDMI/overlay",
+  "zoom_hit_rect": [
+    580,
+    0,
+    180,
+    72
+  ],
+  "live_info_rect": [
+    0,
+    72,
+    1280,
+    52
+  ],
+  "live_fps_font_px": 52,
+  "live_fps_value_font_px": 52,
+  "live_source_font_px": 36,
+  "live_fps_scope": "unique valid corrected HDMI submissions / fixed3s",
+  "live_fps_update_interval_s": 0.1,
+  "media_capture_rect": [
+    1000,
+    640,
+    120,
+    56
+  ],
+  "media_album_rect": [
+    1132,
+    640,
+    120,
+    56
+  ],
+  "recovery_fixed_cooldown": false,
+  "live_fps_window_s": 3.0,
+  "default_duration_s": 7200
+}

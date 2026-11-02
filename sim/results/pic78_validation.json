@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-pic78-20261101-29",
+  "host_tests": 41,
+  "CPU_passed": true,
+  "model_integration": {
+    "passed": true,
+    "model_retrained": true,
+    "graph_identical": true,
+    "weight_bytes_unchanged": true,
+    "selftest_cases": 10,
+    "accuracy": [
+      {
+        "id": 1024,
+        "scenario": "historical_book",
+        "mean_error_px": 2.1954877708324867,
+        "max_error_px": 5.076123346450497
+      },
+      {
+        "id": 1049,
+        "scenario": "historical_book",
+        "mean_error_px": 2.5644331934576776,
+        "max_error_px": 3.4888568672369646
+      },
+      {
+        "id": 4000,
+        "scenario": "tablet_video_wood",
+        "mean_error_px": 1.215877631485045,
+        "max_error_px": 1.5664128948633183
+      },
+      {
+        "id": 4023,
+        "scenario": "tablet_video_wood",
+        "mean_error_px": 0.9366077433914111,
+        "max_error_px": 1.7314782362732162
+      },
+      {
+        "id": 5020,
+        "scenario": "white_book_white_cloth",
+        "mean_error_px": 0.9407198898102744,
+        "max_error_px": 1.5408952473206023
+      },
+      {
+        "id": 5055,
+        "scenario": "white_book_glare",
+        "mean_error_px": 0.9747004479816425,
+        "max_error_px": 1.45711825038897
+      },
+      {
+        "id": 5067,
+        "scenario": "tablet_glare_black",
+        "mean_error_px": 0.9176978844088939,
+        "max_error_px": 1.454717869613171
+      },
+      {
+        "id": 5094,
+        "scenario": "white_notebook_wood",
+        "mean_error_px": 1.4066441404527068,
+        "max_error_px": 4.488772582816479
+      },
+      {
+        "id": 5101,
+        "scenario": "hand_occlusion",
+        "mean_error_px": 0.9141545317578132,
+        "max_error_px": 1.8657004181720362
+      },
+      {
+        "id": 5128,
+        "scenario": "printed_paper_white_margin",
+        "mean_error_px": 1.5427452810792532,
+        "max_error_px": 2.136448498430546
+      }
+    ],
+    "checkpoint_sha256": "e33b25507686cf08e495166fc547338e2648524c08fa68a8291c42c92969f78c",
+    "model_weights_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85",
+    "model_graph_sha256": "b9372d6742a87cb0724b3de80419e65b86dc6d978f8ca6d2408fe7a1ef32a2f8",
+    "desktop_single_thread_inference_ms": {
+      "old": {
+        "median": 19.699149999723886,
+        "p95": 21.612905000256433
+      },
+      "new": {
+        "median": 19.804000000021915,
+        "p95": 21.900265000022046
+      }
+    },
+    "board_FPS_tested": false
+  },
+  "source_dataset": "D:\\p11_ai_training\\data\\diagnostics\\PIC78_training_20261101",
+  "board_FPS_tested": false
+}

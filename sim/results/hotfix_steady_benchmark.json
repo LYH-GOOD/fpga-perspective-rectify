@@ -1,0 +1,32 @@
+{
+  "recovery9_median_us": 22.92523,
+  "hotfix10_median_us": 23.118766666666666,
+  "difference_us": 0.1935366666666667,
+  "rounds": 9,
+  "iterations_per_round": 30000,
+  "previous_rounds_us": [
+    19.373726666666666,
+    21.376516666666667,
+    24.38457,
+    22.30352666666667,
+    24.49091,
+    22.92523,
+    23.235956666666667,
+    23.36609,
+    22.295840000000002
+  ],
+  "current_rounds_us": [
+    19.88515333333333,
+    19.486823333333334,
+    23.118766666666666,
+    23.68973666666667,
+    24.2672,
+    24.558083333333332,
+    22.50556333333333,
+    23.184953333333336,
+    22.293860000000002
+  ],
+  "host_only": true,
+  "board_fps_measured": false,
+  "scope": "healthy producer/completion scalar control only; camera/model/PL/HDMI excluded"
+}

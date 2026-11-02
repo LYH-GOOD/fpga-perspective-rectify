@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "host_tests": 44,
+  "CPU_passed": true,
+  "hardware_model_identical": true,
+  "FPS_window_s": 3.0,
+  "FPS_refresh_s": 0.1,
+  "max_duration_s": 7200,
+  "board_FPS_tested": false,
+  "two_hour_board_soak_tested": false
+}

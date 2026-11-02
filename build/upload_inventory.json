@@ -1,0 +1,1566 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "authoritative_hashes": "release_manifest.json",
+  "files": [
+    {
+      "path": "ai/conversion_report.json",
+      "bytes": 2416
+    },
+    {
+      "path": "ai/plane.ncnn.bin",
+      "bytes": 5461760
+    },
+    {
+      "path": "ai/plane.ncnn.param",
+      "bytes": 13248
+    },
+    {
+      "path": "ai/runtime/ncnn/__init__.py",
+      "bytes": 118
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/__init__.py",
+      "bytes": 199
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/fasterrcnn.py",
+      "bytes": 6868
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/mobilenetssd.py",
+      "bytes": 3199
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/mobilenetv2ssdlite.py",
+      "bytes": 3360
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/mobilenetv3ssdlite.py",
+      "bytes": 4396
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/model_store.py",
+      "bytes": 7911
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/model_zoo.py",
+      "bytes": 1822
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/nanodet.py",
+      "bytes": 7780
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/peleenetssd.py",
+      "bytes": 3090
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/retinaface.py",
+      "bytes": 10289
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/rfcn.py",
+      "bytes": 6821
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/shufflenetv2.py",
+      "bytes": 1967
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/simplepose.py",
+      "bytes": 2474
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/squeezenet.py",
+      "bytes": 1441
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/squeezenetssd.py",
+      "bytes": 3190
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolact.py",
+      "bytes": 10590
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov2.py",
+      "bytes": 3365
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov3.py",
+      "bytes": 3240
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov4.py",
+      "bytes": 4904
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov5.py",
+      "bytes": 10916
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov7.py",
+      "bytes": 10195
+    },
+    {
+      "path": "ai/runtime/ncnn/model_zoo/yolov8.py",
+      "bytes": 9666
+    },
+    {
+      "path": "ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so",
+      "bytes": 7642713
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/__init__.py",
+      "bytes": 154
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/_opencv.py",
+      "bytes": 489
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/download.py",
+      "bytes": 3335
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/functional.py",
+      "bytes": 3246
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/objects.py",
+      "bytes": 1043
+    },
+    {
+      "path": "ai/runtime/ncnn/utils/visual.py",
+      "bytes": 4778
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/licenses/LICENSE.txt",
+      "bytes": 6427
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/METADATA",
+      "bytes": 29616
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/RECORD",
+      "bytes": 3165
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/sboms/auditwheel.cdx.json",
+      "bytes": 1344
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/top_level.txt",
+      "bytes": 5
+    },
+    {
+      "path": "ai/runtime/ncnn-1.0.20261020.dist-info/WHEEL",
+      "bytes": 113
+    },
+    {
+      "path": "ai/runtime/ncnn.libs/libgomp-39027b09.so.1.0.0",
+      "bytes": 214173
+    },
+    {
+      "path": "ai_iteration_evidence.json",
+      "bytes": 316
+    },
+    {
+      "path": "ai_model_update.json",
+      "bytes": 418133
+    },
+    {
+      "path": "ai_selftest/1024.png",
+      "bytes": 356495
+    },
+    {
+      "path": "ai_selftest/1049.png",
+      "bytes": 338103
+    },
+    {
+      "path": "ai_selftest/1108.png",
+      "bytes": 389519
+    },
+    {
+      "path": "ai_selftest/4000.png",
+      "bytes": 339939
+    },
+    {
+      "path": "ai_selftest/4023.png",
+      "bytes": 327224
+    },
+    {
+      "path": "ai_selftest/5020.png",
+      "bytes": 316257
+    },
+    {
+      "path": "ai_selftest/5055.png",
+      "bytes": 375896
+    },
+    {
+      "path": "ai_selftest/5067.png",
+      "bytes": 392136
+    },
+    {
+      "path": "ai_selftest/5094.png",
+      "bytes": 314235
+    },
+    {
+      "path": "ai_selftest/5101.png",
+      "bytes": 347340
+    },
+    {
+      "path": "ai_selftest/5128.png",
+      "bytes": 378459
+    },
+    {
+      "path": "ai_selftest.ipynb",
+      "bytes": 1913
+    },
+    {
+      "path": "bench_b1.py",
+      "bytes": 4443
+    },
+    {
+      "path": "bench_mem.cpp",
+      "bytes": 5283
+    },
+    {
+      "path": "benchmark_physical_tracking.ipynb",
+      "bytes": 1066
+    },
+    {
+      "path": "benchmark_physical_tracking.py",
+      "bytes": 2801
+    },
+    {
+      "path": "continuity16_benchmark.json",
+      "bytes": 17005
+    },
+    {
+      "path": "continuity16_release_report.md",
+      "bytes": 2670
+    },
+    {
+      "path": "continuity16_validation.json",
+      "bytes": 36749
+    },
+    {
+      "path": "display18_benchmark.json",
+      "bytes": 5609
+    },
+    {
+      "path": "display18_cpu_check.json",
+      "bytes": 3785
+    },
+    {
+      "path": "display18_cpu_check.py",
+      "bytes": 1293
+    },
+    {
+      "path": "display18_release_report.md",
+      "bytes": 3242
+    },
+    {
+      "path": "display18_validation.json",
+      "bytes": 32272
+    },
+    {
+      "path": "find_homography.py",
+      "bytes": 22618
+    },
+    {
+      "path": "flowfix_review.json",
+      "bytes": 12944
+    },
+    {
+      "path": "fps30_release_report.md",
+      "bytes": 1469
+    },
+    {
+      "path": "fps30_validation.json",
+      "bytes": 307
+    },
+    {
+      "path": "fps31_release_report.md",
+      "bytes": 1468
+    },
+    {
+      "path": "fps31_validation.json",
+      "bytes": 307
+    },
+    {
+      "path": "fps32_release_report.md",
+      "bytes": 1468
+    },
+    {
+      "path": "fps32_validation.json",
+      "bytes": 306
+    },
+    {
+      "path": "fps33_release_report.md",
+      "bytes": 1470
+    },
+    {
+      "path": "fps33_validation.json",
+      "bytes": 306
+    },
+    {
+      "path": "hardware_light27/axis_light27.v",
+      "bytes": 6660
+    },
+    {
+      "path": "hardware_light27/check_timing_impl.rpt",
+      "bytes": 3334
+    },
+    {
+      "path": "hardware_light27/clocks_impl.rpt",
+      "bytes": 3202
+    },
+    {
+      "path": "hardware_light27/contract.md",
+      "bytes": 2770
+    },
+    {
+      "path": "hardware_light27/drc_impl.rpt",
+      "bytes": 47601
+    },
+    {
+      "path": "hardware_light27/hdmi_out.xdc",
+      "bytes": 923
+    },
+    {
+      "path": "hardware_light27/io_impl.rpt",
+      "bytes": 125047
+    },
+    {
+      "path": "hardware_light27/tb_light27.sv",
+      "bytes": 4724
+    },
+    {
+      "path": "hardware_light27/timing_impl.rpt",
+      "bytes": 227238
+    },
+    {
+      "path": "hardware_light27/utilization_impl.rpt",
+      "bytes": 14441
+    },
+    {
+      "path": "hardware_light27/utilization_impl_hier.rpt",
+      "bytes": 22063
+    },
+    {
+      "path": "hardware_light27/xelab.log",
+      "bytes": 597
+    },
+    {
+      "path": "hardware_light27/xsim.log",
+      "bytes": 1395
+    },
+    {
+      "path": "hardware_light27/xvlog.log",
+      "bytes": 313
+    },
+    {
+      "path": "host_validation.json",
+      "bytes": 12944
+    },
+    {
+      "path": "hotfix_cpu_check.json",
+      "bytes": 2218
+    },
+    {
+      "path": "hotfix_cpu_check.py",
+      "bytes": 1247
+    },
+    {
+      "path": "hotfix_release_report.md",
+      "bytes": 4125
+    },
+    {
+      "path": "hotfix_steady_benchmark.json",
+      "bytes": 782
+    },
+    {
+      "path": "hotfix_validation.json",
+      "bytes": 10845
+    },
+    {
+      "path": "hybrid_cpu_check.json",
+      "bytes": 1136
+    },
+    {
+      "path": "hybrid_cpu_check.py",
+      "bytes": 1649
+    },
+    {
+      "path": "hybrid_release_report.md",
+      "bytes": 7288
+    },
+    {
+      "path": "hybrid_validation.json",
+      "bytes": 6927
+    },
+    {
+      "path": "installfix1_report.md",
+      "bytes": 1564
+    },
+    {
+      "path": "installfix1_validation.json",
+      "bytes": 1071
+    },
+    {
+      "path": "light27_cpu_check.json",
+      "bytes": 7170
+    },
+    {
+      "path": "light27_cpu_check.py",
+      "bytes": 1530
+    },
+    {
+      "path": "light27_hardware.json",
+      "bytes": 3192
+    },
+    {
+      "path": "light27_release_report.md",
+      "bytes": 2365
+    },
+    {
+      "path": "light27_validation.json",
+      "bytes": 14094
+    },
+    {
+      "path": "live_cpu_check.json",
+      "bytes": 2577
+    },
+    {
+      "path": "live_cpu_check.py",
+      "bytes": 1828
+    },
+    {
+      "path": "live_preview_benchmark.json",
+      "bytes": 1579
+    },
+    {
+      "path": "live_release_report.md",
+      "bytes": 3810
+    },
+    {
+      "path": "live_steady_benchmark.json",
+      "bytes": 803
+    },
+    {
+      "path": "live_validation.json",
+      "bytes": 11683
+    },
+    {
+      "path": "manual17_benchmark.json",
+      "bytes": 23763
+    },
+    {
+      "path": "manual17_cpu_check.py",
+      "bytes": 2267
+    },
+    {
+      "path": "manual17_display_benchmark.json",
+      "bytes": 17063
+    },
+    {
+      "path": "manual17_release_report.md",
+      "bytes": 3893
+    },
+    {
+      "path": "manual17_validation.json",
+      "bytes": 64153
+    },
+    {
+      "path": "overlay_benchmark.json",
+      "bytes": 1460
+    },
+    {
+      "path": "overlay_cpu_check.py",
+      "bytes": 1259
+    },
+    {
+      "path": "overlay_release_report.md",
+      "bytes": 3293
+    },
+    {
+      "path": "overlay_validation.json",
+      "bytes": 12944
+    },
+    {
+      "path": "p11_contract.py",
+      "bytes": 12794
+    },
+    {
+      "path": "p11_start.ipynb",
+      "bytes": 11254
+    },
+    {
+      "path": "p1_paper_quad.py",
+      "bytes": 21934
+    },
+    {
+      "path": "paired_benchmark.json",
+      "bytes": 1869
+    },
+    {
+      "path": "paired_cpu_check.json",
+      "bytes": 2936
+    },
+    {
+      "path": "paired_cpu_check.py",
+      "bytes": 1560
+    },
+    {
+      "path": "paired_release_report.md",
+      "bytes": 3869
+    },
+    {
+      "path": "paired_validation.json",
+      "bytes": 12676
+    },
+    {
+      "path": "physical_release_report.md",
+      "bytes": 5889
+    },
+    {
+      "path": "pic56_model_benchmark.json",
+      "bytes": 1604
+    },
+    {
+      "path": "pic56_model_comparison.json",
+      "bytes": 851580
+    },
+    {
+      "path": "pic56_release_report.md",
+      "bytes": 4092
+    },
+    {
+      "path": "pic56_validation.json",
+      "bytes": 18092
+    },
+    {
+      "path": "pic78_cpu_check.json",
+      "bytes": 7748
+    },
+    {
+      "path": "pic78_cpu_check.py",
+      "bytes": 280
+    },
+    {
+      "path": "pic78_model_comparison.json",
+      "bytes": 1065260
+    },
+    {
+      "path": "pic78_release_report.md",
+      "bytes": 2990
+    },
+    {
+      "path": "pic78_validation.json",
+      "bytes": 2737
+    },
+    {
+      "path": "pl_fields.py",
+      "bytes": 10593
+    },
+    {
+      "path": "profile22_cpu_check.json",
+      "bytes": 4609
+    },
+    {
+      "path": "profile22_cpu_check.py",
+      "bytes": 1549
+    },
+    {
+      "path": "profile22_release_report.md",
+      "bytes": 4571
+    },
+    {
+      "path": "profile22_validation.json",
+      "bytes": 39346
+    },
+    {
+      "path": "readme_ai_live.md",
+      "bytes": 138
+    },
+    {
+      "path": "recovery_cpu_check.json",
+      "bytes": 1873
+    },
+    {
+      "path": "recovery_cpu_check.py",
+      "bytes": 955
+    },
+    {
+      "path": "recovery_release_report.md",
+      "bytes": 8509
+    },
+    {
+      "path": "recovery_validation.json",
+      "bytes": 8283
+    },
+    {
+      "path": "reuse21_control_benchmark.json",
+      "bytes": 3474
+    },
+    {
+      "path": "reuse21_cpu_check.json",
+      "bytes": 4189
+    },
+    {
+      "path": "reuse21_cpu_check.py",
+      "bytes": 2329
+    },
+    {
+      "path": "reuse21_native_validation.json",
+      "bytes": 441
+    },
+    {
+      "path": "reuse21_release_report.md",
+      "bytes": 5646
+    },
+    {
+      "path": "reuse21_validation.json",
+      "bytes": 44458
+    },
+    {
+      "path": "run-result.log",
+      "bytes": 70563
+    },
+    {
+      "path": "run_logging.py",
+      "bytes": 30661
+    },
+    {
+      "path": "sharp23_board_check.py",
+      "bytes": 3983
+    },
+    {
+      "path": "sharp23_cpu_check.json",
+      "bytes": 5121
+    },
+    {
+      "path": "sharp23_cpu_check.py",
+      "bytes": 2559
+    },
+    {
+      "path": "sharp23_release_report.md",
+      "bytes": 4980
+    },
+    {
+      "path": "sharp23_validation.json",
+      "bytes": 40896
+    },
+    {
+      "path": "sharp24_cpu_check.json",
+      "bytes": 5630
+    },
+    {
+      "path": "sharp24_cpu_check.py",
+      "bytes": 1322
+    },
+    {
+      "path": "sharp24_release_report.md",
+      "bytes": 4563
+    },
+    {
+      "path": "sharp24_validation.json",
+      "bytes": 42445
+    },
+    {
+      "path": "sharp25_cpu_check.json",
+      "bytes": 6105
+    },
+    {
+      "path": "sharp25_cpu_check.py",
+      "bytes": 947
+    },
+    {
+      "path": "sharp25_release_report.md",
+      "bytes": 3845
+    },
+    {
+      "path": "sharp25_validation.json",
+      "bytes": 15934
+    },
+    {
+      "path": "smooth_cpu_check.py",
+      "bytes": 1460
+    },
+    {
+      "path": "smooth_release_report.md",
+      "bytes": 4254
+    },
+    {
+      "path": "smooth_steady_benchmark.json",
+      "bytes": 786
+    },
+    {
+      "path": "smooth_validation.json",
+      "bytes": 12612
+    },
+    {
+      "path": "source_review.json",
+      "bytes": 12944
+    },
+    {
+      "path": "startfix_release_report.md",
+      "bytes": 1241
+    },
+    {
+      "path": "startfix_validation.json",
+      "bytes": 1556
+    },
+    {
+      "path": "system.bit",
+      "bytes": 4045690
+    },
+    {
+      "path": "system.hwh",
+      "bytes": 853392
+    },
+    {
+      "path": "system.manifest.json",
+      "bytes": 1809
+    },
+    {
+      "path": "target26_cpu_check.json",
+      "bytes": 6649
+    },
+    {
+      "path": "target26_cpu_check.py",
+      "bytes": 1221
+    },
+    {
+      "path": "target26_release_report.md",
+      "bytes": 5589
+    },
+    {
+      "path": "target26_validation.json",
+      "bytes": 19802
+    },
+    {
+      "path": "trackfix_baseline_physical4.py",
+      "bytes": 7385
+    },
+    {
+      "path": "trackfix_cpu_check.json",
+      "bytes": 753
+    },
+    {
+      "path": "trackfix_cpu_check.py",
+      "bytes": 2895
+    },
+    {
+      "path": "trackfix_release_report.md",
+      "bytes": 4588
+    },
+    {
+      "path": "trackfix_validation.json",
+      "bytes": 1554
+    },
+    {
+      "path": "ui28_cpu_check.json",
+      "bytes": 7732
+    },
+    {
+      "path": "ui28_cpu_check.py",
+      "bytes": 1428
+    },
+    {
+      "path": "ui28_release_report.md",
+      "bytes": 3364
+    },
+    {
+      "path": "ui28_validation.json",
+      "bytes": 1020
+    },
+    {
+      "path": "unified_cpu_check.json",
+      "bytes": 1500
+    },
+    {
+      "path": "unified_cpu_check.py",
+      "bytes": 1225
+    },
+    {
+      "path": "unified_release_report.md",
+      "bytes": 9095
+    },
+    {
+      "path": "unified_validation.json",
+      "bytes": 7762
+    },
+    {
+      "path": "v100_ai_badges.png",
+      "bytes": 9000
+    },
+    {
+      "path": "v100_ai_image.py",
+      "bytes": 3793
+    },
+    {
+      "path": "v100_ai_tracking.py",
+      "bytes": 5173
+    },
+    {
+      "path": "v101_ai_camera.py",
+      "bytes": 1495
+    },
+    {
+      "path": "v102_ai_controls.png",
+      "bytes": 10174
+    },
+    {
+      "path": "v102_ai_selection.py",
+      "bytes": 6724
+    },
+    {
+      "path": "v102_ai_stages.png",
+      "bytes": 68735
+    },
+    {
+      "path": "v104_physical_tracking.py",
+      "bytes": 9344
+    },
+    {
+      "path": "v105_edges.cpp",
+      "bytes": 4512
+    },
+    {
+      "path": "v105_manual_tracking.py",
+      "bytes": 3398
+    },
+    {
+      "path": "v105_native.py",
+      "bytes": 3849
+    },
+    {
+      "path": "v105_reference.py",
+      "bytes": 3474
+    },
+    {
+      "path": "v107_hybrid.py",
+      "bytes": 19836
+    },
+    {
+      "path": "v107_policy.py",
+      "bytes": 5839
+    },
+    {
+      "path": "v108_hybrid_status.png",
+      "bytes": 543646
+    },
+    {
+      "path": "v108_hybrid_status.py",
+      "bytes": 5506
+    },
+    {
+      "path": "v109_target_cycle.py",
+      "bytes": 8260
+    },
+    {
+      "path": "v10_quad.py",
+      "bytes": 6685
+    },
+    {
+      "path": "v110_unified.py",
+      "bytes": 24111
+    },
+    {
+      "path": "v111_recovery.py",
+      "bytes": 21372
+    },
+    {
+      "path": "v112_display_hold.py",
+      "bytes": 2040
+    },
+    {
+      "path": "v113_live_preview.py",
+      "bytes": 4138
+    },
+    {
+      "path": "v114_geometry_overlay.py",
+      "bytes": 4690
+    },
+    {
+      "path": "v115_pair_display.py",
+      "bytes": 5179
+    },
+    {
+      "path": "v116_continuity.py",
+      "bytes": 1972
+    },
+    {
+      "path": "v117_manual_reference.py",
+      "bytes": 12645
+    },
+    {
+      "path": "v118_display_continuity.py",
+      "bytes": 5539
+    },
+    {
+      "path": "v119_apply_480p.png",
+      "bytes": 3960
+    },
+    {
+      "path": "v119_apply_600p.png",
+      "bytes": 3781
+    },
+    {
+      "path": "v119_apply_busy.png",
+      "bytes": 2663
+    },
+    {
+      "path": "v119_bar_480p.png",
+      "bytes": 4365
+    },
+    {
+      "path": "v119_bar_600p.png",
+      "bytes": 4242
+    },
+    {
+      "path": "v119_busy_480p.png",
+      "bytes": 9569
+    },
+    {
+      "path": "v119_busy_600p.png",
+      "bytes": 9403
+    },
+    {
+      "path": "v119_frame_timeout.png",
+      "bytes": 8068
+    },
+    {
+      "path": "v119_hint_apply.png",
+      "bytes": 3599
+    },
+    {
+      "path": "v119_hint_keep.png",
+      "bytes": 5230
+    },
+    {
+      "path": "v119_hint_reloc.png",
+      "bytes": 4810
+    },
+    {
+      "path": "v119_opt_480p_active.png",
+      "bytes": 4970
+    },
+    {
+      "path": "v119_opt_480p_cand.png",
+      "bytes": 5461
+    },
+    {
+      "path": "v119_opt_600p_active.png",
+      "bytes": 4531
+    },
+    {
+      "path": "v119_opt_600p_cand.png",
+      "bytes": 5062
+    },
+    {
+      "path": "v119_panel_480p.png",
+      "bytes": 7749
+    },
+    {
+      "path": "v119_panel_600p.png",
+      "bytes": 7600
+    },
+    {
+      "path": "v119_profile_ui.py",
+      "bytes": 18639
+    },
+    {
+      "path": "v119_wait_480p.png",
+      "bytes": 8220
+    },
+    {
+      "path": "v119_wait_600p.png",
+      "bytes": 8055
+    },
+    {
+      "path": "v120_image_settings.py",
+      "bytes": 11565
+    },
+    {
+      "path": "v120_settings_atlas.json",
+      "bytes": 17901
+    },
+    {
+      "path": "v120_settings_atlas.png",
+      "bytes": 203747
+    },
+    {
+      "path": "v120_sharp.py",
+      "bytes": 9695
+    },
+    {
+      "path": "v121_selection.py",
+      "bytes": 6972
+    },
+    {
+      "path": "v121_target_switch.py",
+      "bytes": 2706
+    },
+    {
+      "path": "v122_light.py",
+      "bytes": 5512
+    },
+    {
+      "path": "v123_live_ui.json",
+      "bytes": 2515
+    },
+    {
+      "path": "v123_live_ui.png",
+      "bytes": 63311
+    },
+    {
+      "path": "v123_live_ui.py",
+      "bytes": 6379
+    },
+    {
+      "path": "v14_planner.py",
+      "bytes": 11892
+    },
+    {
+      "path": "v31_camera.py",
+      "bytes": 17517
+    },
+    {
+      "path": "v31_camera_native.cpp",
+      "bytes": 10515
+    },
+    {
+      "path": "v31_crash.py",
+      "bytes": 1603
+    },
+    {
+      "path": "v31_detection.py",
+      "bytes": 36260
+    },
+    {
+      "path": "v31_diagnostics.py",
+      "bytes": 10729
+    },
+    {
+      "path": "v31_gc_budget.py",
+      "bytes": 4259
+    },
+    {
+      "path": "v31_native.cpp",
+      "bytes": 113956
+    },
+    {
+      "path": "v31_native.py",
+      "bytes": 87908
+    },
+    {
+      "path": "v31_pixels.py",
+      "bytes": 2475
+    },
+    {
+      "path": "v31_startup.py",
+      "bytes": 8900
+    },
+    {
+      "path": "v31_tracking.py",
+      "bytes": 141376
+    },
+    {
+      "path": "v41_quad.py",
+      "bytes": 17904
+    },
+    {
+      "path": "v45_color.py",
+      "bytes": 10865
+    },
+    {
+      "path": "v48_candidates.py",
+      "bytes": 504
+    },
+    {
+      "path": "v49_boundary.py",
+      "bytes": 6234
+    },
+    {
+      "path": "v50_orientation.py",
+      "bytes": 8795
+    },
+    {
+      "path": "v51_target.py",
+      "bytes": 2373
+    },
+    {
+      "path": "v58_budget.py",
+      "bytes": 3522
+    },
+    {
+      "path": "v58_recovery.py",
+      "bytes": 11757
+    },
+    {
+      "path": "v62_boundary.py",
+      "bytes": 5122
+    },
+    {
+      "path": "v62_exterior.py",
+      "bytes": 6612
+    },
+    {
+      "path": "v62_policy.py",
+      "bytes": 15059
+    },
+    {
+      "path": "v64_camera_hdmi.py",
+      "bytes": 66847
+    },
+    {
+      "path": "v64_hdmi_display.py",
+      "bytes": 110054
+    },
+    {
+      "path": "v64_io.cpp",
+      "bytes": 33175
+    },
+    {
+      "path": "v64_io.py",
+      "bytes": 13890
+    },
+    {
+      "path": "v64_p1_backend.py",
+      "bytes": 44342
+    },
+    {
+      "path": "v67_observation.py",
+      "bytes": 3124
+    },
+    {
+      "path": "v68_stability.py",
+      "bytes": 3943
+    },
+    {
+      "path": "v69_policy.py",
+      "bytes": 5788
+    },
+    {
+      "path": "v70_hdmi_timing.py",
+      "bytes": 7739
+    },
+    {
+      "path": "v70_ps.py",
+      "bytes": 8291
+    },
+    {
+      "path": "v71_display.py",
+      "bytes": 4561
+    },
+    {
+      "path": "v73_ratio.py",
+      "bytes": 7684
+    },
+    {
+      "path": "v73_ratio_assets.json",
+      "bytes": 3484
+    },
+    {
+      "path": "v73_ratio_atlas.png",
+      "bytes": 76552
+    },
+    {
+      "path": "v73_ratio_panel.png",
+      "bytes": 5143
+    },
+    {
+      "path": "v73_ratio_ui.py",
+      "bytes": 19552
+    },
+    {
+      "path": "v73_reading_header.png",
+      "bytes": 7673
+    },
+    {
+      "path": "v741_reading.py",
+      "bytes": 6555
+    },
+    {
+      "path": "v74_hold.py",
+      "bytes": 27451
+    },
+    {
+      "path": "v74_hold_badge.png",
+      "bytes": 3556
+    },
+    {
+      "path": "v75_header.png",
+      "bytes": 6331
+    },
+    {
+      "path": "v75_home.png",
+      "bytes": 423299
+    },
+    {
+      "path": "v75_hotswitch.py",
+      "bytes": 8567
+    },
+    {
+      "path": "v75_touch.py",
+      "bytes": 12463
+    },
+    {
+      "path": "v75_ui.py",
+      "bytes": 56170
+    },
+    {
+      "path": "v75_ui_layout.json",
+      "bytes": 4852
+    },
+    {
+      "path": "v76_snapshot.py",
+      "bytes": 12286
+    },
+    {
+      "path": "v77_header_rectified.png",
+      "bytes": 6142
+    },
+    {
+      "path": "v77_header_snapshot.png",
+      "bytes": 4895
+    },
+    {
+      "path": "v77_return_pressed.png",
+      "bytes": 2006
+    },
+    {
+      "path": "v78_localization.py",
+      "bytes": 10128
+    },
+    {
+      "path": "v79_acquire.py",
+      "bytes": 9896
+    },
+    {
+      "path": "v79_placement_controls.png",
+      "bytes": 9936
+    },
+    {
+      "path": "v79_placement_help.png",
+      "bytes": 26070
+    },
+    {
+      "path": "v79_setup.py",
+      "bytes": 9615
+    },
+    {
+      "path": "v79_setup_status.png",
+      "bytes": 10699
+    },
+    {
+      "path": "v79_snapshot_busy.png",
+      "bytes": 4155
+    },
+    {
+      "path": "v79_status.png",
+      "bytes": 19119
+    },
+    {
+      "path": "v80_cache.py",
+      "bytes": 10153
+    },
+    {
+      "path": "v80_refind.png",
+      "bytes": 6448
+    },
+    {
+      "path": "v81_clipped_hint.png",
+      "bytes": 6870
+    },
+    {
+      "path": "v81_evidence.py",
+      "bytes": 5645
+    },
+    {
+      "path": "v82_assets.py",
+      "bytes": 1955
+    },
+    {
+      "path": "v82_button_auto.png",
+      "bytes": 2254
+    },
+    {
+      "path": "v82_button_confirm.png",
+      "bytes": 3578
+    },
+    {
+      "path": "v82_button_refresh.png",
+      "bytes": 2943
+    },
+    {
+      "path": "v82_button_undo.png",
+      "bytes": 2683
+    },
+    {
+      "path": "v82_button_zoom_close.png",
+      "bytes": 3308
+    },
+    {
+      "path": "v82_button_zoom_scale.png",
+      "bytes": 3450
+    },
+    {
+      "path": "v82_calibration_help.png",
+      "bytes": 29250
+    },
+    {
+      "path": "v82_calibration_notices.png",
+      "bytes": 21956
+    },
+    {
+      "path": "v82_header_busy.png",
+      "bytes": 10870
+    },
+    {
+      "path": "v82_header_compare.png",
+      "bytes": 15846
+    },
+    {
+      "path": "v82_header_inspect.png",
+      "bytes": 6449
+    },
+    {
+      "path": "v82_header_rectified.png",
+      "bytes": 15497
+    },
+    {
+      "path": "v82_header_snapshot.png",
+      "bytes": 11368
+    },
+    {
+      "path": "v82_interaction.py",
+      "bytes": 29514
+    },
+    {
+      "path": "v82_manual.py",
+      "bytes": 24335
+    },
+    {
+      "path": "v82_manual_badges.png",
+      "bytes": 9139
+    },
+    {
+      "path": "v82_reading_help.png",
+      "bytes": 4828
+    },
+    {
+      "path": "v82_refind.png",
+      "bytes": 5361
+    },
+    {
+      "path": "v83_recovery.py",
+      "bytes": 6697
+    },
+    {
+      "path": "v84_color.py",
+      "bytes": 2868
+    },
+    {
+      "path": "v84_prebuilt.py",
+      "bytes": 9071
+    },
+    {
+      "path": "v84_snapshot.py",
+      "bytes": 3296
+    },
+    {
+      "path": "v85_boundary.py",
+      "bytes": 19443
+    },
+    {
+      "path": "v85_candidates.py",
+      "bytes": 2068
+    },
+    {
+      "path": "v86_candidates.py",
+      "bytes": 6438
+    },
+    {
+      "path": "v86_policy.py",
+      "bytes": 2000
+    },
+    {
+      "path": "v86_tracking.py",
+      "bytes": 680
+    },
+    {
+      "path": "v87_acquire.py",
+      "bytes": 17357
+    },
+    {
+      "path": "v87_v74_native.cpp",
+      "bytes": 105468
+    },
+    {
+      "path": "v87_v74_native.py",
+      "bytes": 84415
+    },
+    {
+      "path": "v87_v74_tracking.py",
+      "bytes": 146933
+    },
+    {
+      "path": "v88_motion.py",
+      "bytes": 2133
+    },
+    {
+      "path": "v88_recovery.py",
+      "bytes": 8679
+    },
+    {
+      "path": "v8_geometry.py",
+      "bytes": 27811
+    },
+    {
+      "path": "v8_plan.py",
+      "bytes": 10735
+    },
+    {
+      "path": "v8_surface.py",
+      "bytes": 17498
+    },
+    {
+      "path": "v8_tables.py",
+      "bytes": 6789
+    },
+    {
+      "path": "v90_lk.py",
+      "bytes": 3696
+    },
+    {
+      "path": "v90_transaction.py",
+      "bytes": 6230
+    },
+    {
+      "path": "v91_native.py",
+      "bytes": 14531
+    },
+    {
+      "path": "v91_policy.py",
+      "bytes": 2071
+    },
+    {
+      "path": "v91_transaction.cpp",
+      "bytes": 8214
+    },
+    {
+      "path": "v92_manual_v87.py",
+      "bytes": 22525
+    },
+    {
+      "path": "v94_audit.py",
+      "bytes": 7193
+    },
+    {
+      "path": "v97_1_button_down.png",
+      "bytes": 1193
+    },
+    {
+      "path": "v97_1_button_left.png",
+      "bytes": 1204
+    },
+    {
+      "path": "v97_1_button_right.png",
+      "bytes": 1200
+    },
+    {
+      "path": "v97_1_button_up.png",
+      "bytes": 1204
+    },
+    {
+      "path": "v97_3_target_hints.png",
+      "bytes": 249554
+    },
+    {
+      "path": "v97_album.py",
+      "bytes": 29337
+    },
+    {
+      "path": "v97_album_buttons.png",
+      "bytes": 22114
+    },
+    {
+      "path": "v97_album_header.png",
+      "bytes": 4654
+    },
+    {
+      "path": "v97_media_bar.png",
+      "bytes": 3241
+    },
+    {
+      "path": "v97_media_notices.png",
+      "bytes": 30132
+    },
+    {
+      "path": "v98_ai_back.png",
+      "bytes": 2538
+    },
+    {
+      "path": "v98_ai_geometry.py",
+      "bytes": 3543
+    },
+    {
+      "path": "v98_ai_header.png",
+      "bytes": 7185
+    },
+    {
+      "path": "v98_ai_help.png",
+      "bytes": 36437
+    },
+    {
+      "path": "v98_ai_manifest.json",
+      "bytes": 5283
+    },
+    {
+      "path": "v98_ai_notices.png",
+      "bytes": 55583
+    },
+    {
+      "path": "v98_ai_request.py",
+      "bytes": 276
+    },
+    {
+      "path": "v98_ai_worker.py",
+      "bytes": 5450
+    },
+    {
+      "path": "v99_ai_home_status.png",
+      "bytes": 23113
+    },
+    {
+      "path": "v99_ai_protocol.py",
+      "bytes": 2035
+    },
+    {
+      "path": "v99_ai_selftest.json",
+      "bytes": 5386
+    },
+    {
+      "path": "v99_ai_selftest.py",
+      "bytes": 7010
+    },
+    {
+      "path": "v99_ai_service.py",
+      "bytes": 24351
+    },
+    {
+      "path": "v99_ai_ui.py",
+      "bytes": 1946
+    },
+    {
+      "path": "v99_ai_worker.py",
+      "bytes": 7278
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "completed": true,
+  "rounds": 9,
+  "measurements": {
+    "AUTO_us": {
+      "supplied18_hybrid": 18.84606,
+      "reuse21_hybrid": 19.229645,
+      "difference_us": 0.38358500000000006,
+      "difference_percent": 2.0353591148494665
+    },
+    "AI_us": {
+      "supplied18_hybrid": 15.81269,
+      "reuse21_hybrid": 16.058120000000002,
+      "difference_us": 0.24543000000000248,
+      "difference_percent": 1.5521078323802007
+    },
+    "hybrid_enable_control_only": {
+      "pure_auto_us": 6.73688,
+      "enabled_auto_us": 19.229645,
+      "extra_us": 12.492765000000002,
+      "scope": "controller wrapper only, actual image tracker replaced identically; not whole-frame FPS"
+    }
+  },
+  "raw_rounds": {
+    "0": [
+      {
+        "version": 0,
+        "AUTO_us": 6.657615
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.71399
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.88645
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.879815
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.74263
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.718484999999999
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.692105
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.921810000000001
+      },
+      {
+        "version": 0,
+        "AUTO_us": 6.73688
+      }
+    ],
+    "19": [
+      {
+        "version": 19,
+        "AUTO_us": 17.57248,
+        "AI_us": 15.493985
+      },
+      {
+        "version": 19,
+        "AUTO_us": 18.88835,
+        "AI_us": 16.289625
+      },
+      {
+        "version": 19,
+        "AUTO_us": 18.642799999999998,
+        "AI_us": 15.81269
+      },
+      {
+        "version": 19,
+        "AUTO_us": 19.685095,
+        "AI_us": 15.565225
+      },
+      {
+        "version": 19,
+        "AUTO_us": 18.056815,
+        "AI_us": 15.751275
+      },
+      {
+        "version": 19,
+        "AUTO_us": 19.13089,
+        "AI_us": 15.470235
+      },
+      {
+        "version": 19,
+        "AUTO_us": 19.58944,
+        "AI_us": 15.83703
+      },
+      {
+        "version": 19,
+        "AUTO_us": 18.84606,
+        "AI_us": 16.19105
+      },
+      {
+        "version": 19,
+        "AUTO_us": 18.19538,
+        "AI_us": 15.850760000000001
+      }
+    ],
+    "20": [
+      {
+        "version": 20,
+        "AUTO_us": 19.92677,
+        "AI_us": 15.71402
+      },
+      {
+        "version": 20,
+        "AUTO_us": 18.24979,
+        "AI_us": 16.71671
+      },
+      {
+        "version": 20,
+        "AUTO_us": 18.848290000000002,
+        "AI_us": 16.26549
+      },
+      {
+        "version": 20,
+        "AUTO_us": 18.780544999999996,
+        "AI_us": 15.721135
+      },
+      {
+        "version": 20,
+        "AUTO_us": 20.07032,
+        "AI_us": 15.76025
+      },
+      {
+        "version": 20,
+        "AUTO_us": 19.394064999999998,
+        "AI_us": 16.058120000000002
+      },
+      {
+        "version": 20,
+        "AUTO_us": 18.614995,
+        "AI_us": 16.53338
+      },
+      {
+        "version": 20,
+        "AUTO_us": 20.11086,
+        "AI_us": 15.896415000000001
+      },
+      {
+        "version": 20,
+        "AUTO_us": 19.229645,
+        "AI_us": 16.92324
+      }
+    ]
+  },
+  "actual_controller_prepare_completed": true,
+  "stand_in_camera_frontend": true,
+  "host_only": true,
+  "board_fps_tested": false
+}

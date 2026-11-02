@@ -1,0 +1,546 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+  "host_tests": 376,
+  "suites": {
+    "test_target26": 47,
+    "test_sharp25": 44,
+    "test_profile22": 36,
+    "test_reuse21": 45,
+    "test_latency20": 36,
+    "test_manual17_frontend": 19,
+    "test_manual17_display": 20,
+    "test_man17_policy": 18,
+    "test_man17_cancel": 6,
+    "test_display18": 30,
+    "test_man17_frontend": 42,
+    "test_manual17_policy": 26,
+    "test_man17_package_ai": 7
+  },
+  "CPU_smoke": {
+    "passed": true,
+    "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+    "previous_cpu_check": {
+      "passed": true,
+      "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+      "previous_cpu_check": {
+        "passed": true,
+        "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+        "previous_cpu_check": {
+          "passed": true,
+          "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+          "previous_cpu_check": {
+            "passed": true,
+            "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+            "previous_cpu_check": {
+              "passed": true,
+              "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+              "previous_cpu_check": {
+                "passed": true,
+                "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                "display_policy_checks": 4,
+                "previous_cpu_check": {
+                  "passed": true,
+                  "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                  "manual_reference_checks": 6,
+                  "progress_checks": 3,
+                  "manual_corner_max_error_px": 2.000488296147524,
+                  "native_lk_executed": false,
+                  "previous_cpu_check": {
+                    "passed": true,
+                    "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                    "pair_checks": 9,
+                    "previous_cpu_check": {
+                      "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                      "passed": true,
+                      "preview_and_cancel_checks": 6,
+                      "previous_cpu_check": {
+                        "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                        "passed": true,
+                        "timer_reset_checks": 4,
+                        "previous_cpu_check": {
+                          "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                          "passed": true,
+                          "budget_checks": 3,
+                          "previous_cpu_check": {
+                            "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                            "passed": true,
+                            "target_cycle_checks": 3,
+                            "previous_cpu_check": {
+                              "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                              "passed": true,
+                              "policy_checks": 4,
+                              "output_hook_mean_us": 1.4897500001097796,
+                              "machine": "AMD64",
+                              "native_edge_check": {
+                                "release_id": "p11-rgb-pspl-v9-ai-target-20261030-26",
+                                "passed": true,
+                                "platform": "Windows-10-10.0.26200-SP0",
+                                "machine": "AMD64",
+                                "native_executed": true,
+                                "native_arm_executed": false,
+                                "native_source_sha256": "39c4e4c90edbba6e78109f5709b4063ed8eadfcbfb1e218fc8691b3c4e9d7f33",
+                                "timing": {
+                                  "physical4": {
+                                    "current": 59,
+                                    "total": 59,
+                                    "median_ms": 1.7644999988988275,
+                                    "p95_ms": 2.451075001772551
+                                  },
+                                  "trackfix5": {
+                                    "current": 59,
+                                    "total": 59,
+                                    "median_ms": 0.9941499974956969,
+                                    "p95_ms": 1.4410300003873997
+                                  }
+                                },
+                                "real_camera_fps_measured": false,
+                                "scope": "CPU recorded/synthetic input only; actual output FPS requires live board run-result.log"
+                              },
+                              "live_board_fps_measured": false,
+                              "scope": "CPU input-only installation smoke; compare live normal AUTO tracking via run-result.log"
+                            },
+                            "machine": "AMD64",
+                            "live_board_fps_measured": false,
+                            "scope": "CPU-only synthetic input and unchanged native edge kernel; not live camera/FPS acceptance"
+                          },
+                          "machine": "AMD64",
+                          "live_board_fps_measured": false,
+                          "scope": "CPU synthetic/policy checks and unchanged native edges; not live recovery/FPS acceptance"
+                        },
+                        "live_board_fps_measured": false,
+                        "scope": "CPU clock/reset and unchanged native checks; board FPS pending"
+                      },
+                      "live_board_fps_measured": false,
+                      "scope": "CPU-only RAM/ownership/cancel/native; no camera/HDMI/PL"
+                    },
+                    "live_board_fps_measured": false,
+                    "scope": "CPU/native and bounded pair metadata; no camera/HDMI/PL"
+                  },
+                  "live_board_fps_measured": false,
+                  "hardware_opened": false
+                },
+                "hardware_opened": false,
+                "live_board_fps_measured": false
+              },
+              "reuse_policy_checks": 12,
+              "cooldown_s": 2,
+              "capture_native": null,
+              "hardware_opened": false,
+              "live_board_fps_measured": false
+            },
+            "actual_profile_metadata_check": true,
+            "hardware_opened": false,
+            "board_FPS_tested": false
+          },
+          "sharp_pair_SHA_CRC_graph_checked": true,
+          "sharp_request_and_mock_MMIO_checked": true,
+          "sharp_UI_metadata_checked": true,
+          "hardware_opened": false,
+          "RTL_simulation_run": false,
+          "board_FPS_tested": false
+        },
+        "remap1p5_contract_checked": true,
+        "native_BGRX_input_selected": true,
+        "hardware_opened": false,
+        "board_FPS_tested": false
+      },
+      "latest_only_100ms_frame_boundary_checked": true,
+      "hardware_opened": false,
+      "board_FPS_tested": false
+    },
+    "point_scale600_checked": true,
+    "AI_manual_permission_checked": true,
+    "smaller_clicked_component_checked": true,
+    "multiple_and_bridge_rejected": true,
+    "hardware_opened": false,
+    "board_FPS_tested": false
+  },
+  "display_benchmark": {
+    "completed": true,
+    "rounds": 9,
+    "measurements": {
+      "display_batch_us": {
+        "previous25": 2935.9288333333334,
+        "current26": 2968.167,
+        "difference_us": 32.23816666666653,
+        "difference_percent": 1.098056815977544
+      },
+      "display_median_us": {
+        "previous25": 2813.7,
+        "current26": 2833.7,
+        "difference_us": 20.0,
+        "difference_percent": 0.7108078331023115
+      },
+      "display_p90_us": {
+        "previous25": 3482.8,
+        "current26": 3542.4,
+        "difference_us": 59.59999999999991,
+        "difference_percent": 1.7112667968301354
+      },
+      "ready_queue_take_us": {
+        "previous25": 1.224634,
+        "current26": 1.142706,
+        "difference_us": -0.081928,
+        "difference_percent": -6.689998807807063
+      }
+    },
+    "raw_rounds": {
+      "25": [
+        {
+          "version": 25,
+          "display_batch_us": 2924.9631666666664,
+          "display_median_us": 2800.25,
+          "display_p90_us": 3482.8,
+          "ready_queue_take_us": 1.12693,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2981.9605,
+          "display_median_us": 2848.2,
+          "display_p90_us": 3576.3,
+          "ready_queue_take_us": 1.2829739999999998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2953.3368333333333,
+          "display_median_us": 2814.4,
+          "display_p90_us": 3504.3,
+          "ready_queue_take_us": 1.1995440000000002,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2935.9288333333334,
+          "display_median_us": 2807.2,
+          "display_p90_us": 3461.5,
+          "ready_queue_take_us": 1.2915560000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3001.2243333333336,
+          "display_median_us": 2852.8999999999996,
+          "display_p90_us": 3675.2,
+          "ready_queue_take_us": 1.131188,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2970.215,
+          "display_median_us": 2837.85,
+          "display_p90_us": 3601.2,
+          "ready_queue_take_us": 1.1405619999999999,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2923.8476666666666,
+          "display_median_us": 2813.7,
+          "display_p90_us": 3436.8,
+          "ready_queue_take_us": 1.224634,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2892.609,
+          "display_median_us": 2759.3500000000004,
+          "display_p90_us": 3397.5,
+          "ready_queue_take_us": 1.32355,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2935.917,
+          "display_median_us": 2801.8,
+          "display_p90_us": 3463.2,
+          "ready_queue_take_us": 1.4237360000000001,
+          "owner_remember_included": true
+        }
+      ],
+      "26": [
+        {
+          "version": 26,
+          "display_batch_us": 2981.345,
+          "display_median_us": 2833.7,
+          "display_p90_us": 3630.8,
+          "ready_queue_take_us": 1.251006,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2898.3985,
+          "display_median_us": 2760.6499999999996,
+          "display_p90_us": 3442.3,
+          "ready_queue_take_us": 1.1100139999999998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2945.9876666666664,
+          "display_median_us": 2788.1,
+          "display_p90_us": 3542.4,
+          "ready_queue_take_us": 1.0804939999999998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2981.0713333333333,
+          "display_median_us": 2863.05,
+          "display_p90_us": 3593.6,
+          "ready_queue_take_us": 1.142706,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2993.4431666666665,
+          "display_median_us": 2856.3999999999996,
+          "display_p90_us": 3583.2,
+          "ready_queue_take_us": 1.1571559999999999,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2968.167,
+          "display_median_us": 2840.8,
+          "display_p90_us": 3451.2,
+          "ready_queue_take_us": 1.138906,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2946.4993333333337,
+          "display_median_us": 2818.65,
+          "display_p90_us": 3473.4,
+          "ready_queue_take_us": 1.132464,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2902.8696666666665,
+          "display_median_us": 2791.2,
+          "display_p90_us": 3354.9,
+          "ready_queue_take_us": 1.24586,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3101.1328333333336,
+          "display_median_us": 2972.7,
+          "display_p90_us": 3765.4,
+          "ready_queue_take_us": 1.172476,
+          "owner_remember_included": true
+        }
+      ]
+    },
+    "actual_offer_compositor": true,
+    "ready_queue_take": true,
+    "healthy_owner_remember_included": true,
+    "CPU_color_conversion_standins": true,
+    "fake_HDMI": true,
+    "host_only": true,
+    "board_fps_tested": false
+  },
+  "initial_concurrent_benchmark": {
+    "completed": true,
+    "rounds": 9,
+    "measurements": {
+      "display_batch_us": {
+        "previous25": 2945.4951666666666,
+        "current26": 3103.9426666666664,
+        "difference_us": 158.44749999999976,
+        "difference_percent": 5.379316245129351
+      },
+      "display_median_us": {
+        "previous25": 2844.8,
+        "current26": 2984.65,
+        "difference_us": 139.8499999999999,
+        "difference_percent": 4.915987064116978
+      },
+      "display_p90_us": {
+        "previous25": 3460.0,
+        "current26": 3767.7,
+        "difference_us": 307.6999999999998,
+        "difference_percent": 8.893063583815032
+      },
+      "ready_queue_take_us": {
+        "previous25": 1.168458,
+        "current26": 1.26591,
+        "difference_us": 0.0974520000000001,
+        "difference_percent": 8.340222755118297
+      }
+    },
+    "raw_rounds": {
+      "25": [
+        {
+          "version": 25,
+          "display_batch_us": 3337.607,
+          "display_median_us": 3266.75,
+          "display_p90_us": 3849.8,
+          "ready_queue_take_us": 1.1167880000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2843.1985,
+          "display_median_us": 2728.6,
+          "display_p90_us": 3273.3,
+          "ready_queue_take_us": 1.1778,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2892.1251666666667,
+          "display_median_us": 2758.7,
+          "display_p90_us": 3395.7,
+          "ready_queue_take_us": 1.12297,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2945.4951666666666,
+          "display_median_us": 2844.8,
+          "display_p90_us": 3460.0,
+          "ready_queue_take_us": 1.168458,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3125.6005,
+          "display_median_us": 2981.95,
+          "display_p90_us": 3956.3,
+          "ready_queue_take_us": 1.061382,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3736.9,
+          "display_median_us": 3649.7,
+          "display_p90_us": 4646.5,
+          "ready_queue_take_us": 1.406028,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3564.1803333333337,
+          "display_median_us": 3418.65,
+          "display_p90_us": 4439.7,
+          "ready_queue_take_us": 1.5350599999999999,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2825.9346666666665,
+          "display_median_us": 2712.7,
+          "display_p90_us": 3283.8,
+          "ready_queue_take_us": 1.175616,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2907.3413333333333,
+          "display_median_us": 2790.85,
+          "display_p90_us": 3409.2,
+          "ready_queue_take_us": 1.167038,
+          "owner_remember_included": true
+        }
+      ],
+      "26": [
+        {
+          "version": 26,
+          "display_batch_us": 3295.101,
+          "display_median_us": 3142.7,
+          "display_p90_us": 4023.7,
+          "ready_queue_take_us": 1.171738,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3103.9426666666664,
+          "display_median_us": 2984.65,
+          "display_p90_us": 3767.7,
+          "ready_queue_take_us": 1.1027280000000002,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3050.5745,
+          "display_median_us": 2869.3,
+          "display_p90_us": 3709.5,
+          "ready_queue_take_us": 1.452316,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 2970.1391666666664,
+          "display_median_us": 2839.7,
+          "display_p90_us": 3586.9,
+          "ready_queue_take_us": 1.129638,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3401.4883333333337,
+          "display_median_us": 3244.6,
+          "display_p90_us": 4378.3,
+          "ready_queue_take_us": 1.637354,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3586.4886666666666,
+          "display_median_us": 3464.95,
+          "display_p90_us": 4450.5,
+          "ready_queue_take_us": 1.42986,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3405.4855,
+          "display_median_us": 3140.3,
+          "display_p90_us": 4260.7,
+          "ready_queue_take_us": 1.295472,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3018.4135,
+          "display_median_us": 2859.25,
+          "display_p90_us": 3683.1,
+          "ready_queue_take_us": 1.17232,
+          "owner_remember_included": true
+        },
+        {
+          "version": 26,
+          "display_batch_us": 3033.0681666666665,
+          "display_median_us": 2890.85,
+          "display_p90_us": 3684.3,
+          "ready_queue_take_us": 1.26591,
+          "owner_remember_included": true
+        }
+      ]
+    },
+    "actual_offer_compositor": true,
+    "ready_queue_take": true,
+    "healthy_owner_remember_included": true,
+    "CPU_color_conversion_standins": true,
+    "fake_HDMI": true,
+    "host_only": true,
+    "board_fps_tested": false
+  },
+  "initial_benchmark_overlapped_regression": true,
+  "actual_compositor_images": [
+    "closed.png",
+    "resolution.png",
+    "sharp_bypass.png",
+    "sharp_panel.png",
+    "sharp_PL.png",
+    "sharp_waiting.png"
+  ],
+  "actual_UI_visually_inspected": true,
+  "previous25_source_preserved": true,
+  "hardware_tracker_camera_native_pixels_unchanged": true,
+  "board_FPS_tested": false
+}

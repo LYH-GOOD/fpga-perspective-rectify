@@ -1,0 +1,62 @@
+{
+ "format": "p1-light-pair-v1",
+ "build_id": "p11_pwl_light_20261030_27",
+ "source_bit": "light27.xsa",
+ "source_hwh": "light27.xsa",
+ "remap_version": 65541,
+ "immutable_user_pair": false,
+ "hardware_changed": true,
+ "software_adapter_board_tested": false,
+ "board_hardware_tested": false,
+ "board_hardware_tested_scope": "not tested; local synthesis/implementation/simulation evidence only",
+ "hdmi_vdma": "video/axi_vdma_disp",
+ "hdmi_pipeline": [
+  "video/axi_vdma_disp",
+  "video/hdmi_out/pixel_unpack",
+  "video/hdmi_out/color_convert",
+  "video/hdmi_out/frontend"
+ ],
+ "remap_parameters": {
+  "DW": 32,
+  "MAX_W": 512,
+  "ROWS": 384,
+  "NCH": 3,
+  "PIX_W": 24,
+  "NORM_SCALE": 2048
+ },
+ "notes": "PWL light27: original remap1.5 BGRX32 input; zero-BRAM target light stage before FIFO/sharp bypass; new matched bit/HWH; boardFPS pending.",
+ "bit_sha256": "aaa9f632d3f8a7a11db14ae36876f0d40fa9d7fa2666d8a4894c2ca14ddef3d0",
+ "bit_crc32": "648ec9a5",
+ "hwh_sha256": "deb1f5a620a74bae0cd74b25a223c4ab2beb319877e2cc74b675e66ac6e83637",
+ "hwh_crc32": "c8f60141",
+ "sharpening": {
+  "ip": "axis_sharp_0",
+  "bypass_ip": "axis_bypass_0",
+  "max_output_width": 512,
+  "block_policy": "single_tile_only_until_seam_validation",
+  "default_level": 0.0,
+  "board_FPS_verified": false
+ },
+ "internal_line_format": "RGB565_16bit",
+ "input_contract": {
+  "format": "BGRX32",
+  "bytes_per_pixel": 4,
+  "PL_YUYV": false,
+  "color_conversion": "existing_native_CPU"
+ },
+ "light": {
+  "ip": "axis_light_0",
+  "version": 1280573441,
+  "base": 1073750016,
+  "algorithm": "PWL_shadow_lift",
+  "strength_percent": [
+   0,
+   100
+  ],
+  "frame_locked": true,
+  "BRAM": 0,
+  "DSP": 1,
+  "hardware_evidence": "light27_hardware.json",
+  "board_FPS_verified": false
+ }
+}

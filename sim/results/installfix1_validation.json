@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "tests": 8,
+  "original_pre_model_failure_reproduced": true,
+  "selftest_preflight_executed": true,
+  "worker_integrity_executed": true,
+  "inference": {
+    "passed": true,
+    "cases": [
+      {
+        "id": "1024",
+        "max_corner_drift_px": 0.0,
+        "passed": true
+      },
+      {
+        "id": "1049",
+        "max_corner_drift_px": 0.0,
+        "passed": true
+      },
+      {
+        "id": "4000",
+        "max_corner_drift_px": 0.0,
+        "passed": true
+      },
+      {
+        "id": "4023",
+        "max_corner_drift_px": 0.0,
+        "passed": true
+      }
+    ],
+    "actual_windows_ncnn": true,
+    "model_retrained": false,
+    "board_abi_gate_simulated_only_for_hash_preflight": true,
+    "actual_arm_ipc_or_board_fps_tested": false
+  },
+  "source_sha256": {
+    "v99_ai_selftest.json": "fff52621108e55466355f23eec43290453eb0c78a065af6f1fc02be518b6aae2",
+    "v98_ai_manifest.json": "26dd5dcc240ccda448c9913c8f4f58511863016309217f8f08bf93b071e2b435"
+  },
+  "board_tested": false
+}

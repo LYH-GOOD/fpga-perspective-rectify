@@ -1,0 +1,435 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+  "host_tests": 254,
+  "suites": {
+    "test_sharp25": 44,
+    "test_profile22": 36,
+    "test_reuse21": 45,
+    "test_latency20": 36,
+    "test_manual17_frontend": 19,
+    "test_manual17_display": 20,
+    "test_man17_policy": 18,
+    "test_man17_cancel": 6,
+    "test_display18": 30
+  },
+  "CPU_smoke": {
+    "passed": true,
+    "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+    "previous_cpu_check": {
+      "passed": true,
+      "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+      "previous_cpu_check": {
+        "passed": true,
+        "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+        "previous_cpu_check": {
+          "passed": true,
+          "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+          "previous_cpu_check": {
+            "passed": true,
+            "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+            "previous_cpu_check": {
+              "passed": true,
+              "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+              "display_policy_checks": 4,
+              "previous_cpu_check": {
+                "passed": true,
+                "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                "manual_reference_checks": 6,
+                "progress_checks": 3,
+                "manual_corner_max_error_px": 2.000488296147524,
+                "native_lk_executed": false,
+                "previous_cpu_check": {
+                  "passed": true,
+                  "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                  "pair_checks": 9,
+                  "previous_cpu_check": {
+                    "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                    "passed": true,
+                    "preview_and_cancel_checks": 6,
+                    "previous_cpu_check": {
+                      "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                      "passed": true,
+                      "timer_reset_checks": 4,
+                      "previous_cpu_check": {
+                        "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                        "passed": true,
+                        "budget_checks": 3,
+                        "previous_cpu_check": {
+                          "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                          "passed": true,
+                          "target_cycle_checks": 3,
+                          "previous_cpu_check": {
+                            "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                            "passed": true,
+                            "policy_checks": 4,
+                            "output_hook_mean_us": 1.7057600000043749,
+                            "machine": "AMD64",
+                            "native_edge_check": {
+                              "release_id": "p11-rgb-pspl-v9-ai-sharplive-20261030-25",
+                              "passed": true,
+                              "platform": "Windows-10-10.0.26200-SP0",
+                              "machine": "AMD64",
+                              "native_executed": true,
+                              "native_arm_executed": false,
+                              "native_source_sha256": "39c4e4c90edbba6e78109f5709b4063ed8eadfcbfb1e218fc8691b3c4e9d7f33",
+                              "timing": {
+                                "physical4": {
+                                  "current": 59,
+                                  "total": 59,
+                                  "median_ms": 1.7781000005925307,
+                                  "p95_ms": 2.363394999883894
+                                },
+                                "trackfix5": {
+                                  "current": 59,
+                                  "total": 59,
+                                  "median_ms": 0.9623000005376525,
+                                  "p95_ms": 1.313375000609084
+                                }
+                              },
+                              "real_camera_fps_measured": false,
+                              "scope": "CPU recorded/synthetic input only; actual output FPS requires live board run-result.log"
+                            },
+                            "live_board_fps_measured": false,
+                            "scope": "CPU input-only installation smoke; compare live normal AUTO tracking via run-result.log"
+                          },
+                          "machine": "AMD64",
+                          "live_board_fps_measured": false,
+                          "scope": "CPU-only synthetic input and unchanged native edge kernel; not live camera/FPS acceptance"
+                        },
+                        "machine": "AMD64",
+                        "live_board_fps_measured": false,
+                        "scope": "CPU synthetic/policy checks and unchanged native edges; not live recovery/FPS acceptance"
+                      },
+                      "live_board_fps_measured": false,
+                      "scope": "CPU clock/reset and unchanged native checks; board FPS pending"
+                    },
+                    "live_board_fps_measured": false,
+                    "scope": "CPU-only RAM/ownership/cancel/native; no camera/HDMI/PL"
+                  },
+                  "live_board_fps_measured": false,
+                  "scope": "CPU/native and bounded pair metadata; no camera/HDMI/PL"
+                },
+                "live_board_fps_measured": false,
+                "hardware_opened": false
+              },
+              "hardware_opened": false,
+              "live_board_fps_measured": false
+            },
+            "reuse_policy_checks": 12,
+            "cooldown_s": 2,
+            "capture_native": null,
+            "hardware_opened": false,
+            "live_board_fps_measured": false
+          },
+          "actual_profile_metadata_check": true,
+          "hardware_opened": false,
+          "board_FPS_tested": false
+        },
+        "sharp_pair_SHA_CRC_graph_checked": true,
+        "sharp_request_and_mock_MMIO_checked": true,
+        "sharp_UI_metadata_checked": true,
+        "hardware_opened": false,
+        "RTL_simulation_run": false,
+        "board_FPS_tested": false
+      },
+      "remap1p5_contract_checked": true,
+      "native_BGRX_input_selected": true,
+      "hardware_opened": false,
+      "board_FPS_tested": false
+    },
+    "latest_only_100ms_frame_boundary_checked": true,
+    "hardware_opened": false,
+    "board_FPS_tested": false
+  },
+  "display_benchmark": {
+    "completed": true,
+    "rounds": 9,
+    "measurements": {
+      "display_batch_us": {
+        "previous24": 2954.8568333333333,
+        "current25": 2970.9245,
+        "difference_us": 16.06766666666681,
+        "difference_percent": 0.5437714100192448
+      },
+      "display_median_us": {
+        "previous24": 2819.3500000000004,
+        "current25": 2800.45,
+        "difference_us": -18.900000000000546,
+        "difference_percent": -0.6703672832390595
+      },
+      "display_p90_us": {
+        "previous24": 3557.8,
+        "current25": 3584.3,
+        "difference_us": 26.5,
+        "difference_percent": 0.744842318286576
+      },
+      "ready_queue_take_us": {
+        "previous24": 1.164414,
+        "current25": 1.1711500000000001,
+        "difference_us": 0.006736000000000075,
+        "difference_percent": 0.578488407044242
+      }
+    },
+    "raw_rounds": {
+      "24": [
+        {
+          "version": 24,
+          "display_batch_us": 2835.1311666666666,
+          "display_median_us": 2717.85,
+          "display_p90_us": 3307.1,
+          "ready_queue_take_us": 1.13715,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 3131.1823333333336,
+          "display_median_us": 2960.25,
+          "display_p90_us": 3884.6,
+          "ready_queue_take_us": 1.2825,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 3041.7813333333334,
+          "display_median_us": 2898.1,
+          "display_p90_us": 3713.0,
+          "ready_queue_take_us": 1.3074459999999999,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2954.8568333333333,
+          "display_median_us": 2822.05,
+          "display_p90_us": 3562.4,
+          "ready_queue_take_us": 1.164414,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2894.3023333333335,
+          "display_median_us": 2756.3,
+          "display_p90_us": 3431.8,
+          "ready_queue_take_us": 1.1170360000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2881.597,
+          "display_median_us": 2753.1,
+          "display_p90_us": 3382.2,
+          "ready_queue_take_us": 1.1654,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2943.2735,
+          "display_median_us": 2799.1000000000004,
+          "display_p90_us": 3557.8,
+          "ready_queue_take_us": 1.092112,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2973.2725,
+          "display_median_us": 2831.3,
+          "display_p90_us": 3560.0,
+          "ready_queue_take_us": 1.165998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2963.0583333333334,
+          "display_median_us": 2819.3500000000004,
+          "display_p90_us": 3506.3,
+          "ready_queue_take_us": 1.1394739999999999,
+          "owner_remember_included": true
+        }
+      ],
+      "25": [
+        {
+          "version": 25,
+          "display_batch_us": 3120.259,
+          "display_median_us": 2999.4,
+          "display_p90_us": 3798.2,
+          "ready_queue_take_us": 1.3409200000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2970.9245,
+          "display_median_us": 2786.3999999999996,
+          "display_p90_us": 3732.8,
+          "ready_queue_take_us": 1.143392,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3082.3981666666664,
+          "display_median_us": 2909.55,
+          "display_p90_us": 3825.9,
+          "ready_queue_take_us": 1.100084,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2995.629,
+          "display_median_us": 2876.7,
+          "display_p90_us": 3584.3,
+          "ready_queue_take_us": 1.1711500000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3171.5865,
+          "display_median_us": 2860.25,
+          "display_p90_us": 4095.3,
+          "ready_queue_take_us": 1.14204,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2871.1091666666666,
+          "display_median_us": 2701.7,
+          "display_p90_us": 3434.6,
+          "ready_queue_take_us": 1.149092,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2937.042,
+          "display_median_us": 2790.85,
+          "display_p90_us": 3491.4,
+          "ready_queue_take_us": 1.2073219999999998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2833.5493333333334,
+          "display_median_us": 2689.3,
+          "display_p90_us": 3326.4,
+          "ready_queue_take_us": 1.47346,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2935.1843333333336,
+          "display_median_us": 2800.45,
+          "display_p90_us": 3448.7,
+          "ready_queue_take_us": 1.2308620000000001,
+          "owner_remember_included": true
+        }
+      ]
+    },
+    "actual_offer_compositor": true,
+    "ready_queue_take": true,
+    "healthy_owner_remember_included": true,
+    "CPU_color_conversion_standins": true,
+    "fake_HDMI": true,
+    "host_only": true,
+    "board_fps_tested": false
+  },
+  "actual_compositor_images": [
+    "closed.png",
+    "resolution.png",
+    "sharp_bypass.png",
+    "sharp_panel.png",
+    "sharp_PL.png",
+    "sharp_waiting.png"
+  ],
+  "actual_UI_visually_inspected": true,
+  "first3_display_benchmark": {
+    "completed": true,
+    "rounds": 3,
+    "measurements": {
+      "display_batch_us": {
+        "previous24": 2914.7861666666663,
+        "current25": 3087.778,
+        "difference_us": 172.9918333333335,
+        "difference_percent": 5.934975104234352
+      },
+      "display_median_us": {
+        "previous24": 2789.9,
+        "current25": 2917.15,
+        "difference_us": 127.25,
+        "difference_percent": 4.561095379762725
+      },
+      "display_p90_us": {
+        "previous24": 3438.0,
+        "current25": 3812.4,
+        "difference_us": 374.4000000000001,
+        "difference_percent": 10.890052356020941
+      },
+      "ready_queue_take_us": {
+        "previous24": 1.0956199999999998,
+        "current25": 1.18425,
+        "difference_us": 0.08863000000000021,
+        "difference_percent": 8.089483580073399
+      }
+    },
+    "raw_rounds": {
+      "24": [
+        {
+          "version": 24,
+          "display_batch_us": 3300.7848333333336,
+          "display_median_us": 3259.45,
+          "display_p90_us": 3977.8,
+          "ready_queue_take_us": 1.1588720000000001,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2880.5345,
+          "display_median_us": 2769.55,
+          "display_p90_us": 3377.0,
+          "ready_queue_take_us": 1.0956199999999998,
+          "owner_remember_included": true
+        },
+        {
+          "version": 24,
+          "display_batch_us": 2914.7861666666663,
+          "display_median_us": 2789.9,
+          "display_p90_us": 3438.0,
+          "ready_queue_take_us": 1.0928520000000002,
+          "owner_remember_included": true
+        }
+      ],
+      "25": [
+        {
+          "version": 25,
+          "display_batch_us": 3169.344,
+          "display_median_us": 3024.55,
+          "display_p90_us": 3818.8,
+          "ready_queue_take_us": 1.18425,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 3087.778,
+          "display_median_us": 2917.15,
+          "display_p90_us": 3812.4,
+          "ready_queue_take_us": 1.233274,
+          "owner_remember_included": true
+        },
+        {
+          "version": 25,
+          "display_batch_us": 2877.3996666666667,
+          "display_median_us": 2759.75,
+          "display_p90_us": 3451.6,
+          "ready_queue_take_us": 1.160696,
+          "owner_remember_included": true
+        }
+      ]
+    },
+    "actual_offer_compositor": true,
+    "ready_queue_take": true,
+    "healthy_owner_remember_included": true,
+    "CPU_color_conversion_standins": true,
+    "fake_HDMI": true,
+    "host_only": true,
+    "board_fps_tested": false
+  },
+  "previous24_source_preserved": true,
+  "hardware_tracker_camera_AI_modes_preserved": true,
+  "board_FPS_tested": false
+}

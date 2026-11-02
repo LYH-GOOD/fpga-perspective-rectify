@@ -1,0 +1,15 @@
+{
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "archive": "p11_rgb_v9_ai_fps_20261101_33.zip",
+  "archive_sha256": "423609f84ddbdbfdee59a369d5fe39f938731ad59e46ebad292a4103c1c8f50d",
+  "archive_bytes": 16512818,
+  "manifest_sha256": "9b7bb4a50d757329162989babc9301ea213815646ecefe570cb134d02352b933",
+  "installer": "install_ai_fps_full_20261101_33.ipynb",
+  "installer_sha256": "058fe99b7ca3bb7107f6584e04f10e0ce4453d6059823500d418bbb466d576fb",
+  "files": 392,
+  "host_tests": 44,
+  "CPU_passed": true,
+  "board_FPS_tested": false,
+  "baseline_bit_sha256": "aaa9f632d3f8a7a11db14ae36876f0d40fa9d7fa2666d8a4894c2ca14ddef3d0",
+  "baseline_hwh_sha256": "deb1f5a620a74bae0cd74b25a223c4ab2beb319877e2cc74b675e66ac6e83637"
+}
