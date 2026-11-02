@@ -1,0 +1,18 @@
+# 关闭一切换行符转换。
+#
+# 原因：本项目的 p11_contract.verify_package() 按字节核对每个运行文件的 sha256。
+# 只要 git 在 checkout 时把 LF 换成 CRLF（Windows 的 core.autocrlf=true 默认行为），
+# 哈希立刻不匹配，程序会拒绝启动并报「文件版本或内容不一致」。
+# 所以仓库里的文件必须与发布包逐字节相同 —— 一行都不能动。
+#
+# `-text` = 不做 EOL 归一化，原样存储、原样检出。
+* -text
+
+# 二进制文件显式声明，避免 diff 时被当作文本处理
+*.bit  binary
+*.hwh  binary
+*.bin  binary
+*.param binary
+*.so   binary
+*.png  binary
+*.pkl  binary
