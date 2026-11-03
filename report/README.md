@@ -47,8 +47,66 @@
 
 ## 迭代与发布记录
 
-`releases/` 是开发过程的发布记录与修改说明，按版本命名。它与上面的报告正文互补：
-正文讲"为什么这么设计"，`releases/` 讲"每一版改了什么、当时是怎么判定的"。
+`releases/` 是开发过程的一版一页发布记录，共 **31 个文件**：29 份版本说明 + 2 份指路文件。
+它与上面的报告正文互补：正文讲"为什么这么设计"，`releases/` 讲"每一版改了什么、当时是怎么判定的"。
+
+### 主线版本（按版本号）
+
+| 版本 | 文件 | 主题 |
+|---|---|---|
+| 10 | `hotfix_release_report.md` | 计时修复、切换进度条、新目标先自动 |
+| 10 | `startfix_release_report.md` | 启动目录修正版 startfix1 |
+| 11 | `smooth_release_report.md` | 平滑（首行注明第 12 版以 `live` 为准） |
+| 12 | `live_release_report.md` | 实时显示（首行注明第 13 版见 `overlay`） |
+| 13 | `overlay_release_report.md` | 独立四角框与恢复冷却 3 秒 / 5 秒 |
+| 14 | `paired_release_report.md` | 同帧成对显示与实时原图恢复 |
+| 15 | `pic56_release_report.md` | 人工审核全量数据模型 |
+| 16 | `continuity16_release_report.md` | 短时实时延续与显式 AI 入口锁 |
+| 17 | `manual17_release_report.md` | 进度条收尾与手动参考跟踪 |
+| 18 | `display18_release_report.md` | 预览与连续显示 |
+| 21 | `reuse21_release_report.md` | V18 基线，相机全路径复用与 2 秒恢复冷却 |
+| 22 | `profile22_release_report.md` | 480P / 600P 切档进度条 |
+| 23 | `sharp23_release_report.md` | PL 锐化与左侧图像设置 |
+| 24 | `sharp24_release_report.md` | 交接 bit 的 remap1.5 兼容修复 |
+| 25 | `sharp25_release_report.md` | 锐化即时预览 |
+| 26 | `target26_release_report.md` | AI 后可点选切书、实时重选 |
+| 27 | `light27_release_report.md` | 可实时调节的低 BRAM 光补 |
+| — | `ui28_release_report.md` | UI28：恢复与实时显示迭代 |
+| 29 | `pic78_release_report.md` | PIC78 模型（2026-11-01） |
+| 30 | `fps30_release_report.md` | 0.5 秒 FPS 统计、2 小时运行 |
+| 31 | `fps31_release_report.md` | 1 秒 FPS 统计 |
+| 32 | `fps32_release_report.md` | 2 秒 FPS 统计 |
+| 33 | `fps33_release_report.md` | 3 秒 FPS 统计（**当前交付版**） |
+
+版本号不连续（缺 19、20），因为那几版没有独立发布说明。
+
+### 历史版说明（首行直接指向当前版）
+
+这 6 份不是某版的独立记录，而是保留下来方便回溯的旧说明，读它们的第一行就知道该看哪份：
+
+| 文件 | 首行指向 |
+|---|---|
+| `recovery_release_report.md` | 第 11 版当前行为见 `smooth` |
+| `unified_release_report.md` | unified8 历史说明，当前 recovery9 见 `recovery` |
+| `hybrid_release_report.md` | hybrid6 历史说明，当前 unified8 见 `unified` |
+| `physical_release_report.md` | 历史记录，hybrid6 见 `hybrid` |
+| `trackfix_release_report.md` | 历史记录，hybrid6 见 `hybrid` |
+| `installfix1_report.md` | 历史版，Current13 行为见 `overlay` |
+
+### 两份指路文件
+
+| 文件 | 内容 |
+|---|---|
+| `readme_ai_live.md` | 一行：先看 `fps33_release_report.md` |
+| `modification-notes.md` | 一行：同 `fps33_release_report.md`（原为同一份文件的重复拷贝） |
+
+### 每份发布说明怎么写
+
+格式基本固定为六段：**基于哪版 → 改了什么 → 哪些没动 → 验了什么 → 没验什么 → 怎么上板**。
+
+第 5 段"没验什么"是刻意的：它写清这一版**没有**做过板端实测的部分
+（例如第 33 版明确写着"没有进行板端 3 秒 FPS 实测或 2 小时实机长跑"）。
+**读的时候不要把这一段的推断和报告正文里的实测结论混为一谈。**
 
 ## 约定
 
