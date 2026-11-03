@@ -2,7 +2,7 @@
   check_start_notebook.py —— 启动本第 1 单元无头执行
 ======================================================================
 时间   : 2026-11-03T13:55:14
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : check_start_notebook.py  sha16=f23990dcb5190358
 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged

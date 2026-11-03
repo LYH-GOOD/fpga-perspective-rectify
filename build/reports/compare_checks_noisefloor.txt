@@ -2,7 +2,7 @@
   compare_checks.py —— 两份检查结果比对
 ======================================================================
 时间   : 2026-11-02T20:34:08
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : compare_checks.py  sha16=8ddf5c32825a4052
 A      : D:\study\competition\qian\fpga-perspective-rectify\build\reports\checks_baseline4.json

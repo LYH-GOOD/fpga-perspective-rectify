@@ -2,7 +2,7 @@
   make_delivery_zip.py —— 发布目录打成单个 zip
 ======================================================================
 时间 : 2026-11-02T23:51:09
-机器 : liheng / Windows-11-10.0.26200-SP0
+机器 : host / Windows-11-10.0.26200-SP0
 脚本 : make_delivery_zip.py  sha16=d476a42836d74f27
 源   : D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
 输出 : D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged.zip

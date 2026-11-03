@@ -2,7 +2,7 @@
   upload_merged.py —— 合并发布包上板 + 逐文件 sha256 复核
 ==============================================================================
 时间   : 2026-11-02T22:46:42
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 脚本   : upload_merged.py  sha16=01d26348c1776975
 本地   : D:\study\competition\qian\fpga-perspective-rectify\src
 远端   : xilinx@192.168.2.99:/home/xilinx/jupyter_notebooks/super/src

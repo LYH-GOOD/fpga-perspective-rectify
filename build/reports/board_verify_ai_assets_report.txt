@@ -2,7 +2,7 @@
   board_verify_ai_assets -- AI asset gate on board
 ======================================================================
 time   : 2026-11-02T21:58:26
-host   : liheng / Windows-11-10.0.26200-SP0
+host   : host / Windows-11-10.0.26200-SP0
 script : probe_ai_assets.py  sha16=2b45d31a8c62af90
 board  : xilinx@192.168.2.99:/home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
 ======================================================================

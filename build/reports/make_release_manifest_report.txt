@@ -2,7 +2,7 @@
   make_release_manifest.py —— 合并版发布清单
 ======================================================================
 时间   : 2026-11-03T02:36:46
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : make_release_manifest.py  sha16=e3d0840787b1a3dc
 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged

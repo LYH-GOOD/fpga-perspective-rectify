@@ -2,7 +2,7 @@
   merge_layers.py —— 把版本化模块按依赖层合并成 6 个文件
 ======================================================================
 时间   : 2026-11-03T02:36:44
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : merge_layers.py  sha16=d69ae937d67ca21f
 仓库   : D:\study\competition\qian\fpga-perspective-rectify

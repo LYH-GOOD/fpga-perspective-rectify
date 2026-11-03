@@ -6,13 +6,16 @@
 
 | 项 | 值 |
 |---|---|
-| 大小 | 2,711,085 B |
-| sha256 | `a443741309b739f4b7a21d2dff2ec2927521434b6b3972e77e23f5742c469c84` |
+| 大小 | 2,711,659 B |
+| sha256 | `fb524ae1faebd689cbe0591b9658473cb1af1c90ce2ede42c02a08687bb081eb` |
 
 > **2026-11-03 修订**：p27 三个数字更新为实测值 —— 115→114 个文件、26.5→26.2 MB、
 > 10→9 条用例图（`ai_selftest/1108.png` 未登记为用例，只跑 9 条）。
 > 只改这三处字符，其余逐页文本比对无差异（`build/reports/report_number_patch.txt`）。
-> 原件保留在 `_backup/design_report_20261103_before_p27_numbers.pdf`（sha256 `940ab49f…`）。
+> 原件保留在 `_backup/design_report_20261103_before_p27_numbers.pdf`（sha256 `e00e628b…`）。
+>
+> **2026-11-04 修订**：两份 PDF 的文档属性里带有个人署名（author 字段），已清空。
+> 正文逐页文本比对完全一致（30 页全同），只动了属性块；因此 sha256 随之变化。
 
 结构（按指南 3.3.5.3 组织）：
 

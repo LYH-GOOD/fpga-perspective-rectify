@@ -2,7 +2,7 @@
   run_checks.py —— 对运行目录跑全部 CPU 检查
 ======================================================================
 时间   : 2026-11-02T20:11:32
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : run_checks.py  sha16=46a511e7e32ce4e8
 运行目录: D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\baseline

@@ -2,7 +2,7 @@
   make_shims.py —— 生成原模块名的转发垫片
 ======================================================================
 时间   : 2026-11-02T20:33:56
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : make_shims.py  sha16=aa77eedd044a4459
 输出   : D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\shims

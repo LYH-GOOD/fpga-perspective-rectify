@@ -2,7 +2,7 @@
   build_merged_release.py —— 打完整合并发布目录
 ==============================================================================
 时间   : 2026-11-03T02:36:43
-机器   : liheng / Windows-11-10.0.26200-SP0
+机器   : host / Windows-11-10.0.26200-SP0
 Python : 3.14.6
 脚本   : build_merged_release.py  sha16=6fbfc48c759edda2
 输出   : D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
@@ -14,7 +14,7 @@ Python : 3.14.6
     |   merge_layers.py —— 把版本化模块按依赖层合并成 6 个文件
     | ======================================================================
     | 时间   : 2026-11-03T02:36:44
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : merge_layers.py  sha16=d69ae937d67ca21f
     | 仓库   : D:\study\competition\qian\fpga-perspective-rectify
@@ -82,7 +82,7 @@ Python : 3.14.6
     |   make_ai_entries.py —— 生成自包含的 AI 独立入口
     | ======================================================================
     | 时间   : 2026-11-03T02:36:45
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : make_ai_entries.py  sha16=ee75159da2f46e45
     | 输出   : D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
@@ -100,7 +100,7 @@ Python : 3.14.6
     |   make_release_manifest.py —— 合并版发布清单
     | ======================================================================
     | 时间   : 2026-11-03T02:36:46
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : make_release_manifest.py  sha16=e3d0840787b1a3dc
     | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
@@ -298,7 +298,7 @@ Python : 3.14.6
     |   check_merged.py —— 合并版运行目录自检
     | ======================================================================
     | 时间   : 2026-11-03T02:36:47
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : check_merged.py  sha16=b0d2e63370bfee48
     | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
@@ -356,7 +356,7 @@ Python : 3.14.6
     |   check_undefined.py —— 静态查未定义名（F821 等价）
     | ======================================================================
     | 时间   : 2026-11-03T02:37:48
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : check_undefined.py  sha16=56d68272acc4fd9c
     | 目标   : 6 个文件
@@ -379,7 +379,7 @@ Python : 3.14.6
     |   check_start_notebook.py —— 启动本第 1 单元无头执行
     | ======================================================================
     | 时间   : 2026-11-03T02:37:48
-    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | 机器   : host / Windows-11-10.0.26200-SP0
     | Python : 3.14.6
     | 脚本   : check_start_notebook.py  sha16=f23990dcb5190358
     | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
