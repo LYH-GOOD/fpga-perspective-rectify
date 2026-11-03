@@ -92,7 +92,7 @@ SFTP 传 `/tmp/<目录名>.new` → 板上逐文件 `sha256sum` 与本地现算�
 inode，换掉再删 `.old` 会让内核里 `Path.cwd()` 直接 `FileNotFoundError`）→ 清上一版残留 →
 在目标路径**再核一遍** → 删 staging。
 报告 `reports/upload_merged_report.txt`。（2026-11-03 实测：115 文件 / 26.5 MB / 两处 sha256 全一致。
-⚠️ 那次是删除 `5094.png` 之前跑的；现包 114 文件 / 25.0 MB，以 `release_manifest.json` 的 113 条为准。）
+⚠️ 那次是删除 `5094.png` 之前跑的；现包 114 文件 / 26.2 MB（25.0 MiB），以 `release_manifest.json` 的 113 条为准。）
 
 ## 辅助脚本（不在主链上，按需单跑）
 

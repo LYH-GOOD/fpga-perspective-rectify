@@ -25,7 +25,7 @@
 | 要求 | 包内位置 |
 |---|---|
 | **技能包** | `skill/`，入口 `skill/README.md`（逐项写明适用范围、使用方法与失效条件） |
-| **设计报告** | `report/design_report.pdf`（30 页，含大模型协作记录与复现说明）；迭代记录在 `report/releases/` |
+| **设计报告** | `report/design_report.pdf`（30 页，含大模型协作记录与复现说明）；迭代记录在 `report/releases/`；ROSS 套件的完整记录在 `report/ross_experience.md`，4.4 节重写稿在 `report/ross_section_4.4.docx` |
 
 ---
 
@@ -35,7 +35,7 @@
 |---|---|---|
 | `board/system.bit` | 4,045,690 B | `aaa9f632d3f8a7a11db14ae36876f0d40fa9d7fa2666d8a4894c2ca14ddef3d0` |
 | `board/system.hwh` | 853,392 B | `deb1f5a620a74bae0cd74b25a223c4ab2beb319877e2cc74b675e66ac6e83637` |
-| `report/design_report.pdf` | 2,743,704 B | `940ab49f2900484af748d9d2c2df2f6ece590e51d790429fe8bc0275e493dc67` |
+| `report/design_report.pdf` | 2,711,085 B | `a443741309b739f4b7a21d2dff2ec2927521434b6b3972e77e23f5742c469c84` |
 
 位流这一对文件就是 `board/logs/` 里那两次实测所运行的位流（包内多处登记，可交叉核对：
 `src/ps/core/p11_contract.py`、`src/ps/runtime/release_manifest.json`、`board/system.manifest.json`）。

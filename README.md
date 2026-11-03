@@ -82,8 +82,8 @@ MSYS_NO_PATHCONV=1 python build/upload_merged.py release/p11_fps33_20261101_merg
 - Git Bash（MSYS）里**必须**加 `MSYS_NO_PATHCONV=1`，否则 `/home/...` 会被改写成 Windows 路径。
 - 流程：先传 `/tmp/<目录>.new` → 板上逐文件核 sha256 → 一致才就地覆盖 → 再核一遍；不一致就中止，老目录保留。
 - 判据：`build/reports/upload_merged_report.txt` 里两处 sha256 全一致。
-  （那份报告是删除 `5094.png` **之前**跑的，记的是 115 文件 / 26.5 MB；现包 114 文件 / 25.0 MB，
-  逐文件核对以 `release_manifest.json` 的 113 条为准。）
+  （那份报告是删除 `5094.png` **之前**跑的，记的是 115 文件 / 26.5 MB；现包 **114 文件 / 26.2 MB
+  （25.0 MiB）**，逐文件核对以 `release_manifest.json` 的 113 条为准。）
 - 也可以整目录手拷，**但必须一个文件不少** —— 启动时 `verify_package()` 逐文件核 sha256，
   顶层 94 个文件缺一个或内容不一致就拒绝启动。
 
