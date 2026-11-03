@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "errors": [],
+  "scope": "offline declared layout only; board and render untested"
+}

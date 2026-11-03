@@ -18,65 +18,151 @@
 
 ## 复现步骤
 
-一次完整的复现不是从第一行代码写到最后一行，而是三条线各自推进、中途两次汇合。下面按推进顺序列出每一步要做什么，以及**什么条件满足了才算这一步真正做完**——放行条件不满足，不进入下一步。
+两条路径，按要做的事选一条：
 
-### 主线：算法与硬件，分五段推进
+| 要做的事 | 走哪条 | 用时 |
+|---|---|---|
+| 把它跑起来、核对结果 | **A · 直接上板** | 约 15 分钟 |
+| 从源文件重建整个工程 | **B · 从零重建** | 约 1 小时，另加 Vivado 跑流程的时间 |
 
-**① 定型｜先回答"做什么"**
+**统一口径**：EDA 用 **Vivado / Vitis 2025.2**，板上镜像 **PYNQ v3.1**（pynq 3.1.1 / Python 3.10.4），
+目标器件 `xc7z020clg400-1`。交付的 `system.bit` 由 Vivado 2025.2 完成综合、实现与位流，
+报告见 [`build/reports/`](build/reports/)；三个 HLS IP 由 Vitis 2025.2 生成，
+源与重建方式见 [`src/hls/`](src/hls/)。
 
-在三个候选方案之间做五维对比，选定平面自适应校正这条路线，并把方案定稿。
+---
 
-> 放行条件：路线唯一确定，四份定稿齐备。
+### A · 直接上板
 
-**② 打通｜再回答"能不能跑"**
+#### A1　上板的是哪些文件
 
-从零建起 PL 校正核，覆盖块设计、流式重映射与坐标发生器，直到整条链路在板上第一次跑通。
+上板的是**一个目录**：[`release/p11_fps33_20261101_merged/`](release/p11_fps33_20261101_merged/) ——
+114 个文件 / 25.0 MB。顶层 97 个，另有 `ai/`（7 个文件）与 `ai_selftest/`（10 张图，
+其中 9 张是自检用例）两个子目录。
 
-> 放行条件：测试平台逐字节通过，板上出首帧。
+| 顶层文件 | 个数 | 作用 |
+|---|---|---|
+| `system.bit` + `system.hwh` | 2 | 位流与硬件描述，必须同名同目录 |
+| `release_manifest.json` + `system.manifest.json` | 2 | 逐文件 sha256 清单，启动时逐个核对 |
+| `core.py` `geometry.py` `tracking.py` `display.py` `ai.py` `ui.py` | 6 | 全部运行逻辑 |
+| `v99_ai_worker.py` + `v99_ai_selftest.py` | 2 | AI 子进程入口 |
+| `p11_start.ipynb` + `ai_selftest.ipynb` | 2 | 板端入口 |
+| `*.png` + `*.json` | 71 + 6 | 界面素材与布局表 |
+| `*.cpp` | 6 | 板上首次运行时现场编译 |
 
-**③ 求对｜回答"算得对不对"**
+启动时 `verify_package()` 核对顶层 97 个中的 94 个（两份 notebook 与 `release_manifest.json`
+本身除外）；`ai/` 缺文件则在 AI 初始化时报错。
 
-加入帧身份校验与色彩通路，把找四角从 PC 端搬到板上，用实拍样本检验。
+上板时把该目录**整个**传上去，不要只挑其中几个文件。
 
-> 放行条件：实拍样本判废率归零。
+这个目录由仓库源码一条命令产出（重跑会先清空同名目录）：
 
-**④ 求快｜回答"连不连续"**
+```
+python build/build_merged_release.py release/p11_fps33_20261101_merged
+```
 
-把取帧、解算、重映射、显示四段做成重叠流水，并压掉显示合成的开销。
+不带参数时默认输出到克隆目录同级的 `_runtime_build/`。约 3 min，结尾打印 PASS 才算成功。
 
-> 放行条件：四段确实重叠，显示合成不再是瓶颈。
+#### A2　板端硬件（缺一不可）
 
-**⑤ 攻坚｜回答"够不够快"**
+| 项 | 要求 |
+|---|---|
+| 开发板 | PYNQ-Z2（`xc7z020clg400-1`），PYNQ v3.1 镜像 |
+| 显示 | HDMI 显示器接 **HDMI OUT**，输出固定 1280×720 |
+| 相机 | UVC 摄像头接 USB 口，固定 `/dev/video0`，工作档 640×480@30 |
+| 触摸屏 | **支持绝对坐标的 USB 触摸屏**。`run_ui` 启动时先开触摸设备，没有会直接报 `RuntimeError: No readable absolute USB touchscreen` |
 
-对校正核逐轮压缩每像素拍数，同时缩减 600P 预览开销，最后完成交付打包。
+#### A3　上传
 
-> 放行条件：打包完整，可交付。
+```
+MSYS_NO_PATHCONV=1 python build/upload_merged.py release/p11_fps33_20261101_merged /home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
+```
 
-### 第二条线：交互与跟踪，在主线打通之后加入
+- 脚本默认连 `192.168.2.99`（`xilinx` / `xilinx`）；换板子就改 [`build/upload_merged.py`](build/upload_merged.py) 顶部的 `HOST` / `USER` / `PASSWORD` / `REMOTE`。
+- Git Bash（MSYS）里**必须**加 `MSYS_NO_PATHCONV=1`，否则 `/home/...` 会被改写成 Windows 路径。
+- 流程：先传 `/tmp/<目录>.new` → 板上逐文件核 sha256 → 一致才就地覆盖 → 再核一遍；不一致就中止，老目录保留。
+- 判据：`build/reports/upload_merged_report.txt` 里两处 sha256 全一致。
+  （那份报告是删除 `5094.png` **之前**跑的，记的是 115 文件 / 26.5 MB；现包 114 文件 / 25.0 MB，
+  逐文件核对以 `release_manifest.json` 的 113 条为准。）
+- 也可以整目录手拷，**但必须一个文件不少** —— 启动时 `verify_package()` 逐文件核 sha256，
+  顶层 94 个文件缺一个或内容不一致就拒绝启动。
 
-这一线关心的不是"算得对不对"，而是"在人手里用起来连不连续"。
+#### A4　板上运行
 
-**① 可操作**——把触摸操作做成闭环。
+1. 浏览器打开 `http://<板子IP>:9090`（Jupyter，`xilinx` / `xilinx`）
+2. 进入该目录，打开 `p11_start.ipynb`
+3. **先重启内核**（Kernel → Restart），运行**第 1 个单元** —— 自动定位本版目录并打印 `RELEASE_ID`
+4. 运行**第 2 个单元**
 
-**② 可恢复**——让系统在静止与跟丢两种状态下都能自行恢复。
+#### A5　应该看到
 
-**③ 可交付**——同帧成对显示，双档位切换不断流。
+| 现象 | 说明 |
+|---|---|
+| HDMI 出主界面 | **点一下触摸屏**开始处理 |
+| 画面被拉正并实时刷新 | 纸、书本倾斜或旋转都能正过来 |
+| 界面有帧率读数 | 3 秒统计一次、100 ms 刷新 |
+| 默认跑满 2 小时 | `max_duration_s=7200`；提前停按界面上的 ■ Stop |
+| 结束打印 `结束；日志: <路径>` | 日志为板上该目录下的 `run-result-*.log` |
 
-### 第三条线：模型，在收口阶段加入
+参考值（原始日志见 [`board/README.md`](board/README.md)）：480P、静止场景 **22.73 fps**，
+相机 30.72 fps，单帧服务时间中位 35.6 ms。口径是 `HDMI_PROGRESS` 里 `frames` 累计值的斜率，
+换场景、换档位不能直接比。
 
-**① 补数据**——先补齐训练数据。
+**不开相机也能先验一套**：运行 `ai_selftest.ipynb`，用包内 9 条用例图跑 AI 分割，
+9 条全过即说明 AI 子进程、清单校验与图片素材都完整。
 
-**② 接入**——把轻量分割网络接进定位环节，只提供初始四角，拿到之后立即交回传统跟踪，不进入逐帧通路。
+---
 
-### 两次交汇
+### B · 从零重建
 
-**交汇一**：主线并入第二条线的代码库。此后"够不够快"与"连不连续"在同一份代码上同时推进。
+PL 与 PS 两条互不依赖，最后汇进同一个运行目录。
 
-**交汇二**：三条线合成同一个版本号。交付版本从这时起才正式存在。
+#### B1　PL：BD → 综合 → 实现 → 位流
 
-### 贯穿全程的纪律
+```
+cd build/vivado
+vivado -mode batch -source rebuild.tcl   -nojournal -log rebuild.log
+vivado -mode batch -source run_build.tcl -nojournal -log run_build.log
+```
 
-每一段的放行条件都是同一条：**先在测试平台上逐字节通过，再上板实测**。任一条不满足，不进入下一段。
+- `rebuild.tcl` 用 Block Design 源 [`system_light27.tcl`](build/vivado/system_light27.tcl)、
+  7 个 IP 的 [`ip_repo/`](build/vivado/ip_repo/)、RTL 与约束 [`src/rtl/`](src/rtl/) 建工程，只建工程不跑流程。
+- `run_build.tcl` 跑综合 → 实现 → 写位流，出 9 份报告与 `.xsa`。
+- 产物：`build/vivado/build/p11_light27.runs/impl_1/system_wrapper.bit` 与同名 `.hwh`
+  （必须同名同目录，`Overlay()` 靠它找硬件信息）。
+- **放行条件**：WNS > 0、DRC 错误 0、布线错误 0。交付版实测 LUT 17,569（33.02%）、
+  FF 24,135（22.68%）、BRAM 121（86.43%）、DSP 46、WNS +0.650 ns。
+- 自己重建的位流要上板，须同步改齐各处登记（两份清单、`p11_contract.EXACT_PAIR_SHA256`、
+  交付记录），否则 `verify_package()` 会拒绝启动。
+- 三个 HLS IP（`axis_sharp` / `color_convert` / `pixel_unpack`）以**打包好的 IP** 提供
+  （`ip_repo/`，含 `hdl/` 与 `component.xml`）；C++ 源与重建方式在 [`src/hls/`](src/hls/)。
+
+#### B2　PS：软件源码
+
+- [`src/ps/`](src/ps/)：`core/` 73 个 + `ui/` 41 个 = 114 个模块，纯 Python，无需编译。
+- [`src/native/`](src/native/) 的 6 个 `.cpp` 不预编译：板上首次运行时由 `v64_io.py` /
+  `v31_native.py` 用 g++ 现场编成 `.so`（`-O3 -fPIC -shared`，armv7l 加 `-mfpu=neon`）。
+
+#### B3　打包
+
+```
+python build/build_merged_release.py release/p11_fps33_20261101_merged
+```
+
+合并 6 个层文件 → 按源清单复制 → 剔掉复现用不到的文件 → 删掉 114 个模块 →
+造 AI 子进程入口 → 写两份清单 → 3 道门禁（`check_merged` / `check_undefined` /
+`check_start_notebook`）。任一道不过就报错退出。
+
+#### B4　上板
+
+回到 **A2** 起，步骤相同。
+
+#### B5　逐层验证（可选）
+
+| 命令 | 核什么 |
+|---|---|
+| `python build/assemble_runtime.py` | 另打一份 114 模块原样布局，与合并版互相印证 |
+| `python build/verify_merge.py` | 合并版切回 114 段做 AST 逐条比对，0 差异 |
 
 ---
 
@@ -89,10 +175,23 @@ fpga-perspective-rectify/
 ├── sim/          仿真或验证脚本与结果
 ├── build/        可复现的构建脚本 + 综合与实现报告
 ├── board/        上板工程、运行脚本与实测输出
+├── release/      上板运行目录（114 个文件，整个目录拷到板子）
 ├── data/         测试数据与参考结果
 ├── skill/        技能包（大模型协作中沉淀的可复用经验）
 └── report/       设计报告 + 大模型协作记录
 ```
+
+### 两种发布布局
+
+`p11_contract.verify_package()` 要求运行文件与 `system.bit` 同目录，并按包根路径逐文件核 sha256，
+所以仓库分层存放、上板前合回去。两种布局都受支持，写在 `release_manifest.json` 的 `layout` 字段里：
+
+| 布局 | 怎么打 | `.py` 个数 | `layout` |
+|---|---|---|---|
+| 按层合并（**交付版**） | `python build/build_merged_release.py` | 6 个层文件 + `v99_ai_worker.py` / `v99_ai_selftest.py`（两个子进程入口） | `layers-6` |
+| 原样 114 模块 | `python build/assemble_runtime.py` | 114 | `modules-114`（缺字段时默认） |
+
+两种布局内容完全等价：合并版由 `build/verify_merge.py` 做 AST 逐条语句比对，0 差异。
 
 ## 环境与依赖
 
@@ -100,7 +199,7 @@ fpga-perspective-rectify/
 |---|---|
 | 开发板 | PYNQ-Z2（`xc7z020clg400-1`） |
 | 板上镜像 | PYNQ v3.1（pynq 3.1.1 / Python 3.10.4） |
-| EDA 工具 | Vivado / Vitis **2026.1** |
+| EDA 工具 | Vivado / Vitis **2025.2** |
 | 主机侧 | Python 3 + Jupyter Notebook |
 
 > 如使用其他工具版本，须在报告中说明并保证脚本可复现。

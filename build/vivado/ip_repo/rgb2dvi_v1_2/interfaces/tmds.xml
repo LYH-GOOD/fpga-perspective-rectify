@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  digilentinc.com:interface:tmds:1.0 —— 总线定义（Bus Definition）
+
+  ⚠️ 本文件为**本仓库补齐**，不是队友原始导出的一部分（2026-11-02）。
+  原因：rgb2dvi_v1_2/component.xml 只声明了 abstractionType=tmds_rtl，
+  接口定义本体在 handoff 里丢失，导致 rebuild.tcl 在 create_bd_intf_pin 处失败，
+  BD 一个 cell 都建不出来。
+  结构照 Vivado 自带样例
+  data/ip/xilinx/an_lt_v1_0/interfaces/an_lt_ctrl_ports_int.xml。
+-->
+<spirit:busDefinition xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>digilentinc.com</spirit:vendor>
+  <spirit:library>interface</spirit:library>
+  <spirit:name>tmds</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:directConnection>true</spirit:directConnection>
+  <spirit:isAddressable>false</spirit:isAddressable>
+  <spirit:description>DVI 1.0 TMDS video interface (Digilent rgb2dvi)</spirit:description>
+</spirit:busDefinition>

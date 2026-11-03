@@ -1,0 +1,178 @@
+日志 : build\_scratch\run-result.log  5,516,764 B
+记录 : 1955 条 JSONL，无法解析 0 行
+       ⚠ 文件含 2 次运行（追加制）；只分析**最后一次**，1304 条，其余 651 条已跳过
+时间 : 2025-05-14T23:19:02.492059+00:00 → 2025-05-14T23:20:14.989723+00:00
+
+========================================================================
+1. 生命周期
+========================================================================
+  2025-05-14T23:19:02.492059+00:00  RUN_BEGIN  {"release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "run_id": "1821_1747264742487418007", "parameters": {"device": "/dev/video0", "touch_device": "auto", "bitfile": "system.bit", "max_duration_s": 7200.0, "max_frames": 0, "warmup_frames": 5, "swap_xy": false, "invert_x": false, "invert_y": false, "width": 640, "height": 480, "fps": 30, "output_size": [362, 512], "hdmi_mode": [1280, 720], "hdmi_ma
+  2025-05-14T23:20:14.989723+00:00  RUN_COMPLETED  {"run_id": "1821_1747264742487418007", "elapsed_wall_s": 72.50438149199908, "status": "stopped"}
+
+  阶段条数 Top20:
+      1003  MANUAL_FRAME
+        22  V64_FRAME
+        16  AI_WORKER_PROGRESS
+        15  DISPLAY_LIVE_EVENT
+        15  HDMI_FRAME_DETAIL
+        12  HDMI_CANVAS_ACQUIRED
+         9  UI_PAGE_PRESENTED
+         8  AI_MEMORY_ADMISSION
+         8  UI_SESSION_PHASE
+         6  UI_MODE_REQUEST
+         6  UI_TOUCH_CONTACT
+         5  AI_LIVE_BOUNDARY
+         5  UI_SESSION_BEGIN
+         5  UNIFIED_READY
+         5  RECOVERY_READY
+         5  GC_BUDGET_BEGIN
+         5  HOT_SWITCH_CAMERA_PARKED
+         5  UI_SESSION_END
+         4  UI_PRESS_FEEDBACK
+         4  UI_NAVIGATION_BEGIN
+
+========================================================================
+1b. 关键事件时间线（相对首条记录，秒）
+========================================================================
+    10.65s UI_NAVIGATION_BEGIN              {"generation": 1, "page": "compare", "kind": "enter", "event_driven": true, "artificial_delay": false}
+    10.65s UI_MODE_REQUEST                  {"page": "compare", "previous_page": "home", "generation": 1, "session_generation": 1, "error_banner": false, "layout_only": false, "camera_restarted": null, "camera_restart_decision": "shared_camera_after_reader_retirem
+    10.66s AI_LIVE_BOUNDARY                 {"state": "on_demand", "resident": false, "background_inference": false, "memory": {"MemAvailable": 259056, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 17092}, "idle_protocol": "blocking receive; passive OpenMP"}
+    10.67s UI_SESSION_BEGIN                 {"generation": 1, "view": "compare", "tracking": "fresh initial admission"}
+    11.12s CAMERA_STABILITY_BEGIN           {"min_frames": 12, "max_frames": 150, "stable_pairs": 4, "timeout_s": 6.0, "tolerance": [5.0, 3.0, 5.0, 3.0, 3.0], "scope": "startup_only_before_initial_detection_and_formal_measurement"}
+    14.61s UNIFIED_AUTO_ACCEPTED            {"epoch": 0, "attempts": 1, "rejections": 0, "source_sequence": 41, "current_revalidated": true, "initial_source_verified": true, "owned_source": true, "admission_policy": "V74 stabilize_camera + admit_initial_frame + fu
+    16.16s UI_NAVIGATION_BEGIN              {"generation": 2, "page": "compare", "kind": "ai_calibration", "event_driven": true, "artificial_delay": false}
+    16.16s UI_MODE_REQUEST                  {"page": "compare", "previous_page": "compare", "generation": 2, "session_generation": 2, "error_banner": false, "layout_only": false, "camera_restarted": null, "camera_restart_decision": "shared_camera_after_reader_reti
+    16.17s UI_CAMERA_RETURN                 {"frames": 90, "hardware_abort": false}
+    16.21s UI_SESSION_END                   {"status": "stopped", "frames": 90, "current": 34, "held": 0, "lost": 56, "current_correction_fps": 8.888632464045088, "delivered_fps": 8.888632464045088, "hdmi_current_fps": 6.5357591647390345, "hdmi_submit_fps": 6.5357
+    16.21s AI_LIVE_BOUNDARY                 {"state": "on_demand", "resident": false, "background_inference": false, "memory": {"MemAvailable": 237056, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 16308}, "idle_protocol": "blocking receive; passive OpenMP"}
+    16.21s UI_SESSION_BEGIN                 {"generation": 2, "view": "compare", "tracking": "fresh initial admission"}
+    28.02s UI_MODE_REQUEST                  {"page": "compare", "previous_page": "compare", "generation": 3, "session_generation": 3, "error_banner": false, "layout_only": false, "camera_restarted": null, "camera_restart_decision": "shared_camera_after_reader_reti
+    28.05s UI_SESSION_END                   {"status": "stopped", "frames": 284, "current": 0, "held": 0, "lost": 284, "current_correction_fps": 0.0, "delivered_fps": 0.0, "hdmi_current_fps": 0.0, "hdmi_submit_fps": 0.0, "formal_elapsed_s": 11.793627065999317, "ti
+    28.06s AI_LIVE_BOUNDARY                 {"state": "ready", "resident": true, "background_inference": false, "memory": {"MemAvailable": 194960, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 3440}, "idle_protocol": "blocking receive; passive OpenMP"}
+    28.06s UI_SESSION_BEGIN                 {"generation": 3, "view": "compare", "tracking": "fresh initial admission"}
+    38.49s RECOVERY_TRIGGER                 {"reason": "recover_tracking_lost", "epoch": 0, "effective_fps": 0.0}
+    38.53s RECOVERY_TRANSITION              {"reason": "recover_tracking_lost", "phase": "WAIT_TARGET", "origin": "AI", "epoch": 1, "recovery_round": 0, "old_workers_retired": true, "camera_reopened": false}
+    38.88s RECOVERY_TRANSITION              {"reason": "target_absent", "phase": "EMPTY_WAIT", "origin": "AI", "epoch": 2, "recovery_round": 0, "old_workers_retired": true, "camera_reopened": false}
+    49.54s UI_MODE_REQUEST                  {"page": "compare", "previous_page": "compare", "generation": 4, "session_generation": 4, "error_banner": false, "layout_only": false, "camera_restarted": null, "camera_restart_decision": "shared_camera_after_reader_reti
+    49.55s UI_SESSION_END                   {"status": "stopped", "frames": 384, "current": 0, "held": 0, "lost": 384, "current_correction_fps": 0.0, "delivered_fps": 0.0, "hdmi_current_fps": 0.0, "hdmi_submit_fps": 0.0, "formal_elapsed_s": 21.45053292800003, "tim
+    49.56s AI_LIVE_BOUNDARY                 {"state": "ready", "resident": true, "background_inference": false, "memory": {"MemAvailable": 196728, "SwapFree": 459516, "CmaTotal": 131072, "CmaFree": 6332}, "idle_protocol": "blocking receive; passive OpenMP"}
+    49.56s UI_SESSION_BEGIN                 {"generation": 4, "view": "compare", "tracking": "fresh initial admission"}
+    56.34s UI_NAVIGATION_BEGIN              {"generation": 5, "page": "compare", "kind": "ai_calibration", "event_driven": true, "artificial_delay": false}
+    56.35s UI_MODE_REQUEST                  {"page": "compare", "previous_page": "compare", "generation": 5, "session_generation": 5, "error_banner": false, "layout_only": false, "camera_restarted": null, "camera_restart_decision": "shared_camera_after_reader_reti
+    56.43s UI_SESSION_END                   {"status": "stopped", "frames": 127, "current": 51, "held": 0, "lost": 76, "current_correction_fps": 7.513524395844006, "delivered_fps": 7.513524395844006, "hdmi_current_fps": 6.77690435703577, "hdmi_submit_fps": 6.77690
+    56.44s AI_LIVE_BOUNDARY                 {"state": "ready", "resident": true, "background_inference": false, "memory": {"MemAvailable": 192164, "SwapFree": 459516, "CmaTotal": 131072, "CmaFree": 6608}, "idle_protocol": "blocking receive; passive OpenMP"}
+    56.44s UI_SESSION_BEGIN                 {"generation": 5, "view": "compare", "tracking": "fresh initial admission"}
+    67.49s UI_NAVIGATION_BEGIN              {"generation": 6, "page": "home", "kind": "home", "event_driven": true, "artificial_delay": false}
+    67.53s UI_MODE_REQUEST                  {"page": "home", "previous_page": "compare", "generation": 6, "session_generation": 6, "error_banner": false, "layout_only": false, "camera_restarted": false, "camera_restart_decision": "shared_camera_after_reader_retire
+    67.53s UI_TOUCH_PRESS_ACTION            {"contact_id": 6, "press": [90, 44], "raw_press": [288, 252], "kernel_event_s": 1747264809.974005, "dispatch_at": 21835.727116213, "callback_s": 0.044313194001006195, "outcome": {"page": "compare", "generation": 5, "acce
+    67.58s UI_SESSION_END                   {"status": "stopped", "frames": 208, "current": 129, "held": 0, "lost": 79, "current_correction_fps": 11.649682736138598, "delivered_fps": 11.649682736138598, "hdmi_current_fps": 10.65629893693298, "hdmi_submit_fps": 10.
+
+========================================================================
+2. 帧率（唯一口径：HDMI_PROGRESS.frames 斜率，回退处切段）
+========================================================================
+  HDMI_PROGRESS 记录不足，无法算斜率
+
+========================================================================
+3. V64_FRAME 明细（注意：这是抽稀日志，条数≠帧数）
+========================================================================
+  条数 22；首条 2025-05-14T23:19:14.953633+00:00，末条 2025-05-14T23:19:18.516299+00:00
+  出现过的字段：admission_mode, ai_mode_locked, ai_target_acquired, automatic_path, cache_sync_s, calm_FB_burst_exit, camera_controls_queried_at, camera_exposure_absolute, camera_exposure_auto_priority, camera_gain, camera_sequence, camera_timestamp, capture_observed_delta, capture_ready_at, capture_to_output_s, capture_wait_s, captured_anchor_age, color_mode, complete_FB, completed_output_reference, confidence, continuity_output, control_s, corner_filter_applied, corner_filter_shift, corner_source, corners, correction_fps, correction_origin, current_proof_reuse_hits, current_proof_store_count, current_source_normal_difference, current_source_proof_reason, current_source_proof_verified, current_source_rms, current_source_support, diagnostic_detail, direct_row_receive, direction_angle_degrees, direction_committed, direction_confirmations, direction_decision, direction_proposed, direction_switch, display_offer_lock_wait_s, display_offer_total_s, display_output_copy_s, display_output_reference_handoff, display_pair_copy_native_s, display_pair_copy_native_thread_cpu_s, display_raw_copy_s, display_raw_reference_handoff, display_snapshot_s, display_snapshot_thread_cpu_s, dma_wait_s, driver_sequence_gap_delta, driver_to_output_s, edge_rescue, edge_stability_s, edge_stability_thread_cpu_s, feature_count, feature_roi_s, feature_s, frame_count, geometry_result_decode_s, geometry_result_decode_thread_cpu_s, h_native_s, h_native_thread_cpu_s, held_age_s, hold_active, hold_changed, hold_count, hold_floor, hold_motion, hold_smooth, hybrid_epoch, hybrid_phase, hybrid_trigger, hybrid_valid_fps, illumination_change, illumination_local_reproof, illumination_probe_s, index, input_copy_s, input_pack_batch, input_pack_prefilled, interval_blocks, invalid_capture_delta, job_seal_s, latest_drop_delta, layout_generation, light_receipt, lk_s, lk_transaction_geometry, lk_trigger, local_edge_lock_attempted, local_edge_lock_s, local_edge_lock_thread_cpu_s, local_edge_lock_verified, localization_baseline, lookahead_prefills, lookahead_service_s, luma_clipped_fraction, luma_delta, luma_mean, mapping_native_s, mapping_native_thread_cpu_s, max_edge_rms, merge_probe_accepted, merge_probe_attempts, merge_probe_failure_streak, merge_probe_retry_s, metadata_build_s, metadata_thread_cpu_s, min_edge_support, mode, native_geometry_calls, native_geometry_fallback, native_geometry_s, native_geometry_thread_cpu_s, native_geometry_used, observation_native_s, observation_wrapper_s, orientation, orientation_prepare_s, orientation_thread_cpu_s, output_cache_batches, output_ready_at, output_size, output_slot, owner_arm_s, owner_loop_accounted_s, owner_loop_s, owner_out_reset_s, owner_prep_s, owner_release_s, owner_s, owner_setup_s, owner_sharp_done_s, owner_sharp_prep_s, owner_tail_s, owner_thread_cpu_s, paired_current_proof, parameter_queue_s, parameter_readback_verified, parameter_readbacks, partition_reused, photometric_residual, physical_layer_suspect, plan_cached, plan_failure, plan_strategy, plan_update_s, post_lk_tail_s, post_observation_s, postlk_native_transaction, pre_obs_s, preparation_wait_s, prev_release_source_s, proof_attempts, proof_budget_splits, proof_cache_hits, proof_coordinate_samples, proof_methods, proof_s, proof_thread_cpu_s, ps_light_results, ps_prepare_s, ps_prepare_total_s, ps_prepare_total_thread_cpu_s, ps_prepared_at, ps_thread_cpu_s, quick_current_candidate_attempted, quick_current_candidate_reason, quick_current_candidate_s, quick_current_candidate_thread_cpu_s, quick_current_candidate_verified, receive_layout, result_decode_s, result_decode_thread_cpu_s, roi_search_gap, same_frame_receipt_reused, service_s, sharp_receipt, skip_research, source_age_at_prepare_s, source_buffer_index, source_capture_gap_s, source_corners_s, source_gap_kind, source_gap_reacquire, source_generation, source_last_owner, source_processing_skips, source_snapshot_owned, source_snapshot_s, source_snapshot_skipped, source_step, stable_FB_context, stage, state, static_hold, static_hold_s, svc_counters_s, svc_hybrid_s, svc_offer_tail_s, svc_pre_s, switch_decided_at, switch_requested_at, target_cycle_state, ticket, tile_assembly_bytes, tile_assembly_s, tile_boxes, tile_crop_h, tile_crop_w, tile_crops, tile_peak_rows, tiles, time, track_reason, tracker_s, tracking_engine, tracking_index, ui_generation, v49_fastpath_route, verified_at
+  mode 分布: [["None", 14], ["static_hold", 7], ["edge_measured", 1]]
+  首条 vs 末条（去掉 time/stage）:
+    首: {"index": 8, "camera_sequence": 8, "capture_ready_at": 21780.6752528, "camera_timestamp": 21780.644096, "state": "LOST", "corners": [], "color_mode": 0, "output_size": [362, 512], "tiles": 0, "verified_at": 0.0, "ps_prepared_at": 21780.694596129, "ps_prepare_s": 0.03012981500069145, "ps_thread_cpu_s": 0.010463728000000005, "tracker_s": 0.0, "track_reason": "AUTO_SEARCH", "admission_mode": "unified_search", "source_snapshot_owned": true, "correction_origin": "AUTO", "corner_source": "AUTO", "tracking_engine": "NONE", "hybrid_phase": "AUTO_SEARCH", "hybrid_epoch": 0, "hybrid_valid_fps": 0.0, "hybrid_trigger": "", "target_cycle_state": "UNKNOWN", "continuity_output": false, "ai_mode_locked": fa
+    末: {"index": 92, "camera_sequence": 96, "capture_ready_at": 21784.203848696, "camera_timestamp": 21784.172317, "verified_at": 21784.203848696, "state": "CURRENT", "color_mode": 0, "source_snapshot_s": 0.00995752599919797, "source_capture_gap_s": 0.041776874000788666, "source_step": 1, "source_gap_reacquire": false, "captured_anchor_age": 55, "source_gap_kind": "normal_selected_interval", "source_processing_skips": false, "source_age_at_prepare_s": 0.0013343690006877296, "capture_observed_delta": 1, "latest_drop_delta": 0, "invalid_capture_delta": 0, "driver_sequence_gap_delta": 0, "capture_wait_s": 0.0010701910032366868, "ps_prepare_s": 0.023509390997787705, "ps_prepared_at": 21784.228704604, "
+
+========================================================================
+3b. 会话表（UI_SESSION_END）—— 这里是「出校正结果的速率」，不是面板刷新率
+========================================================================
+   gen view        frames  current   held    lost  lost%  corr_fps  deliv_fps       秒
+     1 compare         90       34      0      56  62.2%      8.89       8.89     3.8
+     2 compare        284        0      0     284 100.0%      0.00       0.00    11.8
+     3 compare        384        0      0     384 100.0%      0.00       0.00    21.5
+     4 compare        127       51      0      76  59.8%      7.51       7.51     6.8
+     5 compare        208      129      0      79  38.0%     11.65      11.65    11.1
+    合计               1093      214                 80.4%
+
+========================================================================
+3c. 帧状态与 LOST 归因（V64_FRAME 是 1/N 抽稀，看比例别数条数）
+========================================================================
+  state: [["LOST", 14], ["CURRENT", 8]]
+  state × mode:
+    ('LOST', None)                           14
+    ('CURRENT', 'static_hold')               7
+    ('CURRENT', 'edge_measured')             1
+  LOST 帧 14 条的 track_reason：
+       14  AUTO_SEARCH
+
+========================================================================
+3d. 各 mode 的关键耗时（均值，ms）
+========================================================================
+  mode                     n     ps_prepare     tracker          lk    dma_wait       ownercapture_to_outputpreparation_wait
+  None                     14        29.8         0.0           -           -         0.0        28.4        31.3
+  static_hold               7        31.2        12.4         0.0        11.4        24.3        76.1         6.3
+  edge_measured             1        46.1        31.1         0.0        14.5        20.1        79.4        30.0
+
+========================================================================
+3e. 每 5 秒窗：mode 分布 + 均值耗时（ms）—— 看掉帧掉在哪一段
+========================================================================
+      t   n static   lk edge lost  ps_prep  tracker    lk_s  cap2out  prepwait
+     10  15      0    0    1   14    30.9     2.1     0.0    31.8    31.2
+     15   7      7    0    0    0    31.2    12.4     0.0    76.1     6.3
+
+========================================================================
+4. 异常与恢复
+========================================================================
+  命中 5 条
+       3  MANUAL_TRACK_FAIL
+       1  CRASH_CAPTURE_READY
+       1  TARGET_SELECTION_FAILED
+    - {"stage": "CRASH_CAPTURE_READY", "pid": 1821, "enabled": true, "log_file": "/home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged/run-result.log", "caught_signals": ["SIGSEGV", "SIGBUS", "SIGABRT", "SIGFPE", "SIGILL"], "sigkill_oom_captured": false, "scope": "kernel_lifetime_pinned_append_fd", "startup_trace_scope": "first frame; warmup if warmup_frames>=1"}
+    - {"stage": "TARGET_SELECTION_FAILED", "request_id": null, "reason": "目标未分清，请点书中心或拉开两本书", "automatic_retry_same_click": false, "live_preview": true, "waiting_for": "new tap or confirmed absence/return"}
+    - {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 3, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.08841257200037944}
+    - {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 3, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.07465648599827546}
+    - {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 4, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.07934190699961619}
+
+  RECOVERY_TRIGGER: 1 条
+    {"stage": "RECOVERY_TRIGGER", "reason": "recover_tracking_lost", "epoch": 0, "effective_fps": 0.0}
+  RECOVERY_TRANSITION: 2 条
+    {"stage": "RECOVERY_TRANSITION", "reason": "recover_tracking_lost", "phase": "WAIT_TARGET", "origin": "AI", "epoch": 1, "recovery_round": 0, "old_workers_retired": true, "camera_reopened": false}
+    {"stage": "RECOVERY_TRANSITION", "reason": "target_absent", "phase": "EMPTY_WAIT", "origin": "AI", "epoch": 2, "recovery_round": 0, "old_workers_retired": true, "camera_reopened": false}
+  UNIFIED_AUTO_PHASE: 4 条
+    {"stage": "UNIFIED_AUTO_PHASE", "phase": "STABILIZING", "search_at": null, "candidate_at": null, "search_s": 1.5, "candidate_extra_s": 1.3, "total_cap_s": 2.8}
+    {"stage": "UNIFIED_AUTO_PHASE", "phase": "SEARCHING", "search_at": 21780.899919433, "candidate_at": null, "search_s": 1.5, "candidate_extra_s": 1.3, "total_cap_s": 2.8}
+    {"stage": "UNIFIED_AUTO_PHASE", "phase": "CANDIDATE", "search_at": 21780.899919433, "candidate_at": 21781.452584177, "search_s": 1.5, "candidate_extra_s": 1.3, "total_cap_s": 2.8}
+  UNIFIED_AUTO_ACCEPTED: 1 条
+    {"stage": "UNIFIED_AUTO_ACCEPTED", "epoch": 0, "attempts": 1, "rejections": 0, "source_sequence": 41, "current_revalidated": true, "initial_source_verified": true, "owned_source": true, "admission_policy": "V74 stabilize_camera + admit_initial_frame + full detect_refined", "elapsed_worker_cpu_s": 1.2467155879999998, "startup_stability": {"state": "observed_stable", "frames_observed": 12, "frames_r
+  MANUAL_TRACK_FAIL: 3 条
+    {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 3, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.08841257200037944}
+    {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 3, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.07465648599827546}
+    {"stage": "MANUAL_TRACK_FAIL", "reason": "manual_FB_consistency_failed", "feature_count": 18, "good_features": 4, "inlier_fraction": null, "inlier_count": null, "model_points": null, "reprojection_rms": null, "fb_median": null, "hold_active": false, "hold_frames": 0, "source_sha256": "91bc42171f0c5976043992d6978dfa657ab2a213ef24d456a63c1df515c28d1d", "tracker_s": 0.07934190699961619}
+
+========================================================================
+5. AI 与内存
+========================================================================
+  AI_READY: 2 条
+    {"stage": "AI_READY", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "pid": 2254, "memory": {"VmHWM": 67296, "VmRSS": 67296, "VmSwap": 0, "Threads": 1, "Pss": 59711, "MemAvailable": 213176, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 3296}, "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "initialization_ms": 2689.2238360014744, "ncnn_version": "1.0.20261020", "numpy_version": "1.21.5", "threads": 1, "opencv_imported": false, "preprocessing": "rgb-a
+    {"stage": "AI_READY", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "pid": 2279, "memory": {"VmHWM": 67108, "VmRSS": 67108, "VmSwap": 0, "Threads": 1, "Pss": 59700, "MemAvailable": 194004, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 2848}, "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "initialization_ms": 4558.344375000161, "ncnn_version": "1.0.20261020", "numpy_version": "1.21.5", "threads": 1, "opencv_imported": false, "preprocessing": "rgb-ar
+  AI_MEMORY_ADMISSION: 8 条
+    {"stage": "AI_MEMORY_ADMISSION", "passed": false, "memory": {"MemAvailable": 210400, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 1748}, "worker": {"VmHWM": 67296, "VmRSS": 67296, "VmSwap": 0, "Threads": 1, "Pss": 59711, "MemAvailable": 213176, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 3296}, "baseline_before_ai": {"MemAvailable": 257448, "SwapFree": 464636, "CmaTotal": 131072, "CmaFree": 17792}, "min_available_kib": 65536, "max_worker_pss_kib": 131072, "pending_cma_reserve_kib": 
+    {"stage": "AI_MEMORY_ADMISSION", "passed": true, "memory": {"MemAvailable": 193620, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 3440}, "worker": {"VmHWM": 68272, "VmRSS": 67384, "VmSwap": 0, "Threads": 1, "Pss": 59899, "MemAvailable": 193392, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 3408}, "baseline_before_ai": {"MemAvailable": 235004, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 16308}, "min_available_kib": 65536, "max_worker_pss_kib": 131072, "pending_cma_reserve_kib": 2
+    {"stage": "AI_MEMORY_ADMISSION", "passed": true, "memory": {"MemAvailable": 194960, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 3440}, "worker": {"VmHWM": 68272, "VmRSS": 67384, "VmSwap": 0, "Threads": 1, "Pss": 59899, "MemAvailable": 193392, "SwapFree": 463100, "CmaTotal": 131072, "CmaFree": 3408}, "baseline_before_ai": {"MemAvailable": 235004, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 16308}, "min_available_kib": 65536, "max_worker_pss_kib": 131072, "pending_cma_reserve_kib": 2
+    {"stage": "AI_MEMORY_ADMISSION", "passed": true, "memory": {"MemAvailable": 188308, "SwapFree": 462332, "CmaTotal": 131072, "CmaFree": 4824}, "worker": {"VmHWM": 68288, "VmRSS": 67264, "VmSwap": 0, "Threads": 1, "Pss": 59775, "MemAvailable": 188248, "SwapFree": 462332, "CmaTotal": 131072, "CmaFree": 4824}, "baseline_before_ai": {"MemAvailable": 235004, "SwapFree": 463868, "CmaTotal": 131072, "CmaFree": 16308}, "min_available_kib": 65536, "max_worker_pss_kib": 131072, "pending_cma_reserve_kib": 2
+  AI_WORKER_RESULT: 4 条
+    {"stage": "AI_WORKER_RESULT", "status": "failed", "shape": [192, 256], "dtype": "uint8", "mask_sha256": "13a72d65059ed6bc02a1ef0a253294e08adc18adcc044721bbd2d30d400cbaa6", "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "generation": 2, "token": 0, "sequence": 124, "request_id": 1, "source_sha256": "e19b771c81bd790948021bd7eac20cdca85a2a2d1a1a5f7092463b66eed3b145", "tensor_sha256": "8f1174259ac2a29afa8c1c56a4
+    {"stage": "AI_WORKER_RESULT", "status": "candidate", "shape": [192, 256], "dtype": "uint8", "mask_sha256": "9bcadcb65951e8accd87f9417e0cc955b854c4d4eb3748bcc5b21e3b3237abb9", "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "generation": 3, "token": 0, "sequence": 422, "request_id": 1, "source_sha256": "a58e5b23f7117f3ebab7713e5748fac3b5a370d7e73fa9e8b3add11d70449645", "tensor_sha256": "5789ebde281f3af2eafa7fd
+    {"stage": "AI_WORKER_RESULT", "status": "candidate", "shape": [192, 256], "dtype": "uint8", "mask_sha256": "4a7ac5076a10359673c8520d038616218767dea2cca84734eef4855016ea4489", "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "generation": 4, "token": 0, "sequence": 958, "request_id": 1, "source_sha256": "45345ff6b4deb3b8476231ed03e5f35b1421afbd8c5036ab289c2f7a695395de", "tensor_sha256": "d37908cf234e609649308e2
+    {"stage": "AI_WORKER_RESULT", "status": "candidate", "shape": [192, 256], "dtype": "uint8", "mask_sha256": "f591da61377777a8df8451d431fff59bb13081ebd6849ee6e1db47a659e995f9", "model_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85", "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33", "generation": 5, "token": 0, "sequence": 1128, "request_id": 1, "source_sha256": "c252b771e22c3e5ae1336a43afc0fe6c518e83fd28a63833af6648ac4003b33c", "tensor_sha256": "7a5be70d3c8afb45394d98
+
+========================================================================
+6. 最后 6 条
+========================================================================
+  {"time": "2025-05-14T23:20:14.754179+00:00", "stage": "UI_TOUCH_SUMMARY", "contacts": 6, "dropped_contacts": 0, "accepted_press_actions": 1, "corner_move_events": 0}
+  {"time": "2025-05-14T23:20:14.872162+00:00", "stage": "HDMI_STOP_BEGIN", "reason": "application_exit_or_owner_error", "page": "home", "generation": 6}
+  {"time": "2025-05-14T23:20:14.946581+00:00", "stage": "HDMI_STOPPED", "physical_scanout_halted": true, "buffers_released_after_halt": true}
+  {"time": "2025-05-14T23:20:14.983677+00:00", "stage": "GC_RUN_SUMMARY", "summary": {"count": 206, "wall_s": 3.1948556020252, "thread_cpu_s": 3.1740100319999707, "max_s": 0.6699319120016298, "first_number": 305, "last_number": 510}, "retention": {"cursor": 510, "capacity": 4096, "unavailable_since_cursor": 0}}
+  {"time": "2025-05-14T23:20:14.986019+00:00", "stage": "LOG_WRITER_SUMMARY", "scope": "through_summary_barrier_before_final_close", "metrics": {"records": 1302, "bytes": 2086175, "serialize_s": 1.3685046219397918, "serialize_cpu_s": 0.9602704110000022, "serialize_max_s": 0.02223210399824893, "snapshot_s": 1.8244340180208383, "snapshot_cpu_s": 0.7513985980001071, "snapshot_max_s": 0.0319564179990266, "enqueue_s": 0.7655030180030735, "enqueue_cpu_s": 0.25104429000013606, "enqueue_max_s": 0.0374366949981777, "queue_max": 6, "write_s": 0.11944202501035761, "write_cpu_s": 0.05327764000000143, "write
+  {"time": "2025-05-14T23:20:14.989723+00:00", "stage": "RUN_COMPLETED", "run_id": "1821_1747264742487418007", "elapsed_wall_s": 72.50438149199908, "status": "stopped"}
+
+RESULT: OK（只读分析，未改动任何文件）

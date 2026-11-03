@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "preprocessing": {
+    "height": 192,
+    "width": 256,
+    "color": "RGB",
+    "mean": [
+      0.48500001430511475,
+      0.4560000002384186,
+      0.4059999883174896
+    ],
+    "std": [
+      0.2290000021457672,
+      0.2240000069141388,
+      0.22499999403953552
+    ],
+    "resize": "direct_resize"
+  },
+  "trigger": "explicit live compare/rectified AI button; one request per captured frame",
+  "backend": "ncnn FP32 ARMv7 Python3.10 resident one CPU thread",
+  "sha256": {
+    "ai/conversion_report.json": "f819e6efec1eccd1b9e40e79be0f19b015f4c9c85e769aa00ecda3a5e78ffaba",
+    "ai/plane.ncnn.bin": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85",
+    "ai/plane.ncnn.param": "b9372d6742a87cb0724b3de80419e65b86dc6d978f8ca6d2408fe7a1ef32a2f8",
+    "ai/runtime/ncnn-1.0.20261020.dist-info/licenses/LICENSE.txt": "7c974bac98848df46be1af5bdaa3c3c9c01f6082a90f55caeb7f60c6208aa255",
+    "ai/runtime/ncnn.libs/libgomp-39027b09.so.1.0.0": "26a970393a2a05b01376f7dedff92bf3a4716beb2db1678dc2fc36de6d5f2619",
+    "ai/runtime/ncnn/__init__.py": "ef90c76a49b37e74b0cd89f1da9502e764ee6b24a8da44860f4af894dc5838fe",
+    "ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so": "877c4a2ff7503ea0fe6617fb77bb34c94c6ad1935eb47029cb793ac114b12e0d"
+  },
+  "target_policy": "physical tablet outer body INCLUDING bezel; book full cover"
+}

@@ -1,0 +1,22 @@
+======================================================================
+  make_delivery_zip.py —— 发布目录打成单个 zip
+======================================================================
+时间 : 2026-11-02T23:51:09
+机器 : liheng / Windows-11-10.0.26200-SP0
+脚本 : make_delivery_zip.py  sha16=d476a42836d74f27
+源   : D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
+输出 : D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged.zip
+
+[1] 收集 104 个文件，原始 21.61 MB
+[2] 空转门禁：先故意改坏一个条目，自检必须报红
+    [OK] 按预期报红：zip 多出：__ghost__.txt
+[3] 打包
+    p11_fps33_20261101_merged.zip  11.36 MB  压缩率 52.6%
+[4] 回读逐条目核 sha256
+    [OK] 全部一致
+
+zip  sha256 = 29ad838dc6226d2a7c2f51301ba6b9949f2743d2041f40e3a71b1d323c22d8f4
+zip  sha16  = 29ad838dc6226d2a
+包装后大小  = 11,911,114 B
+
+RESULT: PASS

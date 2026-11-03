@@ -1,0 +1,37 @@
+## UI Pro Max Search Results
+**Domain:** ux | **Query:** loading progress feedback
+**Source:** ux-guidelines.csv | **Found:** 3 results
+
+### Result 1
+- **Category:** Feedback
+- **Issue:** Progress Indicators
+- **Platform:** All
+- **Description:** Show progress for multi-step processes
+- **Do:** Step indicators or progress bar
+- **Don't:** No indication of progress
+- **Code Example Good:** Step 2 of 4 indicator
+- **Code Example Bad:** No step information
+- **Severity:** Medium
+
+### Result 2
+- **Category:** Feedback
+- **Issue:** Loading Indicators
+- **Platform:** All
+- **Description:** Loading feedback should match the expected wait and avoid flashing for near-instant work
+- **Do:** Follow platform and component guidance; preserve layout focus and accessible busy status
+- **Don't:** Apply one timing threshold to every operation or leave long waits unexplained
+- **Code Example Good:** Stable skeleton or progress with aria-busy
+- **Code Example Bad:** Flickering spinner or frozen UI
+- **Severity:** High
+
+### Result 3
+- **Category:** Animation
+- **Issue:** Loading States
+- **Platform:** All
+- **Description:** Show feedback during async operations
+- **Do:** Use skeleton screens or spinners
+- **Don't:** Leave UI frozen with no feedback
+- **Code Example Good:** animate-pulse skeleton
+- **Code Example Bad:** Blank screen while loading
+- **Severity:** High
+

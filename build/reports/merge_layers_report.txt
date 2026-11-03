@@ -1,0 +1,37 @@
+======================================================================
+  merge_layers.py —— 把版本化模块按依赖层合并成 6 个文件
+======================================================================
+时间   : 2026-11-03T02:36:44
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : merge_layers.py  sha16=d69ae937d67ca21f
+仓库   : D:\study\competition\qian\fpga-perspective-rectify
+======================================================================
+
+[1] 读入 114 个模块
+    core      core.py        8 个模块
+    geometry  geometry.py   22 个模块
+    tracking  tracking.py   28 个模块
+    display   display.py    13 个模块
+    ai        ai.py          8 个模块
+    ui        ui.py         35 个模块
+
+[2] 层内重名 93 处，全部按 <名字>__<原模块> 改名
+    geometry    4 处
+    tracking   74 处
+    display     5 处
+    ai          3 处
+    ui          7 处
+
+[3] 开始生成
+    core.py        1361 行    81,572 B  模块顺序: p11_contract, run_logging, v31_crash, v31_diagnostics ...
+    geometry.py    4464 行   243,251 B  模块顺序: find_homography, p1_paper_quad, pl_fields, v8_plan ...
+    tracking.py    9918 行   663,856 B  模块顺序: v31_detection, v31_tracking, v31_startup, v58_budget ...
+    display.py     5079 行   349,261 B  模块顺序: v31_camera, v64_io, v71_display, v64_hdmi_display ...
+    ai.py          1002 行    53,744 B  模块顺序: v98_ai_geometry, v99_ai_protocol, v99_ai_service, v98_ai_request ...
+    ui.py          6515 行   401,632 B  模块顺序: v75_touch, v75_ui, v82_interaction, v82_assets ...
+
+[4] 完成，警告 0 条
+[5] 输出目录: D:\study\competition\qian\fpga-perspective-rectify\_merge_out
+
+RESULT: OK

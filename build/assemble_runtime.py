@@ -34,6 +34,9 @@ SOURCES = [
     ("src/native", ""),
     ("board", ""),
     ("src/third_party/ai", "ai"),
+    # AI 自检图：v99_ai_selftest.json 的 cases[].image 指向 ai_selftest/*.png，
+    # 少了它们 ai_selftest.ipynb 在板上第一条用例就 FileNotFoundError。
+    ("data/ai_selftest", "ai_selftest"),
 ]
 
 _REPORT = None
@@ -88,6 +91,10 @@ def main():
         n = 0
         for p in sorted(src.rglob("*")):
             if not p.is_file() or p.name == "README.md":
+                continue
+            # board/logs/ 是证据（原始 run-result 日志），不是运行文件 ——
+            # 不排掉，组出来的目录就比板上跑的那份多 2 个文件 / 14.4 MB。
+            if (p.relative_to(src).as_posix().split("/")[0] == "logs") and sub == "":
                 continue
             target = dst / p.relative_to(src)
             target.parent.mkdir(parents=True, exist_ok=True)

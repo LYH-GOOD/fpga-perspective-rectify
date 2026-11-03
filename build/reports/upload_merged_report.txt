@@ -1,0 +1,51 @@
+==============================================================================
+  upload_merged.py —— 合并发布包上板 + 逐文件 sha256 复核
+==============================================================================
+时间   : 2026-11-02T22:41:43
+机器   : liheng / Windows-11-10.0.26200-SP0
+脚本   : upload_merged.py  sha16=8d667512488e5aad
+本地   : D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
+远端   : xilinx@192.168.2.99:/home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
+==============================================================================
+
+[1] 本地 104 个文件，22,662,508 B
+[2] SSH 已连上 192.168.2.99
+    上传 25/104
+    上传 50/104
+    上传 75/104
+    上传 100/104
+    上传 104/104
+[3] 板端逐文件算 sha256 复核
+    远端实数 104 / 本地 104；不一致 0；多出 0
+[4] 就地覆盖到目标目录（不换 inode，正在跑的内核 cwd 不会失效）
+    rc=0  stdout=''  stderr=''
+    清掉 20 个上一版残留：['.ipynb_checkpoints/p11_start-checkpoint.ipynb', 'loaded.xclbin', '.native_receipts/v31_capture_86affd7ae86a775aff3d_armv7l.so.json', '.native_receipts/v31_native_0256e60cd49107d8_armv7l_lk_4.5.4.so.json', '.native_receipts/v31_native_e1d9d4e44c8a6d74_armv7l_lk_4.5.4.so.json', '.native_receipts/v73_io_cb5884e3f01df1766a99_armv7l.so.json'] …
+[5] 覆盖完再核一遍（目标路径，不是 staging）
+    目标路径实数 104；不一致 0
+[6] 删掉 staging /tmp/p11_fps33_20261101_merged.new（rc=0）
+[7] 板上现状：
+    drwxrwxr-x 6 xilinx xilinx 4096 May 14 23:37 /home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
+    ai
+    ai.py
+    ai_selftest.ipynb
+    core.py
+    display.py
+    geometry.py
+    p11_start.ipynb
+    __pycache__
+    release_manifest.json
+    system.bit
+    system.hwh
+    system.manifest.json
+    tracking.py
+    ui.py
+    v100_ai_badges.png
+    v102_ai_controls.png
+    v102_ai_stages.png
+    v105_edges.cpp
+    v108_hybrid_status.png
+    v119_apply_480p.png
+
+==============================================================================
+上传 104 个文件，逐文件 sha256 全部一致
+RESULT: PASS

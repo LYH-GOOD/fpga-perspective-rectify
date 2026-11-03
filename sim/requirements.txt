@@ -1,0 +1,14 @@
+# sim/checks 的运行依赖（主机侧，不装到板上）
+#
+# ⛔ numpy 必须 < 2。实测（2026-11-02，Python 3.14.6 + numpy 2.5.1）：
+#    运行时 6 处用了二维 np.cross（如 src/ps/core/v31_tracking.py:129），
+#    numpy>=2 已移除该用法，直接抛
+#      ValueError: Both input arrays must be (arrays of) 3-dimensional vectors
+#    24 个检查无一幸免。补回二维语义后全链通过 ⇒ 版本是唯一拦路虎。
+#
+# 版本对上即可，不必逐字相同：
+#   本机验证环境   Python 3.14.6 + numpy 2.5.1 + 二维 cross 兼容垫片（见 run_checks.py）
+#   板上环境       Python 3.10.4 + numpy 1.21.5（PYNQ 3.1 镜像）
+# numpy<2 的官方轮子覆盖 CPython 3.9-3.12 ⇒ 想要“不垫片直接跑”，用 Python 3.10-3.12。
+numpy>=1.21,<2
+opencv-python>=4.5

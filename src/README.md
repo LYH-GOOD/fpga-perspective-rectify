@@ -12,7 +12,8 @@
 | `ps/assets/` | 界面资产：按钮图、状态条、布局 JSON | 77 |
 | `ps/runtime/` | `release_manifest.json`——发布清单，含每个文件的 sha256 | 1 |
 | `native/` | C++ 原生扩展：相机取流、IO 装箱、事务、边缘检测 | 6 |
-| `rtl/` | PL 侧 RTL 与约束：`axis_light27.v`、`tb_light27.sv`、`hdmi_out.xdc` | 3 |
+| `rtl/` | PL 侧 RTL 与约束：`axis_light27.v`、`axis_bypass.v`、`axis_bypass_bd.v`、`tb_light27.sv`、`hdmi_out.xdc` | 5 |
+| `hls/` | 三个 HLS 核的 C++ 源与配置（`axis_sharp` / `color_convert` / `pixel_unpack`），打包后的 IP 在 `build/vivado/ip_repo/` | 9 |
 | `third_party/ai/` | ncnn 运行时与分割模型（第三方，见其 README） | 7 |
 
 ## ⚠️ 为什么不能按目录直接运行

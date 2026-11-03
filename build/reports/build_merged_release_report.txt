@@ -1,0 +1,434 @@
+==============================================================================
+  build_merged_release.py —— 打完整合并发布目录
+==============================================================================
+时间   : 2026-11-03T02:36:43
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : build_merged_release.py  sha16=6fbfc48c759edda2
+输出   : D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+==============================================================================
+
+[1] 合并 114 个模块 -> 6 个层文件
+  $ python build/merge_layers.py 
+    | ======================================================================
+    |   merge_layers.py —— 把版本化模块按依赖层合并成 6 个文件
+    | ======================================================================
+    | 时间   : 2026-11-03T02:36:44
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : merge_layers.py  sha16=d69ae937d67ca21f
+    | 仓库   : D:\study\competition\qian\fpga-perspective-rectify
+    | ======================================================================
+    | 
+    | [1] 读入 114 个模块
+    |     core      core.py        8 个模块
+    |     geometry  geometry.py   22 个模块
+    |     tracking  tracking.py   28 个模块
+    |     display   display.py    13 个模块
+    |     ai        ai.py          8 个模块
+    |     ui        ui.py         35 个模块
+    | 
+    | [2] 层内重名 93 处，全部按 <名字>__<原模块> 改名
+    |     geometry    4 处
+    |     tracking   74 处
+    |     display     5 处
+    |     ai          3 处
+    |     ui          7 处
+    | 
+    | [3] 开始生成
+    |     core.py        1361 行    81,572 B  模块顺序: p11_contract, run_logging, v31_crash, v31_diagnostics ...
+    |     geometry.py    4464 行   243,251 B  模块顺序: find_homography, p1_paper_quad, pl_fields, v8_plan ...
+    |     tracking.py    9918 行   663,856 B  模块顺序: v31_detection, v31_tracking, v31_startup, v58_budget ...
+    |     display.py     5079 行   349,261 B  模块顺序: v31_camera, v64_io, v71_display, v64_hdmi_display ...
+    |     ai.py          1002 行    53,744 B  模块顺序: v98_ai_geometry, v99_ai_protocol, v99_ai_service, v98_ai_request ...
+    |     ui.py          6515 行   401,632 B  模块顺序: v75_touch, v75_ui, v82_interaction, v82_assets ...
+    | 
+    | [4] 完成，警告 0 条
+    | [5] 输出目录: D:\study\competition\qian\fpga-perspective-rectify\_merge_out
+    | 
+    | RESULT: OK
+
+[2] 复制全部非模块文件
+    删掉旧目录 D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    src/ps/core              -> (根目录)                      74 个
+    src/ps/ui                -> (根目录)                      41 个
+    src/ps/assets            -> (根目录)                      77 个
+    src/ps/runtime           -> (根目录)                       1 个
+    src/native               -> (根目录)                       6 个
+    board                    -> (根目录)                       5 个
+    src/third_party/ai       -> ai                          7 个
+    data/ai_selftest         -> ai_selftest                10 个
+    合计 221 个
+    按 RELEASE_EXCLUDE 排除 4 个
+      - fps33_upload_checksums.json
+      - install_ai_fps_full_20261101_33.ipynb
+      - logs/run-result-2026-10-30T232851.860.log
+      - logs/run-result-2026-10-30T233907.730.log
+
+[3] 删掉顶层 114 个模块 .py
+    删掉 114 个（find_homography.py … v99_ai_worker.py）
+
+[4] 拷进 6 个层文件
+    + core.py  sha16=f72f4c3cc0041615  81,572 B
+    + geometry.py  sha16=cf28c396d5c1b91a  243,251 B
+    + tracking.py  sha16=7b2ef1abfed874d2  663,856 B
+    + display.py  sha16=edd609b7426c1b95  349,261 B
+    + ai.py  sha16=0335a44094c8b325  53,744 B
+    + ui.py  sha16=91bc42171f0c5976  401,632 B
+
+[5] 生成自包含的 AI 独立入口（worker + selftest）
+  $ python build/make_ai_entries.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | ======================================================================
+    |   make_ai_entries.py —— 生成自包含的 AI 独立入口
+    | ======================================================================
+    | 时间   : 2026-11-03T02:36:45
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : make_ai_entries.py  sha16=ee75159da2f46e45
+    | 输出   : D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | ======================================================================
+    | 
+    | [+] v99_ai_worker.py        180 行 /   9,701 B  sha16=25f0f9029f4ac318  （源 127 行）
+    | [+] v99_ai_selftest.py      118 行 /   7,500 B  sha16=6b2f64ad45796a94  （源 110 行）
+    | 
+    | RESULT: OK
+
+[6] 重写 release_manifest.json
+    底本 D:\study\competition\qian\fpga-perspective-rectify\src\ps\runtime\release_manifest.json  sha16=b46e93f544351e8d
+  $ python build/make_release_manifest.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged D:\study\competition\qian\fpga-perspective-rectify\src\ps\runtime\release_manifest.json
+    | ======================================================================
+    |   make_release_manifest.py —— 合并版发布清单
+    | ======================================================================
+    | 时间   : 2026-11-03T02:36:46
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : make_release_manifest.py  sha16=e3d0840787b1a3dc
+    | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | 底本    : D:\study\competition\qian\fpga-perspective-rectify\src\ps\runtime\release_manifest.json
+    | ======================================================================
+    | 
+    | [0] 收敛规则自检（每条判据都先造一次失败，必须能报出来）
+    |     发布清单：幽灵 ['ghost.txt'] / 漏登 ['sub/b.txt'] / 原条目未被改坏 —— 判红有效
+    |     AI 资产清单：幽灵 ['ai/ghost.bin'] / 漏登 ['ai/b.bin'] / 资产被改必须报 sha 不符 —— 判红有效
+    | 
+    | [1] 从底本删掉 167 个 .py 条目
+    |     + core.py  f72f4c3cc0041615  81,572 B
+    |     + geometry.py  cf28c396d5c1b91a  243,251 B
+    |     + tracking.py  7b2ef1abfed874d2  663,856 B
+    |     + display.py  edd609b7426c1b95  349,261 B
+    |     + ai.py  0335a44094c8b325  53,744 B
+    |     + ui.py  91bc42171f0c5976  401,632 B
+    |     + v99_ai_worker.py  25f0f9029f4ac318  9,701 B  （子进程入口，非模块）
+    |     + v99_ai_selftest.py  6b2f64ad45796a94  7,500 B  （子进程入口，非模块）
+    | 
+    | [2] 收敛 AI 资产清单 v98_ai_manifest.json（AI 子进程 check_assets 逐条 read_bytes）
+    |     删掉幽灵条目 33 个（包内没有的 ai/ 资产）：
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/METADATA
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/RECORD
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/WHEEL
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/sboms/auditwheel.cdx.json
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/top_level.txt
+    |       - ai/runtime/ncnn/model_zoo/__init__.py
+    |       - ai/runtime/ncnn/model_zoo/fasterrcnn.py
+    |       - ai/runtime/ncnn/model_zoo/mobilenetssd.py
+    |       - ai/runtime/ncnn/model_zoo/mobilenetv2ssdlite.py
+    |       - ai/runtime/ncnn/model_zoo/mobilenetv3ssdlite.py
+    |       - ai/runtime/ncnn/model_zoo/model_store.py
+    |       - ai/runtime/ncnn/model_zoo/model_zoo.py
+    |       - ai/runtime/ncnn/model_zoo/nanodet.py
+    |       - ai/runtime/ncnn/model_zoo/peleenetssd.py
+    |       - ai/runtime/ncnn/model_zoo/retinaface.py
+    |       - ai/runtime/ncnn/model_zoo/rfcn.py
+    |       - ai/runtime/ncnn/model_zoo/shufflenetv2.py
+    |       - ai/runtime/ncnn/model_zoo/simplepose.py
+    |       - ai/runtime/ncnn/model_zoo/squeezenet.py
+    |       - ai/runtime/ncnn/model_zoo/squeezenetssd.py
+    |       - ai/runtime/ncnn/model_zoo/yolact.py
+    |       - ai/runtime/ncnn/model_zoo/yolov2.py
+    |       - ai/runtime/ncnn/model_zoo/yolov3.py
+    |       - ai/runtime/ncnn/model_zoo/yolov4.py
+    |       - ai/runtime/ncnn/model_zoo/yolov5.py
+    |       - ai/runtime/ncnn/model_zoo/yolov7.py
+    |       - ai/runtime/ncnn/model_zoo/yolov8.py
+    |       - ai/runtime/ncnn/utils/__init__.py
+    |       - ai/runtime/ncnn/utils/_opencv.py
+    |       - ai/runtime/ncnn/utils/download.py
+    |       - ai/runtime/ncnn/utils/functional.py
+    |       - ai/runtime/ncnn/utils/objects.py
+    |       - ai/runtime/ncnn/utils/visual.py
+    |     补上漏登资产 0 个：
+    | 
+    | [3] 收敛发布清单：只列包内真实存在的文件
+    |     删掉幽灵条目 120 个（底本里有、包里没有）：
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/METADATA
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/RECORD
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/WHEEL
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/sboms/auditwheel.cdx.json
+    |       - ai/runtime/ncnn-1.0.20261020.dist-info/top_level.txt
+    |       - ai_iteration_evidence.json
+    |       - ai_model_update.json
+    |       - ai_selftest/5094.png
+    |       - bench_mem.cpp
+    |       - benchmark_physical_tracking.ipynb
+    |       - continuity16_benchmark.json
+    |       - continuity16_release_report.md
+    |       - continuity16_validation.json
+    |       - display18_benchmark.json
+    |       - display18_cpu_check.json
+    |       - display18_release_report.md
+    |       - display18_validation.json
+    |       - flowfix_review.json
+    |       - fps30_release_report.md
+    |       - fps30_validation.json
+    |       - fps31_release_report.md
+    |       - fps31_validation.json
+    |       - fps32_release_report.md
+    |       - fps32_validation.json
+    |       - fps33_release_report.md
+    |       - fps33_validation.json
+    |       - hardware_light27/axis_light27.v
+    |       - hardware_light27/check_timing_impl.rpt
+    |       - hardware_light27/clocks_impl.rpt
+    |       - hardware_light27/contract.md
+    |       - hardware_light27/drc_impl.rpt
+    |       - hardware_light27/hdmi_out.xdc
+    |       - hardware_light27/io_impl.rpt
+    |       - hardware_light27/tb_light27.sv
+    |       - hardware_light27/timing_impl.rpt
+    |       - hardware_light27/utilization_impl.rpt
+    |       - hardware_light27/utilization_impl_hier.rpt
+    |       - hardware_light27/xelab.log
+    |       - hardware_light27/xsim.log
+    |       - hardware_light27/xvlog.log
+    |       - host_validation.json
+    |       - hotfix_cpu_check.json
+    |       - hotfix_release_report.md
+    |       - hotfix_steady_benchmark.json
+    |       - hotfix_validation.json
+    |       - hybrid_cpu_check.json
+    |       - hybrid_release_report.md
+    |       - hybrid_validation.json
+    |       - installfix1_report.md
+    |       - installfix1_validation.json
+    |       - light27_cpu_check.json
+    |       - light27_hardware.json
+    |       - light27_release_report.md
+    |       - light27_validation.json
+    |       - live_cpu_check.json
+    |       - live_preview_benchmark.json
+    |       - live_release_report.md
+    |       - live_steady_benchmark.json
+    |       - live_validation.json
+    |       - manual17_benchmark.json
+    |       - manual17_display_benchmark.json
+    |       - manual17_release_report.md
+    |       - manual17_validation.json
+    |       - overlay_benchmark.json
+    |       - overlay_release_report.md
+    |       - overlay_validation.json
+    |       - paired_benchmark.json
+    |       - paired_cpu_check.json
+    |       - paired_release_report.md
+    |       - paired_validation.json
+    |       - physical_release_report.md
+    |       - pic56_model_benchmark.json
+    |       - pic56_model_comparison.json
+    |       - pic56_release_report.md
+    |       - pic56_validation.json
+    |       - pic78_cpu_check.json
+    |       - pic78_model_comparison.json
+    |       - pic78_release_report.md
+    |       - pic78_validation.json
+    |       - profile22_cpu_check.json
+    |       - profile22_release_report.md
+    |       - profile22_validation.json
+    |       - readme_ai_live.md
+    |       - recovery_cpu_check.json
+    |       - recovery_release_report.md
+    |       - recovery_validation.json
+    |       - reuse21_control_benchmark.json
+    |       - reuse21_cpu_check.json
+    |       - reuse21_native_validation.json
+    |       - reuse21_release_report.md
+    |       - reuse21_validation.json
+    |       - run-result.log
+    |       - sharp23_cpu_check.json
+    |       - sharp23_release_report.md
+    |       - sharp23_validation.json
+    |       - sharp24_cpu_check.json
+    |       - sharp24_release_report.md
+    |       - sharp24_validation.json
+    |       - sharp25_cpu_check.json
+    |       - sharp25_release_report.md
+    |       - sharp25_validation.json
+    |       - smooth_release_report.md
+    |       - smooth_steady_benchmark.json
+    |       - smooth_validation.json
+    |       - source_review.json
+    |       - startfix_release_report.md
+    |       - startfix_validation.json
+    |       - target26_cpu_check.json
+    |       - target26_release_report.md
+    |       - target26_validation.json
+    |       - trackfix_cpu_check.json
+    |       - trackfix_release_report.md
+    |       - trackfix_validation.json
+    |       - ui28_cpu_check.json
+    |       - ui28_release_report.md
+    |       - ui28_validation.json
+    |       - unified_cpu_check.json
+    |       - unified_release_report.md
+    |       - unified_validation.json
+    |       - upload_inventory.json
+    |     补上漏登文件 1 个（包里有、底本里没有）：
+    |       + ai/runtime/ncnn/__init__.py  ef90c76a49b37e74
+    |     重算 sha 的条目 2 个（包里内容与底本不同）：
+    |       ~ v98_ai_manifest.json  edf8bee73a8455e3 -> bcd38e54f78d340a
+    |       ~ v99_ai_selftest.json  459a098bbc1858a8 -> 9a2a4e881df593e5
+    | 
+    | 
+    | [4] 写入 D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\release_manifest.json
+    |     sha256 条目 113 个（= 包内除 release_manifest.json 外的全部文件，一个不多一个不少）
+    | 
+    | RESULT: OK
+
+[7] 合并版运行目录自检
+  $ python build/check_merged.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | ======================================================================
+    |   check_merged.py —— 合并版运行目录自检
+    | ======================================================================
+    | 时间   : 2026-11-03T02:36:47
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : check_merged.py  sha16=b0d2e63370bfee48
+    | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | ======================================================================
+    | 
+    | [A] 按 Python 3.10 语法解析
+    |     OK   core.py  1,361 行
+    |     OK   geometry.py  4,464 行
+    |     OK   tracking.py  9,918 行
+    |     OK   display.py  5,079 行
+    |     OK   ai.py  1,002 行
+    |     OK   ui.py  6,515 行
+    | 
+    |     桩目录 D:\study\competition\qian\fpga-perspective-rectify\build\_stubs（Windows 没有 fcntl，板上是真的）
+    | 
+    | [B] 逐个导入
+    |     OK   core
+    |     OK   geometry
+    |     OK   tracking
+    |     OK   display
+    |     OK   ai
+    |     OK   ui
+    | 
+    | [C] RELEASE_ID / _SOURCE_SHA256
+    |     RELEASE_ID = p11-rgb-pspl-v9-ai-fps-20261101-33
+    |     OK   core: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    |     OK   geometry: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    |     OK   tracking: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    |     OK   display: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    |     OK   ai: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    |     OK   ui: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    | 
+    | [D] verify_package(<运行目录>/system.bit) 真跑一遍
+    |     PASS layout=layers-6 release_id=p11-rgb-pspl-v9-ai-fps-20261101-33 校验文件 113 条
+    | 
+    | [E] 空转门禁：故意改坏 system.bit 再核一次，必须报「内容不一致」
+    |     OK   按预期报「不一致」：ValueError: 文件版本或内容不一致：system.bit。请重新完整复制发布目录
+    | 
+    | [F] AI 子进程入口 v99_ai_worker.py
+    |     180 行 / 9,701 B  sha16=25f0f9029f4ac318
+    |     OK   F1 按 Python 3.10 语法解析
+    |     OK   F2 自包含（没有导入任何层文件）
+    |     OK   F3 协议 4 个函数与源模块逐函数 AST 相同
+    |     子进程回了 3 帧：['hello', 'stage', 'error']  启动异常=None
+    |          hello.release_id=一致（本包 p11-rgb-pspl-v9-ai-fps-20261101-33）
+    |     OK   F4 握手通过 + 走到平台断言（说明 RELEASE_ID 与 v98 清单对上了）
+    |     OK   F5 判红有效（改坏后握手不上：TimeoutError: AI 子进程没有连过来）
+    | 
+    | ======================================================================
+    | RESULT: PASS
+
+[8] 静态查未定义名（F821 等价 —— 2026-11-02 板上 NameError 的教训）
+  $ python build/check_undefined.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\core.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\geometry.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\tracking.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\display.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\ai.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\ui.py
+    | ======================================================================
+    |   check_undefined.py —— 静态查未定义名（F821 等价）
+    | ======================================================================
+    | 时间   : 2026-11-03T02:37:48
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : check_undefined.py  sha16=56d68272acc4fd9c
+    | 目标   : 6 个文件
+    | ======================================================================
+    | 
+    | OK   core.py                  未定义名 0 个
+    | OK   geometry.py              未定义名 0 个
+    | OK   tracking.py              未定义名 0 个
+    | OK   display.py               未定义名 0 个
+    | OK   ai.py                    未定义名 0 个
+    | OK   ui.py                    未定义名 0 个
+    | 
+    | ======================================================================
+    | 合计未定义名 0 个
+    | RESULT: PASS
+
+[9] 启动本第 1 单元无头执行（板端唯一入口，必须真的跑得通）
+  $ python build/check_start_notebook.py D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged --tag merged
+    | ======================================================================
+    |   check_start_notebook.py —— 启动本第 1 单元无头执行
+    | ======================================================================
+    | 时间   : 2026-11-03T02:37:48
+    | 机器   : liheng / Windows-11-10.0.26200-SP0
+    | Python : 3.14.6
+    | 脚本   : check_start_notebook.py  sha16=f23990dcb5190358
+    | 运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    | 启动本  : D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\p11_start.ipynb
+    | 布局    : layers-6（按目录里有没有 core.py 判断）
+    | ======================================================================
+    | 
+    | [1] 取到 cells[1]，157 行，语法可解析
+    |     sha16=127bbb4ab32fc8ee6c9f16bac450f4ca702fa268ab80cb66c312fdb3ff0f06bc
+    | [2] 写临时脚本 C:\Users\ROG\AppData\Local\Temp\p11start_3ihc4hr1\run_cell1.py（在运行目录之外，不污染发布包）
+    | [3] 起子进程：cwd=D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    |     PYTHONPATH=D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged;D:\study\competition\qian\fpga-perspective-rectify\build\_stubs
+    | 
+    |     --------------------------------------------------------------
+    |     | 当前目录就是第18版 = D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    |     | 将使用： D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+    |     | GIL switch interval = 1.0 ms
+    |     | PL 侧 YUYV 转换 = 开
+    |     | 逐帧日志：每 4 帧记一条
+    |     | SKIP_RESEARCH = True
+    |     | STATIC_HOLD = True
+    |     | FREEZE_OUTPUT = False
+    |     | HOLD_MAX_S = 4.0
+    |     | PREPARE_AHEAD = 1
+    |     | PREVIEW_SCALE = fused
+    |     | p11-rgb-pspl-v9-ai-fps-20261101-33 V9 FPS33: 3s output FPS; 100ms update; 7200s session
+    |     --------------------------------------------------------------
+    | 
+    | [4] OK   退出码 0
+    | [5] OK   RELEASE_ID = p11-rgb-pspl-v9-ai-fps-20261101-33
+    | [6] OK   跑到最后一行 print
+    | 
+    | ======================================================================
+    | RESULT: PASS  (p11_fps33_20261101_merged / layers-6)
+
+[10] 清掉自检产生的 __pycache__（那是本机 3.14 的产物，不该进板端包）
+    删掉 7 个 .pyc
+
+==============================================================================
+目录 D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+文件 114 个（其中 .py 8 个）
+  ai.py                   53,744 B  sha16=0335a44094c8b325
+  core.py                 81,572 B  sha16=f72f4c3cc0041615
+  display.py             349,261 B  sha16=edd609b7426c1b95
+  geometry.py            243,251 B  sha16=cf28c396d5c1b91a
+  tracking.py            663,856 B  sha16=7b2ef1abfed874d2
+  ui.py                  401,632 B  sha16=91bc42171f0c5976
+  v99_ai_selftest.py       7,500 B  sha16=6b2f64ad45796a94
+  v99_ai_worker.py         9,701 B  sha16=25f0f9029f4ac318
+  release_manifest.json    68,371 B  sha16=a10fd3d882f5ef20
+
+RESULT: PASS

@@ -1,0 +1,195 @@
+======================================================================
+  make_release_manifest.py —— 合并版发布清单
+======================================================================
+时间   : 2026-11-03T02:36:46
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : make_release_manifest.py  sha16=e3d0840787b1a3dc
+运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+底本    : D:\study\competition\qian\fpga-perspective-rectify\src\ps\runtime\release_manifest.json
+======================================================================
+
+[0] 收敛规则自检（每条判据都先造一次失败，必须能报出来）
+    发布清单：幽灵 ['ghost.txt'] / 漏登 ['sub/b.txt'] / 原条目未被改坏 —— 判红有效
+    AI 资产清单：幽灵 ['ai/ghost.bin'] / 漏登 ['ai/b.bin'] / 资产被改必须报 sha 不符 —— 判红有效
+
+[1] 从底本删掉 167 个 .py 条目
+    + core.py  f72f4c3cc0041615  81,572 B
+    + geometry.py  cf28c396d5c1b91a  243,251 B
+    + tracking.py  7b2ef1abfed874d2  663,856 B
+    + display.py  edd609b7426c1b95  349,261 B
+    + ai.py  0335a44094c8b325  53,744 B
+    + ui.py  91bc42171f0c5976  401,632 B
+    + v99_ai_worker.py  25f0f9029f4ac318  9,701 B  （子进程入口，非模块）
+    + v99_ai_selftest.py  6b2f64ad45796a94  7,500 B  （子进程入口，非模块）
+
+[2] 收敛 AI 资产清单 v98_ai_manifest.json（AI 子进程 check_assets 逐条 read_bytes）
+    删掉幽灵条目 33 个（包内没有的 ai/ 资产）：
+      - ai/runtime/ncnn-1.0.20261020.dist-info/METADATA
+      - ai/runtime/ncnn-1.0.20261020.dist-info/RECORD
+      - ai/runtime/ncnn-1.0.20261020.dist-info/WHEEL
+      - ai/runtime/ncnn-1.0.20261020.dist-info/sboms/auditwheel.cdx.json
+      - ai/runtime/ncnn-1.0.20261020.dist-info/top_level.txt
+      - ai/runtime/ncnn/model_zoo/__init__.py
+      - ai/runtime/ncnn/model_zoo/fasterrcnn.py
+      - ai/runtime/ncnn/model_zoo/mobilenetssd.py
+      - ai/runtime/ncnn/model_zoo/mobilenetv2ssdlite.py
+      - ai/runtime/ncnn/model_zoo/mobilenetv3ssdlite.py
+      - ai/runtime/ncnn/model_zoo/model_store.py
+      - ai/runtime/ncnn/model_zoo/model_zoo.py
+      - ai/runtime/ncnn/model_zoo/nanodet.py
+      - ai/runtime/ncnn/model_zoo/peleenetssd.py
+      - ai/runtime/ncnn/model_zoo/retinaface.py
+      - ai/runtime/ncnn/model_zoo/rfcn.py
+      - ai/runtime/ncnn/model_zoo/shufflenetv2.py
+      - ai/runtime/ncnn/model_zoo/simplepose.py
+      - ai/runtime/ncnn/model_zoo/squeezenet.py
+      - ai/runtime/ncnn/model_zoo/squeezenetssd.py
+      - ai/runtime/ncnn/model_zoo/yolact.py
+      - ai/runtime/ncnn/model_zoo/yolov2.py
+      - ai/runtime/ncnn/model_zoo/yolov3.py
+      - ai/runtime/ncnn/model_zoo/yolov4.py
+      - ai/runtime/ncnn/model_zoo/yolov5.py
+      - ai/runtime/ncnn/model_zoo/yolov7.py
+      - ai/runtime/ncnn/model_zoo/yolov8.py
+      - ai/runtime/ncnn/utils/__init__.py
+      - ai/runtime/ncnn/utils/_opencv.py
+      - ai/runtime/ncnn/utils/download.py
+      - ai/runtime/ncnn/utils/functional.py
+      - ai/runtime/ncnn/utils/objects.py
+      - ai/runtime/ncnn/utils/visual.py
+    补上漏登资产 0 个：
+
+[3] 收敛发布清单：只列包内真实存在的文件
+    删掉幽灵条目 120 个（底本里有、包里没有）：
+      - ai/runtime/ncnn-1.0.20261020.dist-info/METADATA
+      - ai/runtime/ncnn-1.0.20261020.dist-info/RECORD
+      - ai/runtime/ncnn-1.0.20261020.dist-info/WHEEL
+      - ai/runtime/ncnn-1.0.20261020.dist-info/sboms/auditwheel.cdx.json
+      - ai/runtime/ncnn-1.0.20261020.dist-info/top_level.txt
+      - ai_iteration_evidence.json
+      - ai_model_update.json
+      - ai_selftest/5094.png
+      - bench_mem.cpp
+      - benchmark_physical_tracking.ipynb
+      - continuity16_benchmark.json
+      - continuity16_release_report.md
+      - continuity16_validation.json
+      - display18_benchmark.json
+      - display18_cpu_check.json
+      - display18_release_report.md
+      - display18_validation.json
+      - flowfix_review.json
+      - fps30_release_report.md
+      - fps30_validation.json
+      - fps31_release_report.md
+      - fps31_validation.json
+      - fps32_release_report.md
+      - fps32_validation.json
+      - fps33_release_report.md
+      - fps33_validation.json
+      - hardware_light27/axis_light27.v
+      - hardware_light27/check_timing_impl.rpt
+      - hardware_light27/clocks_impl.rpt
+      - hardware_light27/contract.md
+      - hardware_light27/drc_impl.rpt
+      - hardware_light27/hdmi_out.xdc
+      - hardware_light27/io_impl.rpt
+      - hardware_light27/tb_light27.sv
+      - hardware_light27/timing_impl.rpt
+      - hardware_light27/utilization_impl.rpt
+      - hardware_light27/utilization_impl_hier.rpt
+      - hardware_light27/xelab.log
+      - hardware_light27/xsim.log
+      - hardware_light27/xvlog.log
+      - host_validation.json
+      - hotfix_cpu_check.json
+      - hotfix_release_report.md
+      - hotfix_steady_benchmark.json
+      - hotfix_validation.json
+      - hybrid_cpu_check.json
+      - hybrid_release_report.md
+      - hybrid_validation.json
+      - installfix1_report.md
+      - installfix1_validation.json
+      - light27_cpu_check.json
+      - light27_hardware.json
+      - light27_release_report.md
+      - light27_validation.json
+      - live_cpu_check.json
+      - live_preview_benchmark.json
+      - live_release_report.md
+      - live_steady_benchmark.json
+      - live_validation.json
+      - manual17_benchmark.json
+      - manual17_display_benchmark.json
+      - manual17_release_report.md
+      - manual17_validation.json
+      - overlay_benchmark.json
+      - overlay_release_report.md
+      - overlay_validation.json
+      - paired_benchmark.json
+      - paired_cpu_check.json
+      - paired_release_report.md
+      - paired_validation.json
+      - physical_release_report.md
+      - pic56_model_benchmark.json
+      - pic56_model_comparison.json
+      - pic56_release_report.md
+      - pic56_validation.json
+      - pic78_cpu_check.json
+      - pic78_model_comparison.json
+      - pic78_release_report.md
+      - pic78_validation.json
+      - profile22_cpu_check.json
+      - profile22_release_report.md
+      - profile22_validation.json
+      - readme_ai_live.md
+      - recovery_cpu_check.json
+      - recovery_release_report.md
+      - recovery_validation.json
+      - reuse21_control_benchmark.json
+      - reuse21_cpu_check.json
+      - reuse21_native_validation.json
+      - reuse21_release_report.md
+      - reuse21_validation.json
+      - run-result.log
+      - sharp23_cpu_check.json
+      - sharp23_release_report.md
+      - sharp23_validation.json
+      - sharp24_cpu_check.json
+      - sharp24_release_report.md
+      - sharp24_validation.json
+      - sharp25_cpu_check.json
+      - sharp25_release_report.md
+      - sharp25_validation.json
+      - smooth_release_report.md
+      - smooth_steady_benchmark.json
+      - smooth_validation.json
+      - source_review.json
+      - startfix_release_report.md
+      - startfix_validation.json
+      - target26_cpu_check.json
+      - target26_release_report.md
+      - target26_validation.json
+      - trackfix_cpu_check.json
+      - trackfix_release_report.md
+      - trackfix_validation.json
+      - ui28_cpu_check.json
+      - ui28_release_report.md
+      - ui28_validation.json
+      - unified_cpu_check.json
+      - unified_release_report.md
+      - unified_validation.json
+      - upload_inventory.json
+    补上漏登文件 1 个（包里有、底本里没有）：
+      + ai/runtime/ncnn/__init__.py  ef90c76a49b37e74
+    重算 sha 的条目 2 个（包里内容与底本不同）：
+      ~ v98_ai_manifest.json  edf8bee73a8455e3 -> bcd38e54f78d340a
+      ~ v99_ai_selftest.json  459a098bbc1858a8 -> 9a2a4e881df593e5
+
+
+[4] 写入 D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged\release_manifest.json
+    sha256 条目 113 个（= 包内除 release_manifest.json 外的全部文件，一个不多一个不少）
+
+RESULT: OK

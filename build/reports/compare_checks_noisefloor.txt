@@ -1,0 +1,62 @@
+======================================================================
+  compare_checks.py —— 两份检查结果比对
+======================================================================
+时间   : 2026-11-02T20:34:08
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : compare_checks.py  sha16=8ddf5c32825a4052
+A      : D:\study\competition\qian\fpga-perspective-rectify\build\reports\checks_baseline4.json
+B      : D:\study\competition\qian\fpga-perspective-rectify\build\reports\checks_baseline5.json
+======================================================================
+
+结构差异 0 处 / 非数值差异 0 处 / 数值差异 15 处
+
+---- 数值 ----
+  overlay_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/median_ms
+      A=0.5008500011172146
+      B=0.5054499979451066  相对差 0.910%
+  overlay_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/p95_ms
+      A=0.542440000208444
+      B=0.5703800019546179  相对差 4.898%
+  overlay_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/median_ms
+      A=0.30530000003636815
+      B=0.30750000041734893  相对差 0.715%
+  overlay_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/p95_ms
+      A=0.41786500169109786
+      B=0.3762599988476722  相对差 9.957%
+  overlay_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/output_hook_mean_us
+      A=0.6115100000897655
+      B=0.6086299999878975  相对差 0.471%
+  pic78_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/median_ms
+      A=0.516849999257829
+      B=0.494699997943826  相对差 4.286%
+  pic78_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/p95_ms
+      A=0.6226000001333886
+      B=0.5507600006239954  相对差 11.539%
+  pic78_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/median_ms
+      A=0.30900000092515256
+      B=0.29270000050019007  相对差 5.275%
+  pic78_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/p95_ms
+      A=0.5008250001992564
+      B=0.35619000027509173  相对差 28.879%
+  pic78_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/output_hook_mean_us
+      A=0.6176599999889731
+      B=0.6064500001230044  相对差 1.815%
+  smooth_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/median_ms
+      A=0.4922499992972007
+      B=0.4989500012015924  相对差 1.343%
+  smooth_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/physical4/p95_ms
+      A=0.5432150002889102
+      B=0.5433500013168668  相对差 0.025%
+  smooth_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/median_ms
+      A=0.3033500015590107
+      B=0.294400000711903  相对差 2.950%
+  smooth_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/native_edge_check/timing/trackfix5/p95_ms
+      A=0.37850000171602
+      B=0.35426999838819023  相对差 6.402%
+  smooth_cpu_check/value/previous_cpu_check/previous_cpu_check/previous_cpu_check/previous_cpu_check/output_hook_mean_us
+      A=0.63244000011764
+      B=0.6176499999128282  相对差 2.339%
+
+======================================================================
+RESULT: PASS（只有数值不同）

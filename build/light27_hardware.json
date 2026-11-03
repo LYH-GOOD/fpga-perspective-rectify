@@ -59,8 +59,8 @@
   "board_evidence": {
     "date": "2026-10-30/31",
     "logs": [
-      "logs/run-result - 2026-10-30T232851.860.log",
-      "logs/run-result - 2026-10-30T233907.730.log"
+      "logs/run-result-2026-10-30T232851.860.log",
+      "logs/run-result-2026-10-30T233907.730.log"
     ],
     "contract_check": "p11_contract.py EXACT_PAIR_SHA256 通过（板上实际运行的 bit/hwh 即本文件 sha256 字段）",
     "480P_static": {

@@ -1,0 +1,24 @@
+======================================================================
+  board_verify_ai_assets -- AI asset gate on board
+======================================================================
+time   : 2026-11-02T21:58:26
+host   : liheng / Windows-11-10.0.26200-SP0
+script : probe_ai_assets.py  sha16=2b45d31a8c62af90
+board  : xilinx@192.168.2.99:/home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
+======================================================================
+
+$ sudo -n /usr/local/share/pynq-venv/bin/python3 /tmp/probe_ai_assets.py
+verify_package     OK entries=103 layout=layers-6
+validate_assets    OK entries=7 release_id=p11-rgb-pspl-v9-ai-fps-20261101-33
+   asset ai/conversion_report.json
+   asset ai/plane.ncnn.bin
+   asset ai/plane.ncnn.param
+   asset ai/runtime/ncnn-1.0.20261020.dist-info/licenses/LICENSE.txt
+   asset ai/runtime/ncnn.libs/libgomp-39027b09.so.1.0.0
+   asset ai/runtime/ncnn/__init__.py
+   asset ai/runtime/ncnn/ncnn.cpython-310-arm-linux-gnueabihf.so
+Model init         OK stages=['check_assets', 'import_numpy', 'import_ncnn', 'load_parameters', 'load_weights', 'warmup'] elapsed=2.14s
+RESULT: PASS
+exit=0
+
+RESULT: OK

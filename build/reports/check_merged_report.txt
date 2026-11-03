@@ -1,0 +1,55 @@
+======================================================================
+  check_merged.py —— 合并版运行目录自检
+======================================================================
+时间   : 2026-11-03T13:54:05
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : check_merged.py  sha16=b0d2e63370bfee48
+运行目录: D:\study\competition\qian\fpga-perspective-rectify\release\p11_fps33_20261101_merged
+======================================================================
+
+[A] 按 Python 3.10 语法解析
+    OK   core.py  1,361 行
+    OK   geometry.py  4,464 行
+    OK   tracking.py  9,918 行
+    OK   display.py  5,079 行
+    OK   ai.py  1,002 行
+    OK   ui.py  6,515 行
+
+    桩目录 D:\study\competition\qian\fpga-perspective-rectify\build\_stubs（Windows 没有 fcntl，板上是真的）
+
+[B] 逐个导入
+    OK   core
+    OK   geometry
+    OK   tracking
+    OK   display
+    OK   ai
+    OK   ui
+
+[C] RELEASE_ID / _SOURCE_SHA256
+    RELEASE_ID = p11-rgb-pspl-v9-ai-fps-20261101-33
+    OK   core: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    OK   geometry: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    OK   tracking: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    OK   display: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    OK   ai: RELEASE_ID=一致  _SOURCE_SHA256=一致
+    OK   ui: RELEASE_ID=一致  _SOURCE_SHA256=一致
+
+[D] verify_package(<运行目录>/system.bit) 真跑一遍
+    PASS layout=layers-6 release_id=p11-rgb-pspl-v9-ai-fps-20261101-33 校验文件 113 条
+
+[E] 空转门禁：故意改坏 system.bit 再核一次，必须报「内容不一致」
+    OK   按预期报「不一致」：ValueError: 文件版本或内容不一致：system.bit。请重新完整复制发布目录
+
+[F] AI 子进程入口 v99_ai_worker.py
+    180 行 / 9,701 B  sha16=25f0f9029f4ac318
+    OK   F1 按 Python 3.10 语法解析
+    OK   F2 自包含（没有导入任何层文件）
+    OK   F3 协议 4 个函数与源模块逐函数 AST 相同
+    子进程回了 3 帧：['hello', 'stage', 'error']  启动异常=None
+         hello.release_id=一致（本包 p11-rgb-pspl-v9-ai-fps-20261101-33）
+    OK   F4 握手通过 + 走到平台断言（说明 RELEASE_ID 与 v98 清单对上了）
+    OK   F5 判红有效（改坏后握手不上：TimeoutError: AI 子进程没有连过来）
+
+======================================================================
+RESULT: PASS

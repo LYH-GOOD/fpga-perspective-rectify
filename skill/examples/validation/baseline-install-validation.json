@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "release_id": "p11-rgb-pspl-v9-ai-fps-20261101-33",
+  "archive_files": 392,
+  "archive_CRC_and_all_hashes": true,
+  "installer_code_parsed": true,
+  "AI_selftest_cell_preserved": true,
+  "renamed_wechat_archive_installs": true,
+  "duplicate_install_preserves_previous": true,
+  "exact_extraction_inventory": true,
+  "firstcell_from_fresh_install_passed": true,
+  "host_only_get_ipython_None_shim": true,
+  "hardware_identity_unchanged": true,
+  "camera_or_hardware_opened": false,
+  "AI_inference_selftest_run_on_host": false,
+  "board_FPS_tested": false
+}

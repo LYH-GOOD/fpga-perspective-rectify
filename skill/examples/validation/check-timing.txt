@@ -1,0 +1,126 @@
+============================================================================================
+# check-timing 自检（证明能判红、也能判绿）   2026-11-01 14:07:15
+#   主机 TLF2006   python 3.11.16   cwd C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp
+#   脚本 C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\package\skill\scripts\check-timing.py
+#   sha16 694a0ca25a704a99
+============================================================================================
+
+  tim_good.rpt           期望 有绿且无红 ⇒ 实得 红0 绿2   合格
+      [绿] WNS = +0.488 ns（判据 ≥ +0.000）
+      [绿] WHS = +0.018 ns（判据 ≥ +0.000）
+      [·] 时序表取自第 1~3 行
+
+  tim_bad_wns.rpt        期望 有红且理由含 'WNS = -1.234' ⇒ 实得 红1 绿1   合格
+      [红] WNS = -1.234 ns（判据 ≥ +0.000） ⇒ 时序不满足
+      [绿] WHS = +0.018 ns（判据 ≥ +0.000）
+      [·] 时序表取自第 1~3 行
+
+  tim_truncated.rpt      期望 有红且理由含 '没有短横线' ⇒ 实得 红1 绿0   合格
+      [红] 有时序表但解析失败：第 1 行是总表表头，但下面没有短横线分隔行，列宽无法确定 —— 不敢猜
+
+  util_good.rpt          期望 有绿且无红 ⇒ 实得 红0 绿4   合格
+      [绿] Slice LUTs         18839.0 / 53200.0 = 35.41%（判据 ≤ 90.0%）
+      [绿] Slice Registers    26217.0 / 106400.0 = 24.64%（判据 ≤ 90.0%）
+      [绿] Block RAM Tile       112.5 / 140.0   = 80.36%（判据 ≤ 90.0%）
+      [绿] DSPs                  59.0 / 220.0   = 26.82%（判据 ≤ 90.0%）
+
+  util_bad_bram.rpt      期望 有红且理由含 '96.00' ⇒ 实得 红1 绿3   合格
+      [绿] Slice LUTs         18839.0 / 53200.0 = 35.41%（判据 ≤ 90.0%）
+      [绿] Slice Registers    26217.0 / 106400.0 = 24.64%（判据 ≤ 90.0%）
+      [红] Block RAM Tile       112.5 / 140.0   = 96.00%（判据 ≤ 90.0%） ⇒ 资源告急
+      [绿] DSPs                  59.0 / 220.0   = 26.82%（判据 ≤ 90.0%）
+
+  garbage.rpt            期望 有红且理由含 '不是一个能判定的报告' ⇒ 实得 红1 绿0   合格
+      [红] 既没有时序总表也没有资源表 —— 不是一个能判定的报告
+
+── --collect 的臂（假 subprocess.run，不启动真的 Vivado）──────
+
+  Tcl/--dcp              合格
+
+  Tcl/--xpr              合格
+
+  Tcl/默认限单线程             合格
+
+  Tcl/--threads 可改       合格
+[红] 找不到 vivado 可执行文件。
+     --vivado 没给、$VIVADO 没设、PATH 里没有、常见安装目录也没扫到。
+     请显式指定，例如：--vivado "F:/vivado/2026.1/Vivado/bin/vivado.bat"
+
+  无Vivado→红              合格
+  vivado : D:\p11_ai_training\.venv\Scripts\python.exe
+  输入   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\f.dcp
+  输出   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\o_dry
+  Tcl    :
+      # 由 check-timing.py --collect 自动生成，勿手改
+      open_checkpoint {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/f.dcp}
+      set_param general.maxThreads 1
+      report_timing_summary -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_dry/timing_summary.rpt} -warn_on_violation
+      report_utilization -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_dry/utilization.rpt}
+      puts "COLLECT_DONE"
+      exit 0
+  --dry-run：只打印，没有真的调用 Vivado
+
+  dry-run→SKIP           合格
+  vivado : D:\p11_ai_training\.venv\Scripts\python.exe
+  输入   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\f.dcp
+  输出   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\o_empty
+  Tcl    :
+      # 由 check-timing.py --collect 自动生成，勿手改
+      open_checkpoint {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/f.dcp}
+      set_param general.maxThreads 1
+      report_timing_summary -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_empty/timing_summary.rpt} -warn_on_violation
+      report_utilization -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_empty/utilization.rpt}
+      puts "COLLECT_DONE"
+      exit 0
+  命令   : D:\p11_ai_training\.venv\Scripts\python.exe -mode batch -notrace -nojournal -log C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_tl18cp_2\vivado.log -source C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_tl18cp_2\collect.tcl
+  Vivado 退出码 0，用时 0.0 s
+  timing_summary.rpt：缺失或 0 字节
+  utilization.rpt   ：缺失或 0 字节
+  Vivado 日志（全文留档）：C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_tl18cp_2\vivado.log
+[红] 采集跑完了，但报告没出来：timing_summary.rpt, utilization.rpt
+     常见原因：DCP 是 OOC 的子模块（没有完整实现）、run 名写错、
+     或 report_timing_summary 需要先 open_run 一个已实现的设计。
+
+  报告没出来→红                合格
+  vivado : D:\p11_ai_training\.venv\Scripts\python.exe
+  输入   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\f.dcp
+  输出   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\o_good
+  Tcl    :
+      # 由 check-timing.py --collect 自动生成，勿手改
+      open_checkpoint {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/f.dcp}
+      set_param general.maxThreads 1
+      report_timing_summary -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_good/timing_summary.rpt} -warn_on_violation
+      report_utilization -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_good/utilization.rpt}
+      puts "COLLECT_DONE"
+      exit 0
+  命令   : D:\p11_ai_training\.venv\Scripts\python.exe -mode batch -notrace -nojournal -log C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_ktxxa9ja\vivado.log -source C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_ktxxa9ja\collect.tcl
+  Vivado 退出码 0，用时 0.0 s
+  timing_summary.rpt：639 字节
+  utilization.rpt   ：454 字节
+  Vivado 日志（全文留档）：C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_ktxxa9ja\vivado.log
+[采到] 两份报告都在，交给下面的判据
+
+  采集绿→判据绿                合格
+  vivado : D:\p11_ai_training\.venv\Scripts\python.exe
+  输入   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\f.dcp
+  输出   : C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\tmpybo7vtl_\o_bad
+  Tcl    :
+      # 由 check-timing.py --collect 自动生成，勿手改
+      open_checkpoint {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/f.dcp}
+      set_param general.maxThreads 1
+      report_timing_summary -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_bad/timing_summary.rpt} -warn_on_violation
+      report_utilization -file {C:/Users/tlf/Desktop/新建文件夹/amd_skill_submission_work/test-tmp/tmpybo7vtl_/o_bad/utilization.rpt}
+      puts "COLLECT_DONE"
+      exit 0
+  命令   : D:\p11_ai_training\.venv\Scripts\python.exe -mode batch -notrace -nojournal -log C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_4lfeb2qe\vivado.log -source C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_4lfeb2qe\collect.tcl
+  Vivado 退出码 0，用时 0.0 s
+  timing_summary.rpt：639 字节
+  utilization.rpt   ：454 字节
+  Vivado 日志（全文留档）：C:\Users\tlf\Desktop\新建文件夹\amd_skill_submission_work\test-tmp\_ctcollect_4lfeb2qe\vivado.log
+[采到] 两份报告都在，交给下面的判据
+
+  采集出的负WNS→红             合格
+
+【自检通过】能判红（负 WNS / 超阈值资源 / 截断 / 非报告 全都报红）
+            也能判绿（正 WNS + 资源充足 报绿），且「解析不到」不会冒充通过
+            --collect：找不到 Vivado 判红、报告没落盘判红、采集出的负 WNS 判红

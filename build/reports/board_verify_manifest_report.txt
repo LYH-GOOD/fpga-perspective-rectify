@@ -1,0 +1,18 @@
+======================================================================
+  board_verify_manifest —— 板上核清单收敛结果
+======================================================================
+时间   : 2026-11-02T21:47:27
+机器   : liheng / Windows-11-10.0.26200-SP0
+脚本   : probe_manifest.py  sha16=c45d78f595f82401
+板端   : xilinx@192.168.2.99:/home/xilinx/jupyter_notebooks/super/p11_fps33_20261101_merged
+======================================================================
+
+$ sudo -n /usr/local/share/pynq-venv/bin/python3 /tmp/probe_manifest.py
+verify_package OK layout=layers-6 entries=103
+board files=103
+ghost in manifest (listed but absent) = 0 []
+missing from manifest (present but unlisted) = 0 []
+RESULT: PASS
+exit=0
+
+RESULT: OK

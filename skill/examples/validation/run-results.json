@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "check-golden.py",
+      "command": [
+        "skill/scripts/check-golden.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "check-timing.py",
+      "command": [
+        "skill/scripts/check-timing.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "check-repro.py",
+      "command": [
+        "skill/scripts/check-repro.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "gen-host-skeleton.py",
+      "command": [
+        "skill/scripts/gen-host-skeleton.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "dma_xfer.py",
+      "command": [
+        "skill/scripts/dma_xfer.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "preflight.py",
+      "command": [
+        "skill/scripts/preflight.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "check-ui-layout.py",
+      "command": [
+        "skill/scripts/check-ui-layout.py",
+        "--selftest"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "ui-layout-example",
+      "command": [
+        "skill/scripts/check-ui-layout.py",
+        "skill/examples/ui-layout.json"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "ui-search-touch",
+      "command": [
+        "skill/ui-ux-pro-max/scripts/search.py",
+        "touch target feedback",
+        "--domain",
+        "ux"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    },
+    {
+      "name": "ui-search-progress",
+      "command": [
+        "skill/ui-ux-pro-max/scripts/search.py",
+        "loading progress feedback",
+        "--domain",
+        "ux"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "hardware_access": false
+    }
+  ],
+  "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "offline; no Vivado, board or camera"
+}

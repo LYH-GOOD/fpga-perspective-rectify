@@ -1,0 +1,35 @@
+======================================================================
+  check_start_notebook.py —— 启动本第 1 单元无头执行
+======================================================================
+时间   : 2026-11-02T20:36:25
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : check_start_notebook.py  sha16=f23990dcb5190358
+运行目录: D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
+启动本  : D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\p11_start_orig.ipynb
+布局    : layers-6（按目录里有没有 core.py 判断）
+======================================================================
+
+[1] 取到 cells[1]，143 行，语法可解析
+    sha16=ca39d6a32956fdd6cc1a5071952bea81bbc5c9be3fa29b418d3e396c9c023bed
+[2] 写临时脚本 C:\Users\ROG\AppData\Local\Temp\p11start_7tchlh36\run_cell1.py（在运行目录之外，不污染发布包）
+[3] 起子进程：cwd=D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
+    PYTHONPATH=D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged;D:\study\competition\qian\fpga-perspective-rectify\build\_stubs
+
+    --------------------------------------------------------------
+    | 当前目录 = D:\study\competition\qian\_runtime_build\p11_fps33_20261101_merged
+    | 找到的第18版目录 = []
+    --------------------------------------------------------------
+
+[4] FAIL 退出码 1
+    完整 stderr（不截断）：
+    ! Traceback (most recent call last):
+    !   File "C:\Users\ROG\AppData\Local\Temp\p11start_7tchlh36\run_cell1.py", line 28, in <module>
+    !     if not hit:raise FileNotFoundError('未找到第18版完整目录。请在包含p11_contract.py和system.bit的第18版目录中运行本启动本；支持改名、重复嵌套和安装后缀。')
+    !                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ! FileNotFoundError: 未找到第18版完整目录。请在包含p11_contract.py和system.bit的第18版目录中运行本启动本；支持改名、重复嵌套和安装后缀。
+[5] FAIL stdout 里没有 'p11-rgb-pspl-v9-ai-fps-20261101-33'
+[6] FAIL 没跑到最后一行 print（缺 'V9 FPS33: 3s output FPS'）—— 单元中途退出了
+
+======================================================================
+RESULT: FAIL  (p11_fps33_20261101_merged / layers-6)

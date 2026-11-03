@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "checkpoint": "data/diagnostics/PIC78_training_20261101/run_pic78_20261101/best.pt",
+  "checkpoint_sha256": "e33b25507686cf08e495166fc547338e2648524c08fa68a8291c42c92969f78c",
+  "param_sha256": "b9372d6742a87cb0724b3de80419e65b86dc6d978f8ca6d2408fe7a1ef32a2f8",
+  "weights_sha256": "17184b944784af164b2e20bdf57591779507b3c5e9ef6b9cca251974d23a3a85",
+  "weights_bytes": 5461760,
+  "graph_byte_identical": true,
+  "shape": [
+    1,
+    3,
+    192,
+    256
+  ],
+  "dtype": "float32",
+  "fp16": false,
+  "quantized": false,
+  "postprocess_version": "mask_quad_huber_lines_v2",
+  "tensor_names": {
+    "inputs": [
+      "in0"
+    ],
+    "outputs": [
+      "out0"
+    ]
+  },
+  "preprocessing": {
+    "height": 192,
+    "width": 256,
+    "color": "RGB",
+    "mean": [
+      0.48500001430511475,
+      0.4560000002384186,
+      0.4059999883174896
+    ],
+    "std": [
+      0.2290000021457672,
+      0.2240000069141388,
+      0.22499999403953552
+    ],
+    "resize": "direct_resize"
+  },
+  "cases": [
+    {
+      "id": 1024,
+      "max_abs_logit_difference": 4.172325134277344e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 1049,
+      "max_abs_logit_difference": 0.00010061264038085938,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 4000,
+      "max_abs_logit_difference": 4.482269287109375e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 4023,
+      "max_abs_logit_difference": 8.511543273925781e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5020,
+      "max_abs_logit_difference": 4.595518112182617e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5055,
+      "max_abs_logit_difference": 5.626678466796875e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5067,
+      "max_abs_logit_difference": 3.1828880310058594e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5094,
+      "max_abs_logit_difference": 4.76837158203125e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5101,
+      "max_abs_logit_difference": 4.6253204345703125e-05,
+      "binary_difference_pixels": 0
+    },
+    {
+      "id": 5128,
+      "max_abs_logit_difference": 4.291534423828125e-05,
+      "binary_difference_pixels": 0
+    }
+  ],
+  "conversion_exit_code": 0,
+  "board_tested": false
+}

@@ -1,0 +1,10 @@
+test_480p_coordinates (__main__.Tests.test_480p_coordinates) ... ok
+test_600p_coordinates (__main__.Tests.test_600p_coordinates) ... ok
+test_bad_contracts (__main__.Tests.test_bad_contracts) ... ok
+test_good (__main__.Tests.test_good) ... ok
+test_outside_preview (__main__.Tests.test_outside_preview) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK

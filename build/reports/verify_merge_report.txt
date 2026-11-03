@@ -1,0 +1,133 @@
+======================================================================
+  verify_merge.py —— 合并前后逐条语句结构比对
+======================================================================
+时间   : 2026-11-03T13:53:59
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : verify_merge.py  sha16=3e3b53081187069d
+======================================================================
+
+[core.py] 切出 8 段
+    OK   p11_contract  35 条顶层语句
+    OK   run_logging  40 条顶层语句
+    OK   v31_crash  6 条顶层语句
+    OK   v31_diagnostics  24 条顶层语句
+    OK   v31_gc_budget  4 条顶层语句
+    OK   v31_pixels  11 条顶层语句
+    OK   v84_prebuilt  13 条顶层语句
+    OK   v94_audit  3 条顶层语句
+[geometry.py] 切出 22 段
+    OK   find_homography  23 条顶层语句
+    OK   p1_paper_quad  25 条顶层语句
+    OK   pl_fields  16 条顶层语句
+    OK   v8_geometry  18 条顶层语句
+    OK   v8_plan  18 条顶层语句
+    OK   v8_surface  15 条顶层语句
+    OK   v8_tables  11 条顶层语句
+    OK   v10_quad  5 条顶层语句
+    OK   v14_planner  3 条顶层语句
+    OK   v41_quad  8 条顶层语句
+    OK   v45_color  9 条顶层语句
+    OK   v48_candidates  3 条顶层语句
+    OK   v49_boundary  8 条顶层语句
+    OK   v50_orientation  4 条顶层语句
+    OK   v51_target  5 条顶层语句
+    OK   v62_boundary  6 条顶层语句
+    OK   v62_exterior  7 条顶层语句
+    OK   v62_policy  15 条顶层语句
+    OK   v84_color  9 条顶层语句
+    OK   v85_boundary  12 条顶层语句
+    OK   v85_candidates  4 条顶层语句
+    OK   v86_candidates  6 条顶层语句
+[tracking.py] 切出 28 段
+    OK   v31_detection  24 条顶层语句
+    OK   v31_tracking  11 条顶层语句
+    OK   v31_startup  6 条顶层语句
+    OK   v58_budget  4 条顶层语句
+    OK   v58_recovery  5 条顶层语句
+    OK   v67_observation  3 条顶层语句
+    OK   v68_stability  3 条顶层语句
+    OK   v69_policy  6 条顶层语句
+    OK   v78_localization  4 条顶层语句
+    OK   v79_acquire  5 条顶层语句
+    OK   v79_setup  10 条顶层语句
+    OK   v80_cache  13 条顶层语句
+    OK   v81_evidence  6 条顶层语句
+    OK   v83_recovery  9 条顶层语句
+    OK   v86_policy  6 条顶层语句
+    OK   v86_tracking  3 条顶层语句
+    OK   v87_acquire  10 条顶层语句
+    OK   v87_v74_tracking  17 条顶层语句
+    OK   v88_motion  5 条顶层语句
+    OK   v88_recovery  7 条顶层语句
+    OK   v90_lk  3 条顶层语句
+    OK   v91_policy  3 条顶层语句
+    OK   v107_policy  4 条顶层语句
+    OK   v31_native  70 条顶层语句
+    OK   v87_v74_native  69 条顶层语句
+    OK   v90_transaction  8 条顶层语句
+    OK   v91_native  12 条顶层语句
+    OK   v105_native  7 条顶层语句
+[display.py] 切出 13 段
+    OK   v31_camera  8 条顶层语句
+    OK   v64_camera_hdmi  11 条顶层语句
+    OK   v64_hdmi_display  10 条顶层语句
+    OK   v64_io  15 条顶层语句
+    OK   v64_p1_backend  13 条顶层语句
+    OK   v70_hdmi_timing  8 条顶层语句
+    OK   v70_ps  9 条顶层语句
+    OK   v71_display  5 条顶层语句
+    OK   v73_ratio  14 条顶层语句
+    OK   v73_ratio_ui  9 条顶层语句
+    OK   v74_hold  7 条顶层语句
+    OK   v741_reading  7 条顶层语句
+    OK   v76_snapshot  5 条顶层语句
+[ai.py] 切出 8 段
+    OK   v98_ai_geometry  6 条顶层语句
+    OK   v98_ai_request  2 条顶层语句
+    OK   v98_ai_worker  10 条顶层语句
+    OK   v99_ai_protocol  8 条顶层语句
+    OK   v99_ai_selftest  6 条顶层语句
+    OK   v99_ai_service  13 条顶层语句
+    OK   v99_ai_ui  4 条顶层语句
+    OK   v99_ai_worker  10 条顶层语句
+[ui.py] 切出 35 段
+    OK   v75_touch  13 条顶层语句
+    OK   v75_ui  12 条顶层语句
+    OK   v82_assets  3 条顶层语句
+    OK   v82_interaction  19 条顶层语句
+    OK   v82_manual  6 条顶层语句
+    OK   v84_snapshot  5 条顶层语句
+    OK   v92_manual_v87  16 条顶层语句
+    OK   v97_album  15 条顶层语句
+    OK   v100_ai_image  6 条顶层语句
+    OK   v100_ai_tracking  6 条顶层语句
+    OK   v101_ai_camera  6 条顶层语句
+    OK   v102_ai_selection  5 条顶层语句
+    OK   v104_physical_tracking  5 条顶层语句
+    OK   v105_manual_tracking  3 条顶层语句
+    OK   v105_reference  5 条顶层语句
+    OK   v107_hybrid  4 条顶层语句
+    OK   v108_hybrid_status  16 条顶层语句
+    OK   v109_target_cycle  3 条顶层语句
+    OK   v110_unified  4 条顶层语句
+    OK   v111_recovery  5 条顶层语句
+    OK   v112_display_hold  3 条顶层语句
+    OK   v113_live_preview  5 条顶层语句
+    OK   v114_geometry_overlay  4 条顶层语句
+    OK   v115_pair_display  3 条顶层语句
+    OK   v116_continuity  7 条顶层语句
+    OK   v117_manual_reference  8 条顶层语句
+    OK   v118_display_continuity  3 条顶层语句
+    OK   v119_profile_ui  22 条顶层语句
+    OK   v120_image_settings  13 条顶层语句
+    OK   v120_sharp  8 条顶层语句
+    OK   v121_selection  9 条顶层语句
+    OK   v121_target_switch  3 条顶层语句
+    OK   v122_light  6 条顶层语句
+    OK   v123_live_ui  11 条顶层语句
+    OK   v75_hotswitch  7 条顶层语句
+
+======================================================================
+模块 114 个，顶层语句 1148 条，不同 0 个模块
+RESULT: PASS

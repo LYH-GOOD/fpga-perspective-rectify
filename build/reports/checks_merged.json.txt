@@ -1,0 +1,33 @@
+======================================================================
+  run_checks.py —— 对运行目录跑全部 CPU 检查
+======================================================================
+时间   : 2026-11-02T20:21:58
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : run_checks.py  sha16=ad554e86a66796b1
+运行目录: D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\merged
+Python 可执行: D:\Program Files\Python314\python.exe
+======================================================================
+
+桩目录 : D:\study\competition\qian\fpga-perspective-rectify\build\_stubs（仅供本机；板上用真模块）
+检查脚本: D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\merged（与运行目录同处 —— 它们要找旁边的 system.bit / v105_edges.cpp）
+numpy  : 2.5.1 —— 已补 2 维 np.cross（numpy 2.x 删掉了它）
+
+共 20 个检查，其中 3 个是链条顶端（其余被顶端连带跑）
+顶端: overlay_cpu_check, pic78_cpu_check, smooth_cpu_check
+
+----------------------------------------------------------------------
+[overlay_cpu_check] 开始
+[overlay_cpu_check] PASS
+
+----------------------------------------------------------------------
+[pic78_cpu_check] 开始
+[pic78_cpu_check] PASS
+
+----------------------------------------------------------------------
+[smooth_cpu_check] 开始
+[smooth_cpu_check] PASS
+
+======================================================================
+通过 3 / 3
+RESULT: PASS

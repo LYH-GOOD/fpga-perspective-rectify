@@ -1,0 +1,15 @@
+======================================================================
+  make_shims.py —— 生成原模块名的转发垫片
+======================================================================
+时间   : 2026-11-02T20:33:56
+机器   : liheng / Windows-11-10.0.26200-SP0
+Python : 3.14.6
+脚本   : make_shims.py  sha16=aa77eedd044a4459
+输出   : D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\shims
+======================================================================
+
+    [skip] v99_ai_selftest: 合并包里是真实文件（子进程入口），不造垫片
+    [skip] v99_ai_worker: 合并包里是真实文件（子进程入口），不造垫片
+[完成] 生成 112 个垫片 -> D:\study\competition\qian\fpga-perspective-rectify\build\_scratch\shims
+
+RESULT: OK

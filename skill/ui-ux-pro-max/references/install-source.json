@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "commit": "28327f2f214d31bbd7555ed0c012a5df6484ed96",
+  "source_path": ".claude/skills/ui-ux-pro-max",
+  "installed_on": "2026-10-23",
+  "license": "MIT",
+  "local_changes": [
+    "Codex absolute search paths",
+    "Concise discovery description",
+    "Conditional PYNQ HDMI project profile",
+    "Codex UI metadata"
+  ],
+  "runtime_dependencies": "Python 3 standard library"
+}
