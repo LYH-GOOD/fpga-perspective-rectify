@@ -68,9 +68,8 @@ python build/build_merged_release.py release/p11_fps33_20261101_merged
 | 项 | 要求 |
 |---|---|
 | 开发板 | PYNQ-Z2（`xc7z020clg400-1`），PYNQ v3.1 镜像 |
-| 显示 | HDMI 显示器接 **HDMI OUT**，输出固定 1280×720 |
+| 显示 + 触摸 | **一块支持绝对坐标的 USB 触摸屏**，同一块屏接两路：HDMI 接 **HDMI OUT**（输出固定 1280×720），USB 接板子（出触摸）。只接 HDMI 会报 `RuntimeError: No readable absolute USB touchscreen`；探测器扫 `/dev/input/event*` 找绝对坐标设备，找不到就在 `OPTIONS` 里指定 `touch_device='/dev/input/eventN'`。**没有触摸屏跑不起来** —— 程序没有自动开始入口，必须点屏才开跑（`run_ui` 签名里就没有这个参数） |
 | 相机 | UVC 摄像头接 USB 口，固定 `/dev/video0`，工作档 640×480@30 |
-| 触摸屏 | **支持绝对坐标的 USB 触摸屏**。`run_ui` 启动时先开触摸设备，没有会直接报 `RuntimeError: No readable absolute USB touchscreen` |
 
 #### A3　上传
 
