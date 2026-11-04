@@ -4,6 +4,35 @@
 
 ---
 
+## 目录结构
+
+```
+fpga-perspective-rectify/
+├── README.md     项目简介与复现步骤
+├── src/          设计源码（RTL / HLS / PS 侧软件）
+├── sim/          仿真或验证脚本与结果
+├── build/        可复现的构建脚本 + 综合与实现报告
+├── board/        上板工程、运行脚本与实测输出
+├── release/      上板运行目录（114 个文件，整个目录拷到板子）
+├── data/         测试数据与参考结果
+├── skill/        技能包（大模型协作中沉淀的可复用经验）
+└── report/       设计报告 + 大模型协作记录
+```
+
+### 两种发布布局
+
+`p11_contract.verify_package()` 要求运行文件与 `system.bit` 同目录，并按包根路径逐文件核 sha256，
+所以仓库分层存放、上板前合回去。两种布局都受支持，写在 `release_manifest.json` 的 `layout` 字段里：
+
+| 布局 | 怎么打 | `.py` 个数 | `layout` |
+|---|---|---|---|
+| 按层合并（**交付版**） | `python build/build_merged_release.py` | 6 个层文件 + `v99_ai_worker.py` / `v99_ai_selftest.py`（两个子进程入口） | `layers-6` |
+| 原样 114 模块 | `python build/assemble_runtime.py` | 114 | `modules-114`（缺字段时默认） |
+
+两种布局内容完全等价：合并版由 `build/verify_merge.py` 做 AST 逐条语句比对，0 差异。
+
+---
+
 ## 项目简介
 
 书本、纸张等平面目标在倾斜或旋转拍摄时会产生透视畸变，版面歪斜、文字拉伸，不能直接当作正视画面来阅读、归档或送入识别算法。而现有的"拍照后逐张处理"方式，在背景杂乱或目标移动时仍需人工框选四角，难以适应连续拍摄的场景。
@@ -164,33 +193,6 @@ python build/build_merged_release.py release/p11_fps33_20261101_merged
 | `python build/verify_merge.py` | 合并版切回 114 段做 AST 逐条比对，0 差异 |
 
 ---
-
-## 目录结构
-
-```
-fpga-perspective-rectify/
-├── README.md     项目简介与复现步骤
-├── src/          设计源码（RTL / HLS / PS 侧软件）
-├── sim/          仿真或验证脚本与结果
-├── build/        可复现的构建脚本 + 综合与实现报告
-├── board/        上板工程、运行脚本与实测输出
-├── release/      上板运行目录（114 个文件，整个目录拷到板子）
-├── data/         测试数据与参考结果
-├── skill/        技能包（大模型协作中沉淀的可复用经验）
-└── report/       设计报告 + 大模型协作记录
-```
-
-### 两种发布布局
-
-`p11_contract.verify_package()` 要求运行文件与 `system.bit` 同目录，并按包根路径逐文件核 sha256，
-所以仓库分层存放、上板前合回去。两种布局都受支持，写在 `release_manifest.json` 的 `layout` 字段里：
-
-| 布局 | 怎么打 | `.py` 个数 | `layout` |
-|---|---|---|---|
-| 按层合并（**交付版**） | `python build/build_merged_release.py` | 6 个层文件 + `v99_ai_worker.py` / `v99_ai_selftest.py`（两个子进程入口） | `layers-6` |
-| 原样 114 模块 | `python build/assemble_runtime.py` | 114 | `modules-114`（缺字段时默认） |
-
-两种布局内容完全等价：合并版由 `build/verify_merge.py` 做 AST 逐条语句比对，0 差异。
 
 ## 环境与依赖
 
