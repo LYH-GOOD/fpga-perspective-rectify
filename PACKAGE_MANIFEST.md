@@ -18,14 +18,15 @@
 | **仿真或验证结果** | `sim/rtl/`：RTL testbench + `logs_v2025_2/` 的 xsim 日志与通过判据<br>`sim/checks/`：PS 侧对标脚本<br>`sim/results/`：各版本 benchmark / validation 的 JSON 结果<br>`sim/reports/`：跑 `sim/run_checks.py` 后的输出 —— 运行副产物，按 `.gitignore` 不入库（正式结果在 `sim/results/`） |
 | **综合与实现报告** | `build/reports/` 下 7 份 `*_impl.rpt`：`utilization`（资源）、`timing`（时序）、`clocks`（时钟）、`drc`、`io`、`power`、`route_status`。全部由 **Vivado 2025.2** 产出 |
 | **上板工程、运行脚本、实测输出与参考结果的比对数据** | `board/system.bit` + `board/system.hwh`：交付位流与硬件描述<br>`board/p11_start.ipynb`：板端唯一入口（Jupyter）<br>`board/logs/`：两次连续实测的完整 JSON 行日志<br>`release/p11_fps33_20261101_merged/`：114 文件运行包（含 `release_manifest.json` 逐文件 sha256 锁）<br>`data/`：测试数据与说明<br>`sim/results/`：参考结果 |
-| **可复现的构建脚本** | 软件链：`build/build_merged_release.py`（一条命令从 `src/` 重建运行包并跑 10 道自检）<br>PL 链：`build/vivado/rebuild.tcl`（建工程）+ `run_build.tcl`（综合→实现→位流→报告）<br>详见 `README.md` 与 `build/README.md` |
+| **可复现的构建脚本** | 软件链：`build/build_merged_release.py`（一条命令从 `src/` 重建运行包并跑 10 道自检）；`build/extract_llm_log.py`（从会话记录提取大模型协作统计）<br>PL 链：`build/vivado/rebuild.tcl`（建工程）+ `run_build.tcl`（综合→实现→位流→报告）<br>详见 `README.md` 与 `build/README.md` |
 
 另外两项（指南 3.3.5.2 / 3.3.5.3）：
 
 | 要求 | 包内位置 |
 |---|---|
 | **技能包** | `skill/`，入口 `skill/README.md`（逐项写明适用范围、使用方法与失效条件） |
-| **设计报告** | `report/design_report.pdf`（30 页，含大模型协作记录与复现说明）；迭代记录在 `report/releases/`；ROSS 套件的完整记录在 `report/ross_experience.md`，4.4 节重写稿在 `report/ross_section_4.4.docx` |
+| **设计报告** | `report/design_report.pdf`（30 页，含第四部分「大模型协作与技能包」及复现说明）；迭代记录在 `report/releases/`；ROSS 套件的完整记录在 `report/ross_experience.md`，4.4 节重写稿在 `report/ross_section_4.4.docx` |
+| **大模型协作记录**（指南 §3.3.3.1 要求项） | `report/llm-collaboration.md`：提示词四类（带真实原文）、自我纠错轨迹 8 例（每例带证据链）、智能体工作流设计、复现与核查方法。数字由 `build/extract_llm_log.py` 从会话 JSONL 机器提取，截止 2026-11-01 12:32；原始 JSONL 含本机用户名，不随包提交 |
 
 ---
 

@@ -101,6 +101,7 @@ inode，换掉再删 `.old` 会让内核里 `Path.cwd()` 直接 `FileNotFoundErr
 | `analyze_run_log.py` | 读板上 `run-result.log`，出一份只读的分段耗时分析报告 |
 | `make_delivery_zip.py` | 把一个发布目录打成单个 zip（外发用"一个文件"） |
 | `make_shims.py` | 给合并版造 114 个「原模块名」转发垫片，让现成的检查脚本还能按老名字 import |
+| `extract_llm_log.py` | 读 Claude Code 的会话 JSONL，统计人机交互量/工具调用分布，产出单文件报告。`report/llm-collaboration.md` 的全部数字由它生成。默认读 `~/.claude/projects/d--study-competition-qian`，换机器用 `--dir` |
 
 ## 其他文件
 
