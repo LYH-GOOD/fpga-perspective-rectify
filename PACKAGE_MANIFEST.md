@@ -36,7 +36,7 @@
 |---|---|---|
 | `board/system.bit` | 4,045,690 B | `aaa9f632d3f8a7a11db14ae36876f0d40fa9d7fa2666d8a4894c2ca14ddef3d0` |
 | `board/system.hwh` | 853,392 B | `deb1f5a620a74bae0cd74b25a223c4ab2beb319877e2cc74b675e66ac6e83637` |
-| `report/design_report.pdf` | 2,711,659 B | `fb524ae1faebd689cbe0591b9658473cb1af1c90ce2ede42c02a08687bb081eb` |
+| `report/design_report.pdf` | 11,093,194 B | `b5bf2eb181db150bd7bbfb3e63291763b1f754b3e228494257645e3250a8b1ee` |
 
 位流这一对文件就是 `board/logs/` 里那两次实测所运行的位流（包内多处登记，可交叉核对：
 `src/ps/core/p11_contract.py`、`src/ps/runtime/release_manifest.json`、`board/system.manifest.json`）。
