@@ -9,7 +9,7 @@
 #
 # 产物：
 #     build/p11_light27.runs/impl_1/system_wrapper.bit   位流
-#     reports/*.rpt                                       7 份报告（与 build/reports 旧约定同名）
+#     reports/*.rpt                                       9 份 *_impl.rpt（另 1 份 synth_utilization.rpt）
 #     p11_light27.xsa                                     硬件平台
 #
 # 这一步耗时以小时计的话说明 jobs 太小；Zynq-7020 这个规模 8 jobs 约半小时。

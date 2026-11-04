@@ -15,7 +15,7 @@
 | 要求 | 包内位置 |
 |---|---|
 | **完整的工程文件与源码**（RTL、HLS、PS 侧软件） | `src/rtl/`（5 个 RTL/约束源）<br>`src/hls/`（三个 HLS 核的 C++ 源 + `hls_config.cfg`）<br>`src/ps/`（PS 侧 Python 软件，114 个模块）<br>`build/vivado/`（**PL 侧完整构建源**：BD 脚本 `system_light27.tcl` + 7 个 IP 的 `ip_repo/` + `rebuild.tcl`/`run_build.tcl`，可按 `build/vivado/README.md` 从零建出同一工程）<br>⚠️ 队友导出的整份 Vivado 工程 zip（142 MB，含 `.runs/`）**未入库** —— 超过 GitHub 单文件上限，且可由上述构建源复现，理由见 `build/vivado/README.md` 末尾「已知缺口」 |
-| **仿真或验证结果** | `sim/rtl/`：RTL testbench + `logs_v2025_2/` 的 xsim 日志与通过判据<br>`sim/checks/`：PS 侧对标脚本<br>`sim/results/`：各版本 benchmark / validation 的 JSON 结果<br>`sim/reports/`：检查链输出 |
+| **仿真或验证结果** | `sim/rtl/`：RTL testbench + `logs_v2025_2/` 的 xsim 日志与通过判据<br>`sim/checks/`：PS 侧对标脚本<br>`sim/results/`：各版本 benchmark / validation 的 JSON 结果<br>`sim/reports/`：跑 `sim/run_checks.py` 后的输出 —— 运行副产物，按 `.gitignore` 不入库（正式结果在 `sim/results/`） |
 | **综合与实现报告** | `build/reports/` 下 7 份 `*_impl.rpt`：`utilization`（资源）、`timing`（时序）、`clocks`（时钟）、`drc`、`io`、`power`、`route_status`。全部由 **Vivado 2025.2** 产出 |
 | **上板工程、运行脚本、实测输出与参考结果的比对数据** | `board/system.bit` + `board/system.hwh`：交付位流与硬件描述<br>`board/p11_start.ipynb`：板端唯一入口（Jupyter）<br>`board/logs/`：两次连续实测的完整 JSON 行日志<br>`release/p11_fps33_20261101_merged/`：114 文件运行包（含 `release_manifest.json` 逐文件 sha256 锁）<br>`data/`：测试数据与说明<br>`sim/results/`：参考结果 |
 | **可复现的构建脚本** | 软件链：`build/build_merged_release.py`（一条命令从 `src/` 重建运行包并跑 10 道自检）<br>PL 链：`build/vivado/rebuild.tcl`（建工程）+ `run_build.tcl`（综合→实现→位流→报告）<br>详见 `README.md` 与 `build/README.md` |
